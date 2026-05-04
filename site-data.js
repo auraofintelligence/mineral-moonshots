@@ -340,23 +340,26 @@ const SITE_BRIEFS = [
     url: "briefs/public-honour-board.html",
     title: "Public Honour Board",
     eyebrow: "Visible Support",
-    material: "Public-safe JSON, screens, kiosks, trust trails",
+    material: "Public-safe JSON, profile.md, XRP, Solana, trust trails",
     source: "PLFC public honour board model and Strange but True community ledger",
     deck: "A public-safe display layer for community contribution trails, built around consent, broad summaries and visible local support rather than private records.",
     brief: [
       "The honour board is imagined as a wall-screen, kiosk and web display layer showing approved public support for local projects.",
+      "If a supporter chooses public financial visibility, the public profile.md can sit beside public wallet transaction references from XRP, Solana or other ledgers added later.",
       "It should never publish raw private records, exact locations, contact details, private payments, emergency contacts or unapproved media.",
       "In this game-world, it becomes the ceremonial surface where people can choose to be seen helping, without forcing anyone into publicity."
     ],
     moonshot: "A civic contribution display that makes care, training, repair, support and stewardship feel as visible as sporting wins, while keeping private life private.",
     modules: [
       "Public-safe supporter cards",
+      "Public profile.md and ledger references",
       "Project contribution trails",
       "Kiosk and wall-screen display mode",
       "Approval workflow before anything becomes public"
     ],
     experiments: [
       "Create a fake sample honour board using fictional supporters and clearly marked demo data.",
+      "Mock a public profile.md linked to fictional XRP and Solana transaction hashes before any real ledger use.",
       "Define what must stay private before defining what can be public.",
       "Test whether locals read it as appreciation, pressure, theatre or useful accountability."
     ],
@@ -697,19 +700,23 @@ const INTERACTIVE_LABS = {
   "public-honour-board": {
     type: "reality-stack",
     title: "Public-Safe Honour Stack",
-    deck: "Sort the honour board into what can be shown, what must stay hidden, what needs approval and what belongs only in the game-world.",
+    deck: "Sort the honour board into what can be shown, what must stay hidden, what needs approval, and how public profile.md plus public wallet transactions could appear after moving onto XRP, Solana or other ledgers.",
     lanes: [
       {
         name: "Can show",
-        items: ["display name", "approved project", "public contribution type", "broad location", "thank-you note"]
+        items: ["display name", "approved project", "public contribution type", "broad location", "thank-you note", "public profile.md"]
+      },
+      {
+        name: "Public ledgers",
+        items: ["XRP transaction hash", "Solana / SOL transaction hash", "wallet display name", "project support receipt", "other ledgers later"]
       },
       {
         name: "Must hide",
-        items: ["contact details", "private payments", "exact GPS", "emergency contacts", "unapproved media"]
+        items: ["contact details", "private payments", "exact GPS", "emergency contacts", "unapproved media", "private wallet notes"]
       },
       {
         name: "Needs approval",
-        items: ["photos", "organisation names", "amounts", "role claims", "cultural references"]
+        items: ["photos", "organisation names", "public amounts", "role claims", "cultural references"]
       },
       {
         name: "Game-world",

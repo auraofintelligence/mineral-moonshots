@@ -1,0 +1,968 @@
+:root {
+  --obsidian: #071013;
+  --magnetite: #10161b;
+  --ilmenite: #182129;
+  --panel: rgba(20, 28, 34, 0.88);
+  --panel-strong: #17222a;
+  --quartz: #f8fbff;
+  --quartz-soft: #dce6ea;
+  --zircon: #8be9ff;
+  --rutile: #f2c15e;
+  --titanium: #c7d1d8;
+  --iron: #c85c3a;
+  --monazite: #b891ff;
+  --rare-earth: #7df0c2;
+  --muted: #aab8bd;
+  --line: rgba(220, 230, 234, 0.16);
+  --shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
+  --heading: "Nunito Sans", "Avenir Next", Arial, sans-serif;
+  --body: "Atkinson Hyperlegible", "Source Sans 3", Arial, sans-serif;
+  --max-width: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--obsidian);
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    linear-gradient(135deg, rgba(11, 22, 26, 0.96), rgba(7, 16, 19, 0.98)),
+    repeating-linear-gradient(110deg, rgba(242, 193, 94, 0.08) 0 1px, transparent 1px 38px);
+  color: var(--quartz);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body::before {
+  background:
+    linear-gradient(120deg, transparent 0 18%, rgba(139, 233, 255, 0.07) 18% 20%, transparent 20% 48%, rgba(184, 145, 255, 0.08) 48% 50%, transparent 50% 100%),
+    linear-gradient(65deg, transparent 0 34%, rgba(242, 193, 94, 0.08) 34% 35%, transparent 35% 100%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  background: var(--rutile);
+  color: var(--obsidian);
+  left: 1rem;
+  padding: 0.65rem 0.85rem;
+  position: absolute;
+  text-decoration: none;
+  top: -5rem;
+  z-index: 20;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  background: rgba(7, 16, 19, 0.9);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 0.8rem 1.25rem;
+  width: 100%;
+}
+
+.brand-mark {
+  color: var(--quartz);
+  display: grid;
+  flex-shrink: 1;
+  font-family: var(--heading);
+  font-weight: 900;
+  line-height: 0.92;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand-mark span:first-child {
+  color: var(--zircon);
+  text-shadow: 0 0 18px rgba(139, 233, 255, 0.45);
+}
+
+.brand-mark span:last-child {
+  color: var(--rutile);
+  text-shadow: 0 0 18px rgba(242, 193, 94, 0.4);
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  gap: 0.95rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-family: var(--heading);
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--rare-earth);
+}
+
+.nav-toggle {
+  align-items: center;
+  background: transparent;
+  border: 1px solid rgba(139, 233, 255, 0.55);
+  border-radius: 8px;
+  display: none;
+  flex-shrink: 0;
+  gap: 0.22rem;
+  height: 2.7rem;
+  justify-content: center;
+  width: 2.9rem;
+}
+
+.nav-toggle span {
+  background: var(--zircon);
+  display: block;
+  height: 2px;
+  width: 1.15rem;
+}
+
+.hero {
+  background:
+    linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.78) 48%, rgba(7, 16, 19, 0.24)),
+    linear-gradient(0deg, rgba(7, 16, 19, 0.9), transparent 34%),
+    url("assets/mineral-city-map.svg");
+  background-position: center;
+  background-size: cover;
+  min-height: 86vh;
+  position: relative;
+}
+
+.hero-inner,
+.section,
+.page-hero,
+.site-footer {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 86vh;
+  padding-bottom: 4.5rem;
+  padding-top: 4.5rem;
+}
+
+.eyebrow {
+  color: var(--rare-earth);
+  font-family: var(--heading);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  margin: 0 0 0.75rem;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  letter-spacing: 0;
+  line-height: 1.04;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6.7rem);
+  max-width: 9.8ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
+  max-width: 12.5ch;
+}
+
+h3 {
+  font-size: 1.28rem;
+}
+
+p {
+  margin: 0;
+}
+
+.hero-lede,
+.page-lede {
+  color: var(--quartz-soft);
+  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  margin-top: 1.35rem;
+  max-width: min(46rem, 100%);
+  overflow-wrap: break-word;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.button {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-family: var(--heading);
+  font-weight: 900;
+  justify-content: center;
+  min-height: 3rem;
+  min-width: 10.5rem;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: var(--rutile);
+  box-shadow: 0 0 28px rgba(242, 193, 94, 0.28);
+  color: var(--obsidian);
+}
+
+.button.secondary {
+  border: 1px solid rgba(139, 233, 255, 0.62);
+  color: var(--zircon);
+}
+
+.intro-band {
+  background: linear-gradient(90deg, var(--rutile), var(--rare-earth), var(--zircon));
+  color: var(--obsidian);
+  font-family: var(--heading);
+  font-weight: 900;
+  padding: 0.9rem 1.25rem;
+}
+
+.intro-band div {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  overflow-wrap: break-word;
+}
+
+.section {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.section.wide {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section.wide > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.section-heading {
+  max-width: 780px;
+}
+
+.section-heading p:not(.eyebrow) {
+  color: var(--muted);
+  margin-top: 1rem;
+  overflow-wrap: break-word;
+}
+
+.brief-grid,
+.element-grid,
+.module-grid,
+.two-col,
+.roadmap-grid,
+.visitor-grid,
+.lab-preview-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.brief-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.brief-card,
+.element-card,
+.module-card,
+.moonshot-panel,
+.source-panel,
+.roadmap-card,
+.contact-panel,
+.visitor-card,
+.lab-preview-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.15rem;
+}
+
+.brief-card {
+  border-top: 4px solid var(--zircon);
+  min-height: 18rem;
+}
+
+.brief-card:nth-child(3n + 2) {
+  border-top-color: var(--rutile);
+}
+
+.brief-card:nth-child(3n) {
+  border-top-color: var(--monazite);
+}
+
+.brief-card h3,
+.element-card h3,
+.module-card h3,
+.roadmap-card h3,
+.visitor-card h3,
+.lab-preview-card h3 {
+  color: var(--quartz);
+}
+
+.brief-card p:not(.eyebrow),
+.element-card p,
+.roadmap-card p,
+.contact-panel p,
+.source-panel p,
+.visitor-card p,
+.lab-preview-card p {
+  color: var(--muted);
+  margin-top: 0.7rem;
+}
+
+.card-meta,
+.element-colour {
+  color: var(--rutile) !important;
+  font-family: var(--heading);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.card-link,
+.mini-link {
+  color: var(--rare-earth);
+  display: inline-flex;
+  font-family: var(--heading);
+  font-weight: 900;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.card-link:hover,
+.card-link:focus,
+.mini-link:hover,
+.mini-link:focus {
+  color: var(--quartz);
+}
+
+.element-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.element-card strong {
+  color: var(--rutile);
+  display: block;
+  font-family: var(--heading);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.element-card.compact strong {
+  font-size: 1.7rem;
+}
+
+.visual-band {
+  background:
+    linear-gradient(180deg, rgba(7, 16, 19, 0), rgba(7, 16, 19, 0.78)),
+    linear-gradient(90deg, rgba(139, 233, 255, 0.12), rgba(242, 193, 94, 0.12), rgba(184, 145, 255, 0.14));
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.roadmap-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.visitor-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.visitor-card {
+  border-top: 4px solid var(--rare-earth);
+  min-height: 15rem;
+}
+
+.visitor-card:nth-child(2) {
+  border-top-color: var(--zircon);
+}
+
+.visitor-card:nth-child(3) {
+  border-top-color: var(--rutile);
+}
+
+.visitor-card:nth-child(4) {
+  border-top-color: var(--monazite);
+}
+
+.lab-preview-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.lab-preview-card {
+  min-height: 13rem;
+}
+
+.roadmap-card span,
+.module-card span {
+  align-items: center;
+  background: rgba(139, 233, 255, 0.12);
+  border: 1px solid rgba(139, 233, 255, 0.24);
+  border-radius: 999px;
+  color: var(--zircon);
+  display: inline-flex;
+  font-family: var(--heading);
+  font-weight: 900;
+  height: 2.35rem;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  min-width: 2.35rem;
+  padding: 0 0.65rem;
+}
+
+.contact-panel {
+  background:
+    linear-gradient(135deg, rgba(242, 193, 94, 0.18), rgba(139, 233, 255, 0.1)),
+    var(--panel-strong);
+}
+
+.site-footer {
+  align-items: start;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+}
+
+.footer-copy {
+  max-width: 48rem;
+}
+
+.footer-note {
+  color: rgba(170, 184, 189, 0.84);
+  font-size: 0.92rem;
+  margin-top: 0.35rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: flex-end;
+  max-width: 34rem;
+}
+
+.footer-links a,
+.footer-links small {
+  border: 1px solid rgba(220, 230, 234, 0.14);
+  border-radius: 8px;
+  color: var(--zircon);
+  font-family: var(--heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.42rem 0.55rem;
+  text-decoration: none;
+}
+
+.page-hero {
+  background:
+    linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.76)),
+    url("assets/mineral-city-map.svg");
+  background-position: center;
+  background-size: cover;
+  max-width: none;
+  min-height: 52vh;
+  padding-bottom: 5rem;
+  padding-top: 5.5rem;
+}
+
+.page-hero > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.page-hero h1 {
+  max-width: 12ch;
+}
+
+.source-line {
+  color: var(--rutile);
+  font-family: var(--heading);
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin-top: 1.4rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.two-col {
+  align-items: start;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.62fr);
+}
+
+.source-panel h2,
+.moonshot-panel h2 {
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  max-width: none;
+}
+
+.brief-points,
+.experiment-list {
+  color: var(--quartz-soft);
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.brief-points li::marker,
+.experiment-list li::marker {
+  color: var(--rare-earth);
+}
+
+.moonshot-panel {
+  border-color: rgba(242, 193, 94, 0.32);
+}
+
+.moonshot-panel p {
+  color: var(--quartz-soft);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.module-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.module-card {
+  min-height: 10.5rem;
+}
+
+.interactive-section {
+  background:
+    linear-gradient(135deg, rgba(139, 233, 255, 0.08), rgba(242, 193, 94, 0.08)),
+    rgba(7, 16, 19, 0.68);
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  max-width: none;
+}
+
+.interactive-section > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.lab-shell {
+  margin-top: 2rem;
+}
+
+.dial-grid,
+.layer-lab,
+.kiosk-lab,
+.path-lab,
+.archipelago-lab {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.75fr);
+}
+
+.control-stack,
+.dial-readout,
+.metric-panel,
+.layer-detail,
+.kiosk-screen,
+.path-detail,
+.island-detail,
+.reality-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.15rem;
+}
+
+.range-control {
+  background: rgba(7, 16, 19, 0.48);
+  border: 1px solid rgba(139, 233, 255, 0.16);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.range-control + .range-control {
+  margin-top: 0.75rem;
+}
+
+.range-top {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.range-top strong,
+.range-top em {
+  font-family: var(--heading);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.range-top em {
+  color: var(--rutile);
+}
+
+.range-control input {
+  accent-color: var(--rare-earth);
+  width: 100%;
+}
+
+.dial-readout strong,
+.metric-panel strong {
+  color: var(--rutile);
+  display: block;
+  font-family: var(--heading);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.dial-readout h3 {
+  color: var(--zircon);
+  margin-top: 1rem;
+}
+
+.dial-readout p,
+.metric-panel p,
+.layer-detail p,
+.kiosk-screen p,
+.path-detail p,
+.island-detail p {
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+.dial-bar {
+  background: rgba(220, 230, 234, 0.14);
+  border-radius: 999px;
+  height: 0.8rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.dial-bar span {
+  background: linear-gradient(90deg, var(--rare-earth), var(--zircon), var(--rutile));
+  display: block;
+  height: 100%;
+  transition: width 180ms ease;
+}
+
+.layer-visual {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.layer-band {
+  background: rgba(20, 28, 34, 0.9);
+  border: 0;
+  border-bottom: 1px solid rgba(220, 230, 234, 0.1);
+  color: var(--quartz);
+  cursor: pointer;
+  font: inherit;
+  font-family: var(--heading);
+  font-weight: 900;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.layer-band:nth-child(1) {
+  background: linear-gradient(90deg, rgba(125, 240, 194, 0.34), rgba(7, 16, 19, 0.78));
+}
+
+.layer-band:nth-child(2) {
+  background: linear-gradient(90deg, rgba(242, 193, 94, 0.42), rgba(24, 33, 41, 0.92));
+}
+
+.layer-band:nth-child(3) {
+  background: linear-gradient(90deg, rgba(139, 233, 255, 0.32), rgba(7, 16, 19, 0.82));
+}
+
+.layer-band:nth-child(4) {
+  background: linear-gradient(90deg, rgba(184, 145, 255, 0.38), rgba(7, 16, 19, 0.82));
+}
+
+.layer-band:nth-child(5) {
+  background: linear-gradient(90deg, rgba(200, 92, 58, 0.36), rgba(7, 16, 19, 0.94));
+}
+
+.layer-band.is-active,
+.layer-button.is-active,
+.mode-button.is-active,
+.path-step.is-active,
+.island-button.is-active {
+  border-color: rgba(242, 193, 94, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(242, 193, 94, 0.32), 0 0 22px rgba(242, 193, 94, 0.12);
+}
+
+.layer-controls,
+.mode-buttons,
+.island-buttons {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.layer-button,
+.mode-button,
+.island-button {
+  background: rgba(7, 16, 19, 0.54);
+  border: 1px solid rgba(139, 233, 255, 0.22);
+  border-radius: 8px;
+  color: var(--zircon);
+  cursor: pointer;
+  font-family: var(--heading);
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.priority-grid,
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.priority-grid span,
+.chip-list span {
+  background: rgba(139, 233, 255, 0.1);
+  border: 1px solid rgba(139, 233, 255, 0.22);
+  border-radius: 999px;
+  color: var(--quartz-soft);
+  font-family: var(--heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 0.45rem 0.6rem;
+}
+
+.path-rail {
+  align-items: center;
+  background:
+    linear-gradient(90deg, transparent 0 7%, rgba(139, 233, 255, 0.32) 7% 93%, transparent 93%),
+    rgba(7, 16, 19, 0.48);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  min-height: 9rem;
+  padding: 1rem;
+}
+
+.path-step {
+  background: var(--panel-strong);
+  border: 1px solid rgba(139, 233, 255, 0.24);
+  border-radius: 999px;
+  color: var(--rutile);
+  cursor: pointer;
+  font-family: var(--heading);
+  font-size: 1.2rem;
+  font-weight: 900;
+  height: 3rem;
+  justify-self: center;
+  width: 3rem;
+}
+
+.reality-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.reality-card h3 {
+  color: var(--zircon);
+}
+
+.island-buttons {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.more-briefs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.mini-link {
+  border: 1px solid rgba(139, 233, 255, 0.22);
+  border-radius: 8px;
+  margin-top: 0;
+  padding: 0.55rem 0.7rem;
+}
+
+@media (max-width: 980px) {
+  .brief-grid,
+  .element-grid,
+  .roadmap-grid,
+  .module-grid,
+  .visitor-grid,
+  .lab-preview-grid,
+  .reality-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .two-col,
+  .dial-grid,
+  .layer-lab,
+  .kiosk-lab,
+  .path-lab,
+  .archipelago-lab {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    font-size: 16px;
+  }
+
+  .nav {
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    background: var(--obsidian);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    display: none;
+    padding: 0.75rem;
+    position: absolute;
+    right: 1rem;
+    top: 4.2rem;
+    width: min(18rem, calc(100vw - 2rem));
+  }
+
+  .nav-links.is-open {
+    display: grid;
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0;
+  }
+
+  .hero {
+    background:
+      linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.72)),
+      url("assets/mineral-city-map.svg");
+    background-position: 58% center;
+    background-size: cover;
+  }
+
+  .hero-inner,
+  .page-hero {
+    min-height: auto;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 13vw, 4.7rem);
+    max-width: 8.8ch;
+  }
+
+  .brief-grid,
+  .element-grid,
+  .roadmap-grid,
+  .module-grid,
+  .visitor-grid,
+  .lab-preview-grid,
+  .reality-grid,
+  .island-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

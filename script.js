@@ -4,12 +4,11 @@
 
   const routes = [
     { label: "Home", href: "index.html" },
-    { label: "World", href: "index.html#world-rules" },
+    { label: "Start", href: "index.html#start" },
+    { label: "Repos", href: "index.html#repo-moonshots" },
     { label: "Briefs", href: "index.html#briefs" },
     { label: "Elements", href: "index.html#elements" },
-    { label: "Roadmap", href: "index.html#roadmap" },
-    { label: "Labs", href: "index.html#labs" },
-    { label: "Contact", href: "index.html#contact" }
+    { label: "Labs", href: "index.html#labs" }
   ];
 
   function make(tag, className, text) {
@@ -60,8 +59,8 @@
     mount.innerHTML = "";
 
     const copy = make("div", "footer-copy");
-    copy.appendChild(make("p", "", "Mineral Moonshots is an island idea atlas for curious locals exploring resilience, materials, food, compute and peaceful space futures."));
-    copy.appendChild(make("p", "footer-note", "Shared game-world and narrative planning sandbox. Real-world work needs consent, engineering, ecology, law, culture and community governance."));
+    copy.appendChild(make("p", "", "Mineral Moonshots is a connected public collection for trying bigger views from ordinary starting points."));
+    copy.appendChild(make("p", "footer-note", "Public repo links are open doors. Private and local workbenches stay boundaries. Real-world work still needs consent, engineering, ecology, law, culture and community governance."));
 
     const links = make("div", "footer-links");
     SITE_BRIEFS.slice(0, 4).forEach((brief) => {
@@ -86,11 +85,39 @@
       const title = make("h3", "", brief.title);
       const deck = make("p", "", brief.deck);
       const meta = make("p", "card-meta", brief.material);
-      const link = make("a", "card-link", "Open brief");
+      const link = make("a", "card-link", "Open moonshot");
       link.href = brief.url;
       link.setAttribute("aria-label", "Open " + brief.title);
 
       card.append(tag, title, deck, meta, link);
+      grid.appendChild(card);
+    });
+  }
+
+  function renderRepoMoonshots() {
+    const grid = document.querySelector("[data-repo-moonshots]");
+    if (!grid || typeof REPO_MOONSHOTS === "undefined") return;
+
+    REPO_MOONSHOTS.forEach((repo) => {
+      const card = make("article", "repo-card");
+      const visibility = make("p", "repo-status", repo.visibility);
+      const title = make("h3", "", repo.name);
+      const moonshot = make("p", "", repo.moonshot);
+      const bridge = make("p", "repo-bridge", repo.bridge);
+      const meta = make("p", "card-meta", repo.repo);
+
+      card.append(visibility, title, moonshot, bridge, meta);
+
+      if (repo.url) {
+        const link = make("a", "card-link", "Open repo");
+        link.href = repo.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        card.appendChild(link);
+      } else {
+        card.appendChild(make("span", "repo-boundary", "Private/local boundary"));
+      }
+
       grid.appendChild(card);
     });
   }
@@ -497,6 +524,7 @@
   renderHeader();
   renderFooter();
   renderHomeBriefs();
+  renderRepoMoonshots();
   renderElementGrid();
   renderHomeLabPreview();
   renderBriefPage();

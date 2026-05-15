@@ -310,6 +310,7 @@ p {
 }
 
 .brief-grid,
+.repo-grid,
 .element-grid,
 .module-grid,
 .two-col,
@@ -325,7 +326,13 @@ p {
   margin-top: 2rem;
 }
 
+.repo-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
 .brief-card,
+.repo-card,
 .element-card,
 .module-card,
 .moonshot-panel,
@@ -346,6 +353,11 @@ p {
   min-height: 18rem;
 }
 
+.repo-card {
+  border-left: 4px solid var(--rare-earth);
+  min-height: 19rem;
+}
+
 .brief-card:nth-child(3n + 2) {
   border-top-color: var(--rutile);
 }
@@ -355,6 +367,7 @@ p {
 }
 
 .brief-card h3,
+.repo-card h3,
 .element-card h3,
 .module-card h3,
 .roadmap-card h3,
@@ -364,6 +377,7 @@ p {
 }
 
 .brief-card p:not(.eyebrow),
+.repo-card p,
 .element-card p,
 .roadmap-card p,
 .contact-panel p,
@@ -375,11 +389,31 @@ p {
 }
 
 .card-meta,
-.element-colour {
+.element-colour,
+.repo-status,
+.repo-boundary {
   color: var(--rutile) !important;
   font-family: var(--heading);
   font-size: 0.92rem;
   font-weight: 900;
+}
+
+.repo-status {
+  color: var(--rare-earth) !important;
+  margin: 0 0 0.8rem !important;
+  text-transform: uppercase;
+}
+
+.repo-bridge {
+  color: var(--quartz-soft) !important;
+}
+
+.repo-boundary {
+  border: 1px solid rgba(242, 193, 94, 0.28);
+  border-radius: 8px;
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.55rem 0.7rem;
 }
 
 .card-link,
@@ -423,6 +457,32 @@ p {
     linear-gradient(90deg, rgba(139, 233, 255, 0.12), rgba(242, 193, 94, 0.12), rgba(184, 145, 255, 0.14));
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
+}
+
+.image-story {
+  padding-bottom: 4rem;
+}
+
+.system-image {
+  margin: 2rem auto 0;
+  max-width: var(--max-width);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.system-image img {
+  aspect-ratio: 1672 / 941;
+  border: 1px solid rgba(220, 230, 234, 0.18);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  width: 100%;
+}
+
+.system-image figcaption {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.8rem;
 }
 
 .roadmap-grid {
@@ -870,6 +930,7 @@ p {
 
 @media (max-width: 980px) {
   .brief-grid,
+  .repo-grid,
   .element-grid,
   .roadmap-grid,
   .module-grid,
@@ -944,6 +1005,7 @@ p {
   }
 
   .brief-grid,
+  .repo-grid,
   .element-grid,
   .roadmap-grid,
   .module-grid,

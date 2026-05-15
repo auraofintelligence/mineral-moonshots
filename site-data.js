@@ -472,6 +472,240 @@ const SITE_BRIEFS = [
       "Let the main page stay simple while the deep pages hold the wildness."
     ],
     elements: ["SiO2", "REE", "FeTiO3"]
+  },
+  {
+    slug: "island-abundance",
+    url: "briefs/island-abundance.html",
+    title: "Island Abundance Matrix",
+    eyebrow: "Joyful Responsible Abundance",
+    material: "local businesses, events, artists, care, public art",
+    source: "Stradbroke Island Research Project.pdf",
+    deck: "A practical research doorway into Minjerribah after sand mining: local businesses, community groups, events, artists, visitors and public conversation becoming a regenerative civic matrix.",
+    brief: [
+      "The research project frames North Stradbroke Island / Minjerribah as a place moving from extraction toward joyful responsible abundance.",
+      "The useful public layer is not a top-down technology pitch. It is a map of businesses, events, organisations, artists and public touchpoints where conversation can start gently.",
+      "The moonshot is to let AI, public art, noticeboards, grants and local media help people coordinate without flattening culture, privacy or local authority."
+    ],
+    moonshot: "A whole-island abundance matrix where everyday events, local businesses, artists, visitors and community organisations become the living interface for resilience, culture and regenerative opportunity.",
+    modules: [
+      "Business and organisation directory as relationship map",
+      "Recurring events as public conversation gateways",
+      "Artists, makers and cultural hubs as imagination infrastructure",
+      "Visitor-facing notices that invite empathy rather than consumption"
+    ],
+    experiments: [
+      "Turn the research directory into a public map of practical doors and moonshot doors.",
+      "Use the noticeboard network image as the bridge between wall, tablet, phone, kiosk and fallback emergency modes.",
+      "Label every public pathway with consent, custodianship and plain-language boundaries."
+    ],
+    elements: ["SiO2", "Fe", "REE", "TiO2"]
+  },
+  {
+    slug: "alien-necklace",
+    url: "briefs/alien-necklace.html",
+    title: "Alien Necklace Alignment Film",
+    eyebrow: "Backyard Alignment",
+    material: "film, Aura, MoE, comedy, truth",
+    source: "AI Alignment CYOA For Film.md / Alien Necklace Sparks Philosophical Shift (1).md",
+    deck: "A plausible sci-fi film doorway where an alien necklace lands in a Gumpi backyard and turns AI alignment into comedy, aesthetics, ultimate truth and civic imagination.",
+    brief: [
+      "The story starts small: a meteorite, a backyard, a necklace and ordinary Australian banter instead of sterile AI doom.",
+      "The necklace works like a cosmic Mixture of Experts: it routes human fear, humour, beauty and longing into different possible futures.",
+      "The CYOA layer lets collaborators test choices, jokes, ethics and character arcs before pretending the story is settled."
+    ],
+    moonshot: "Make AI alignment emotionally legible by letting people play through truth, temptation, style, humour and love before the technology becomes a policy lecture.",
+    modules: [
+      "Aura Director prompt system for branching film scenes",
+      "Backyard discovery and vernacular resistance",
+      "Aesthetic acceptance as a different alignment route",
+      "Global film festival as civic imagination engine"
+    ],
+    experiments: [
+      "Create a playable CYOA prompt that asks the visitor what they do when the necklace wakes up.",
+      "Write one scene where humour lowers fear without trivialising the stakes.",
+      "Keep the fiction label visible so the necklace stays story technology, not a real claim."
+    ],
+    elements: ["REE", "SiO2", "ZrSiO4", "Fe"]
+  },
+  {
+    slug: "protopian-gambit",
+    url: "briefs/protopian-gambit.html",
+    title: "A Protopian Gambit",
+    eyebrow: "Culture As Protocol",
+    material: "music, hope, films, bridges, public courage",
+    source: "4th i C. infinity album A Protopian Gambit (lyrics).md",
+    deck: "A music-and-story doorway where the future is not sold as utopia. It is sung as a protopian risk: act from love, build better tools, and keep moving.",
+    brief: [
+      "The album material gives Mineral Moonshots a cultural signal rather than another planning note.",
+      "Songs can carry courage, grief, humour, bridges and public hope into places where diagrams cannot reach.",
+      "The protopian frame means better is enough to begin. The moonshot does not have to pretend perfection."
+    ],
+    moonshot: "A public culture engine where songs, films, local events and repo tools help people feel the future before they are asked to build it.",
+    modules: [
+      "I See Infinity music universe as emotional front door",
+      "Film prompts that make civilisation design playable",
+      "Public performances linked to noticeboards and market tables",
+      "Bridge language for people who do not think in code"
+    ],
+    experiments: [
+      "Link one song to one practical public action and one science-fiction question.",
+      "Create a small listening path through moonshot themes: love, courage, borders, forms and repair.",
+      "Use lyrics as invitations, not as claims that the system is already real."
+    ],
+    elements: ["SiO2", "REE", "Fe"]
+  },
+  {
+    slug: "cosmic-nexus",
+    url: "briefs/cosmic-nexus.html",
+    title: "Cosmic Nexus And Abyss Protocol",
+    eyebrow: "Wild Ideas, Data First",
+    material: "UAP, underwater civilisations, diplomacy, sensorium",
+    source: "Cosmic_Nexus_UAP,_AI,_AA,_R&D.md / What_if_UAP_are_Underwater_Civilizations.md / What_Would_You_Choose_2023.md",
+    deck: "A responsible fringe-science doorway that treats UAP, underwater civilisation and cosmic-risk material as thought experiments for data, diplomacy and resilience, not as belief demands.",
+    brief: [
+      "The Cosmic Nexus material mixes UAP research, ancient aeronautics, AI, spiritual science, travel, events and joyful responsible abundance.",
+      "The Abyss Protocol asks a high-strangeness question: what if underwater non-human intelligence were a geopolitical variable rather than entertainment?",
+      "The safe public move is to treat this as a simulation and diplomacy exercise: data first, panic last, and no pretending speculation is evidence."
+    ],
+    moonshot: "A planetary sensorium and diplomacy simulator where wild hypotheses are allowed into the room, then held to evidence, consent, calm governance and human decency.",
+    modules: [
+      "Open-minded research club with clear evidence standards",
+      "Hydro-acoustic and coastal sensor thought experiments",
+      "Xeno-diplomacy and Love U.N. simulation layer",
+      "Return-to-grounding protocol for fringe material"
+    ],
+    experiments: [
+      "Build a reality sorter for evidence, speculation, fiction and governance simulation.",
+      "Create a calm public page explaining how to explore UAP material without panic or certainty theatre.",
+      "Connect cosmic curiosity back to island resilience, ocean care and peaceful space commons."
+    ],
+    elements: ["ZrSiO4", "REE", "TiO2", "SiO2"]
+  },
+  {
+    slug: "loving-longevity",
+    url: "briefs/loving-longevity.html",
+    title: "Loving Longevity Commons",
+    eyebrow: "Warm Boundaries",
+    material: "microbiome, HBOT, relationships, consent, privacy",
+    source: "in-home farm and microbiome.md / Global_Group_Marriages___Extended.md / Grey Area Commons / Aura Health Twin",
+    deck: "A public-safe doorway for longevity, microbiome care and consensual adult relationship futures, with enough loving spice to feel alive and enough boundaries to stay responsible.",
+    brief: [
+      "The longevity material links in-home food systems, microbiome reflection, HBOT ideas and private-first health context.",
+      "The relationship material asks whether internet-connected abundance needs more flexible, honest and consent-based forms of love than default scripts allow.",
+      "The public version must stay warm, adult, privacy-preserving and non-medical: invitation first, pressure never."
+    ],
+    moonshot: "A loving abundance layer where people can explore health, intimacy, friendship, family, desire, care and long life without surrendering consent, privacy or evidence.",
+    modules: [
+      "Private-first health twin and microbiome reflection",
+      "Home biosphere and food-security experiments",
+      "Grey-area consent questions for adults",
+      "Relationship futures that value honesty, care and emotional safety"
+    ],
+    experiments: [
+      "Create public-safe cards that separate health ideas, adult relationship prompts, private notes and fiction.",
+      "Keep medical claims out until evidence and qualified professionals are involved.",
+      "Let the page feel warm and spicy without publishing private life or pressuring anyone into visibility."
+    ],
+    elements: ["SiO2", "REE", "Fe", "ZrSiO4"]
+  }
+];
+
+const REPO_MOONSHOTS = [
+  {
+    name: "Straddie Noticeboard Network",
+    repo: "auraofintelligence/straddie-noticeboard-network",
+    visibility: "Public prototype",
+    url: "https://github.com/auraofintelligence/straddie-noticeboard-network",
+    bridge: "The wall, tablet, phone, kiosk and fallback image becomes the real-world media spine for Mineral Moonshots.",
+    moonshot: "A public information commons that is useful on normal days and already trusted when the island needs emergency coordination."
+  },
+  {
+    name: "Strange But True",
+    repo: "auraofintelligence/strange-but-true",
+    visibility: "Public shelf",
+    url: "https://github.com/auraofintelligence/strange-but-true",
+    bridge: "The friendly front door for tech help, AI help, grant support, public downloads and local trust.",
+    moonshot: "A community support brand that lets practical help, creative work and civic prototypes share one visible doorway."
+  },
+  {
+    name: "Stradbroke Grants Lab",
+    repo: "auraofintelligence/stradbroke-grants-lab",
+    visibility: "Public prototype",
+    url: "https://github.com/auraofintelligence/stradbroke-grants-lab",
+    bridge: "Turns local ideas into grant-ready structures without pretending funding or approval already exists.",
+    moonshot: "A grant preparation engine where community imagination becomes evidence, budget, risk and staged delivery."
+  },
+  {
+    name: "Shared Table Initiative",
+    repo: "auraofintelligence/shared-table-initiative",
+    visibility: "Public prototype",
+    url: "https://github.com/auraofintelligence/shared-table-initiative",
+    bridge: "Starts with the simple question of who is already feeding, welcoming and caring for people here.",
+    moonshot: "A hospitality protocol for joyful responsible abundance, where food becomes social infrastructure."
+  },
+  {
+    name: "Grey Area Commons",
+    repo: "auraofintelligence/grey-area-commons",
+    visibility: "Public adult boundary",
+    url: "https://github.com/auraofintelligence/grey-area-commons",
+    bridge: "Keeps the loving spice consent-first, adult-only, privacy-preserving and gentle enough for real humans.",
+    moonshot: "A warmer relationship commons where adults can ask better questions before intimacy, pressure or confusion takes over."
+  },
+  {
+    name: "i C. infinity Music Universe",
+    repo: "auraofintelligence/i-C-infinity-music-universe",
+    visibility: "Public culture",
+    url: "https://github.com/auraofintelligence/i-C-infinity-music-universe",
+    bridge: "Carries the protopian mood through songs, albums, mythic language and public-facing story worlds.",
+    moonshot: "A music catalogue that works like emotional infrastructure for hope, repair and future courage."
+  },
+  {
+    name: "Agent Markdown Form Navigator",
+    repo: "auraofintelligence/agent-md-form-navigator",
+    visibility: "Public tool",
+    url: "https://github.com/auraofintelligence/agent-md-form-navigator",
+    bridge: "Shows how public forms can become agent-ready markdown without burying people in technical setup.",
+    moonshot: "A civic input layer where visitors can shape useful AI briefs from plain-language forms."
+  },
+  {
+    name: "Legal Memory Workbench",
+    repo: "auraofintelligence/legal-memory-workbench",
+    visibility: "Public workbench",
+    url: "https://github.com/auraofintelligence/legal-memory-workbench",
+    bridge: "Adds sober legal-memory boundaries to a site that otherwise wants to run toward the stars.",
+    moonshot: "A personal and project legal context layer that helps AI assist without pretending to be a lawyer."
+  },
+  {
+    name: "Amity Outdoor Fitness",
+    repo: "auraofintelligence/amity-outdoor-fitness-grant",
+    visibility: "Public proposal",
+    url: "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
+    bridge: "Grounds longevity and abundance in ordinary public movement, access, safety and outdoor activity.",
+    moonshot: "A health and confidence node where bodies, place, ageing and community care meet in daylight."
+  },
+  {
+    name: "Strange But True Field Library",
+    repo: "auraofintelligence/strange-but-true-field-library",
+    visibility: "Private workbench",
+    url: "",
+    bridge: "The deeper archive catalogue stays private while public-safe summaries can feed future moonshots.",
+    moonshot: "A field library that lets the whole repo garden remember itself without leaking private source material."
+  },
+  {
+    name: "Strange But True Travel Oracle",
+    repo: "auraofintelligence/strange-but-true-travel-oracle",
+    visibility: "Private workbench",
+    url: "",
+    bridge: "Keeps travel, hospitality, reciprocity and Shared Table logic in a private planning lane for now.",
+    moonshot: "A world-travel oracle where every destination begins with care, culture, reciprocity and practical safety."
+  },
+  {
+    name: "Aura Health Twin",
+    repo: "auraofintelligence/aura-health-twin",
+    visibility: "Private-first health",
+    url: "",
+    bridge: "Keeps longevity, health context and personal reflection private unless the person deliberately chooses otherwise.",
+    moonshot: "A longevity twin that supports life, limits and care without turning a person into a dashboard product."
   }
 ];
 
@@ -835,6 +1069,138 @@ const INTERACTIVE_LABS = {
         name: "Strange but True",
         practical: "Tech help, AI help, scam awareness, grant writing and local support.",
         moonshot: "The friendly front door into the whole intelligence ecosystem."
+      }
+    ]
+  },
+  "island-abundance": {
+    type: "archipelago-map",
+    title: "Island Abundance Doors",
+    deck: "Click a door to see how ordinary island life can become a practical prototype and a bigger abundance window.",
+    islands: [
+      {
+        name: "Local business",
+        practical: "Listings, offers, services, visitor guidance and plain-language support.",
+        moonshot: "A regenerative economy where local value is visible without turning community into an extraction funnel."
+      },
+      {
+        name: "Events",
+        practical: "Markets, music, sport, workshops and public notices as regular gathering points.",
+        moonshot: "Recurring events become the rhythm that trains civic imagination, resilience and shared abundance."
+      },
+      {
+        name: "Artists",
+        practical: "Public art, music, stories, making and visual culture as invitation.",
+        moonshot: "Culture becomes the user interface for a future people can feel before they can describe it."
+      },
+      {
+        name: "Care",
+        practical: "Food, transport, access, safety, welcome and patient digital help.",
+        moonshot: "A care economy where the boring acts of help become visible civic infrastructure."
+      },
+      {
+        name: "Visitors",
+        practical: "Kind orientation, ferry help, local etiquette, events and low-friction discovery.",
+        moonshot: "Tourism becomes conscious participation instead of drive-through consumption."
+      }
+    ]
+  },
+  "alien-necklace": {
+    type: "space-path",
+    title: "Alignment Scene Path",
+    deck: "Walk the necklace story from backyard comedy into public AI alignment without losing the human warmth.",
+    steps: [
+      {
+        name: "Backyard",
+        detail: "Begin with ordinary Gumpi life, jokes, awkwardness and a meteorite landing where no one asked for a cosmic upgrade."
+      },
+      {
+        name: "Temptation",
+        detail: "The necklace offers perfect routing, perfect intelligence and the seductive feeling of never being confused again."
+      },
+      {
+        name: "Aesthetic yes",
+        detail: "A different character meets the artifact through beauty, charm and social grace, changing the alignment route."
+      },
+      {
+        name: "Truth gate",
+        detail: "The Aura Twin asks people to face what they actually want, fear, hide and hope for."
+      },
+      {
+        name: "Civic festival",
+        detail: "The film world opens into a public CYOA where audiences test futures instead of being lectured about them."
+      }
+    ]
+  },
+  "protopian-gambit": {
+    type: "space-path",
+    title: "Culture-To-Action Path",
+    deck: "A five-step path from song and story into practical courage.",
+    steps: [
+      {
+        name: "Feel it",
+        detail: "Use music, humour and mythic language to let people feel hope before asking them to understand the system."
+      },
+      {
+        name: "Name it",
+        detail: "Give the future simple phrases: protopian gambit, joyful responsible abundance, love not spite, every border a bridge."
+      },
+      {
+        name: "Share it",
+        detail: "Carry the idea through performances, short films, noticeboards, downloads and ordinary conversations."
+      },
+      {
+        name: "Build it",
+        detail: "Attach each cultural signal to a small public action: form, grant, map, page, table, event or prototype."
+      },
+      {
+        name: "Repair it",
+        detail: "Let criticism improve the work. Protopian means better next, not perfect forever."
+      }
+    ]
+  },
+  "cosmic-nexus": {
+    type: "reality-stack",
+    title: "High-Strangeness Reality Sorter",
+    deck: "Sort wild material into evidence, simulation, fiction and governance before it gets mistaken for certainty.",
+    lanes: [
+      {
+        name: "Evidence",
+        items: ["sensor logs", "witness quality", "source chain", "ocean data", "astronomy data"]
+      },
+      {
+        name: "Simulation",
+        items: ["UAP scenario", "underwater civilisation hypothesis", "xeno-diplomacy", "risk model", "public calm drill"]
+      },
+      {
+        name: "Fiction",
+        items: ["film scene", "game quest", "alien necklace", "abyss protocol myth", "cosmic festival"]
+      },
+      {
+        name: "Governance",
+        items: ["do no panic", "data first", "peaceful space", "ocean care", "consent and law"]
+      }
+    ]
+  },
+  "loving-longevity": {
+    type: "reality-stack",
+    title: "Warm Boundary Sorter",
+    deck: "Keep longevity and loving spice alive by separating public prompts, private context, evidence and adult consent.",
+    lanes: [
+      {
+        name: "Public-safe",
+        items: ["food systems", "movement", "community care", "consent prompts", "relationship questions"]
+      },
+      {
+        name: "Private",
+        items: ["health notes", "desire", "medical records", "relationship details", "personal limits"]
+      },
+      {
+        name: "Evidence first",
+        items: ["nutrition", "microbiome", "HBOT claims", "longevity protocols", "clinical advice"]
+      },
+      {
+        name: "Fiction room",
+        items: ["abundant love futures", "long-life rituals", "group relationship worlds", "AI companion stories", "joyful spice"]
       }
     ]
   }

@@ -26,6 +26,7 @@
 
 html {
   background: var(--obsidian);
+  scroll-padding-top: 5rem;
   scroll-behavior: smooth;
 }
 
@@ -312,6 +313,11 @@ p {
 .brief-grid,
 .repo-grid,
 .element-grid,
+.element-atlas-grid,
+.ree-breakdown,
+.ree-ledger,
+.project-current-grid,
+.opportunity-grid,
 .module-grid,
 .experiment-grid,
 .depth-stack,
@@ -336,6 +342,11 @@ p {
 .brief-card,
 .repo-card,
 .element-card,
+.element-atlas-card,
+.material-detail-card,
+.ree-ledger-card,
+.project-current-card,
+.opportunity-card,
 .module-card,
 .experiment-card,
 .depth-card,
@@ -373,6 +384,11 @@ p {
 .brief-card h3,
 .repo-card h3,
 .element-card h3,
+.element-atlas-card h3,
+.material-detail-card h3,
+.ree-ledger-card h3,
+.project-current-card h3,
+.opportunity-card h3,
 .module-card h3,
 .experiment-card h3,
 .depth-card h3,
@@ -385,6 +401,11 @@ p {
 .brief-card p:not(.eyebrow),
 .repo-card p,
 .element-card p,
+.element-atlas-card p,
+.material-detail-card p,
+.ree-ledger-card p,
+.project-current-card p,
+.opportunity-card p,
 .depth-card p,
 .roadmap-card p,
 .contact-panel p,
@@ -443,6 +464,11 @@ p {
   margin-top: 2rem;
 }
 
+.element-atlas-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
 .element-card strong {
   color: var(--rutile);
   display: block;
@@ -454,6 +480,225 @@ p {
 
 .element-card.compact strong {
   font-size: 1.7rem;
+}
+
+.element-atlas-card,
+.ree-ledger-card {
+  border-top: 4px solid var(--zircon);
+}
+
+.element-atlas-card:nth-child(3n + 2),
+.ree-ledger-card:nth-child(3n + 2) {
+  border-top-color: var(--rare-earth);
+}
+
+.element-atlas-card:nth-child(3n),
+.ree-ledger-card:nth-child(3n) {
+  border-top-color: var(--rutile);
+}
+
+.element-atlas-card strong,
+.ree-ledger-card strong {
+  color: var(--rutile);
+  display: block;
+  font-family: var(--heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.ree-breakdown {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.ree-ledger {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.compact-heading {
+  margin-top: 3rem;
+}
+
+.material-detail-card {
+  border-left: 4px solid var(--rutile);
+}
+
+.material-detail-card span {
+  align-items: center;
+  background: rgba(242, 193, 94, 0.12);
+  border: 1px solid rgba(242, 193, 94, 0.32);
+  border-radius: 999px;
+  color: var(--rutile);
+  display: inline-flex;
+  font-family: var(--heading);
+  font-weight: 900;
+  height: 2.35rem;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  min-width: 2.35rem;
+  padding: 0 0.65rem;
+}
+
+.opportunity-grid,
+.project-current-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.opportunity-card,
+.project-current-card {
+  border-top: 4px solid var(--rare-earth);
+}
+
+.opportunity-card:nth-child(2n),
+.project-current-card:nth-child(2n) {
+  border-top-color: var(--rutile);
+}
+
+.project-current-build,
+.element-local-role,
+.biology-bridge {
+  color: var(--quartz-soft) !important;
+}
+
+.biology-bridge {
+  border-left: 3px solid var(--rare-earth);
+  margin-top: 1rem !important;
+  padding-left: 0.85rem;
+}
+
+.periodic-explorer {
+  align-items: start;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.38fr);
+  margin-top: 2rem;
+}
+
+.periodic-table-wrap {
+  overflow-x: auto;
+  padding-bottom: 0.8rem;
+}
+
+.periodic-table {
+  display: grid;
+  gap: 0.34rem;
+  grid-auto-rows: minmax(4.1rem, auto);
+  grid-template-columns: repeat(18, minmax(3.4rem, 1fr));
+  min-width: 66rem;
+}
+
+.periodic-tile {
+  background: rgba(20, 28, 34, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--quartz);
+  cursor: pointer;
+  display: grid;
+  font-family: var(--body);
+  min-height: 4.1rem;
+  padding: 0.42rem;
+  text-align: left;
+  transition: border-color 160ms ease, transform 160ms ease, background 160ms ease;
+}
+
+.periodic-tile:hover,
+.periodic-tile:focus,
+.periodic-tile.is-active {
+  background: rgba(125, 240, 194, 0.12);
+  border-color: var(--rare-earth);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.periodic-tile strong {
+  color: var(--quartz);
+  font-family: var(--heading);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.atomic-number,
+.element-name {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.lane-heavy-mineral {
+  border-color: rgba(242, 193, 94, 0.48);
+}
+
+.lane-rare-earth,
+.lane-rare-earth-side {
+  border-color: rgba(184, 145, 255, 0.55);
+}
+
+.lane-stewardship {
+  border-color: rgba(200, 92, 58, 0.7);
+}
+
+.lane-biology-ready {
+  border-style: dashed;
+  opacity: 0.78;
+}
+
+.periodic-detail {
+  background: var(--panel);
+  border: 1px solid rgba(125, 240, 194, 0.28);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  position: sticky;
+  top: 5.8rem;
+}
+
+.periodic-detail h3 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  max-width: none;
+}
+
+.periodic-detail p:not(.eyebrow) {
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+.periodic-caption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.property-grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1rem 0 0;
+}
+
+.property-grid div {
+  background: rgba(7, 16, 19, 0.5);
+  border: 1px solid rgba(220, 230, 234, 0.12);
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.property-grid dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.property-grid dd {
+  color: var(--quartz-soft);
+  font-family: var(--heading);
+  font-weight: 900;
+  margin: 0.18rem 0 0;
+  overflow-wrap: anywhere;
 }
 
 .visual-band {
@@ -496,7 +741,7 @@ p {
 }
 
 .visitor-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin-top: 2rem;
 }
 
@@ -1091,6 +1336,11 @@ p {
   .brief-grid,
   .repo-grid,
   .element-grid,
+  .element-atlas-grid,
+  .ree-breakdown,
+  .ree-ledger,
+  .project-current-grid,
+  .opportunity-grid,
   .roadmap-grid,
   .module-grid,
   .experiment-grid,
@@ -1102,6 +1352,7 @@ p {
   }
 
   .two-col,
+  .periodic-explorer,
   .dial-grid,
   .layer-lab,
   .kiosk-lab,
@@ -1180,6 +1431,11 @@ p {
   .brief-grid,
   .repo-grid,
   .element-grid,
+  .element-atlas-grid,
+  .ree-breakdown,
+  .ree-ledger,
+  .project-current-grid,
+  .opportunity-grid,
   .roadmap-grid,
   .module-grid,
   .experiment-grid,
@@ -1202,5 +1458,13 @@ p {
 
   .button {
     width: 100%;
+  }
+
+  .periodic-detail {
+    position: static;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
   }
 }

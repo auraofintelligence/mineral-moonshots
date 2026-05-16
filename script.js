@@ -1,11 +1,13 @@
 (function () {
   const isBriefPage = document.body.dataset.page;
-  const prefix = location.pathname.replace(/\\/g, "/").includes("/briefs/") ? "../" : "";
+  const pathName = location.pathname.replace(/\\/g, "/");
+  const prefix = pathName.includes("/briefs/") || pathName.includes("/elements/") ? "../" : "";
 
   const routes = [
     { label: "Home", href: "index.html" },
     { label: "Moonshots", href: "moonshots.html" },
     { label: "Materials", href: "materials.html" },
+    { label: "Elements", href: "elements.html" },
     { label: "Build Path", href: "build-path.html" },
     { label: "Worlds", href: "worlds.html" },
     { label: "Labs", href: "labs.html" },
@@ -170,6 +172,255 @@
       card.appendChild(make("p", "", item.role));
       grid.appendChild(card);
     });
+  }
+
+  function getElementAtlas() {
+    return typeof ELEMENT_ATLAS === "undefined" ? [] : ELEMENT_ATLAS;
+  }
+
+  function getElementBySymbol(symbol) {
+    return getElementAtlas().find((item) => item.symbol === symbol);
+  }
+
+  function elementPageHref(element) {
+    if (!element || !element.hasPage || !element.slug) return "";
+    return prefix + "elements/" + element.slug + ".html";
+  }
+
+  function makePropertyRows(element) {
+    const rows = [
+      ["Atomic number", element.atomicNumber],
+      ["Atomic mass", element.atomicMass],
+      ["Category", element.category],
+      ["Phase", element.phase],
+      ["Period", element.period],
+      ["Group", element.group]
+    ];
+    const grid = make("dl", "property-grid");
+    rows.forEach(([label, value]) => {
+      const wrap = make("div", "");
+      wrap.appendChild(make("dt", "", label));
+      wrap.appendChild(make("dd", "", String(value)));
+      grid.appendChild(wrap);
+    });
+    return grid;
+  }
+
+  function renderPeriodicExplorer() {
+    const mounts = document.querySelectorAll("[data-periodic-table]");
+    if (!mounts.length) return;
+    const elements = getElementAtlas();
+    if (!elements.length) return;
+
+    mounts.forEach((mount) => {
+      mount.innerHTML = "";
+      const shell = make("div", "periodic-explorer");
+      const tableWrap = make("div", "periodic-table-wrap");
+      const table = make("div", "periodic-table");
+      const detail = make("article", "periodic-detail");
+      const caption = make("p", "periodic-caption", "Highlighted elements are local sand, coastal companion, rare-earth, stewardship or future biology bridge elements. Empty spaces are left open so the atlas can grow without changing shape.");
+
+      elements.forEach((element) => {
+        const tile = make("button", "periodic-tile lane-" + element.lane);
+        tile.type = "button";
+        tile.style.gridColumn = String(element.tableColumn);
+        tile.style.gridRow = String(element.tableRow);
+        tile.dataset.symbol = element.symbol;
+        tile.setAttribute("aria-label", element.name + " properties");
+        tile.appendChild(make("span", "atomic-number", String(element.atomicNumber)));
+        tile.appendChild(make("strong", "", element.symbol));
+        tile.appendChild(make("span", "element-name", element.name));
+        tile.addEventListener("click", () => setActive(element.symbol));
+        table.appendChild(tile);
+      });
+
+      function setActive(symbol) {
+        const element = getElementBySymbol(symbol) || elements[0];
+        table.querySelectorAll(".periodic-tile").forEach((tile) => {
+          tile.classList.toggle("is-active", tile.dataset.symbol === element.symbol);
+        });
+
+        detail.innerHTML = "";
+        detail.appendChild(make("p", "eyebrow", element.lane.replaceAll("-", " ")));
+        const heading = make("h3", "", element.name + " (" + element.symbol + ")");
+        detail.appendChild(heading);
+        detail.appendChild(make("p", "card-meta", element.stream));
+        detail.appendChild(makePropertyRows(element));
+        detail.appendChild(make("p", "", element.summary));
+        detail.appendChild(make("p", "element-local-role", element.localRole));
+        if (element.biologyBridge) {
+          detail.appendChild(make("p", "biology-bridge", "Biology bridge: " + element.biologyBridge));
+        }
+        const href = elementPageHref(element);
+        if (href) {
+          const link = make("a", "card-link", "Open " + element.name + " page");
+          link.href = href;
+          detail.appendChild(link);
+        }
+      }
+
+      tableWrap.append(table, caption);
+      shell.append(tableWrap, detail);
+      mount.appendChild(shell);
+      setActive(mount.dataset.defaultElement || "Si");
+    });
+  }
+
+  function renderReeBreakdown() {
+    const grid = document.querySelector("[data-ree-breakdown]");
+    if (!grid || typeof REE_BREAKDOWN === "undefined") return;
+    REE_BREAKDOWN.forEach((item, index) => {
+      const card = make("article", "material-detail-card");
+      card.appendChild(make("span", "", String(index + 1).padStart(2, "0")));
+      card.appendChild(make("h3", "", item.title));
+      card.appendChild(make("p", "card-meta", item.symbols));
+      card.appendChild(make("p", "", item.story));
+      grid.appendChild(card);
+    });
+  }
+
+  function renderReeConstituents() {
+    const grid = document.querySelector("[data-ree-constituents]");
+    if (!grid || typeof REE_CONSTITUENTS === "undefined") return;
+    REE_CONSTITUENTS.forEach((item) => {
+      const element = getElementBySymbol(item.symbol);
+      const card = make("article", "ree-ledger-card");
+      card.appendChild(make("strong", "", item.symbol));
+      card.appendChild(make("h3", "", item.name));
+      card.appendChild(make("p", "card-meta", item.material));
+      card.appendChild(make("p", "", item.opportunity));
+      const href = elementPageHref(element);
+      if (href) {
+        const link = make("a", "card-link", "Open element");
+        link.href = href;
+        card.appendChild(link);
+      }
+      grid.appendChild(card);
+    });
+  }
+
+  function renderElementAtlasCards() {
+    const grid = document.querySelector("[data-element-card-grid]");
+    if (!grid) return;
+    getElementAtlas().filter((element) => element.hasPage).forEach((element) => {
+      const card = make("article", "element-atlas-card");
+      card.appendChild(make("strong", "", element.symbol));
+      card.appendChild(make("h3", "", element.name));
+      card.appendChild(make("p", "card-meta", element.stream));
+      card.appendChild(make("p", "", element.summary));
+      const link = make("a", "card-link", "Open page");
+      link.href = elementPageHref(element);
+      card.appendChild(link);
+      grid.appendChild(card);
+    });
+  }
+
+  function renderProjectCurrents() {
+    const grids = document.querySelectorAll("[data-project-currents]");
+    if (!grids.length || typeof PROJECT_CURRENTS === "undefined") return;
+    grids.forEach((grid) => {
+      const lanes = new Set((grid.dataset.projectCurrents || "").split(",").map((item) => item.trim()).filter(Boolean));
+      PROJECT_CURRENTS.filter((item) => lanes.has(item.lane)).forEach((item) => {
+        const card = make("article", "project-current-card");
+        card.appendChild(make("p", "eyebrow", item.eyebrow));
+        card.appendChild(make("h3", "", item.title));
+        card.appendChild(make("p", "", item.narrative));
+        card.appendChild(make("p", "project-current-build", item.build));
+        if (item.href) {
+          const link = make("a", "card-link", "Follow thread");
+          link.href = prefix + item.href;
+          card.appendChild(link);
+        }
+        grid.appendChild(card);
+      });
+    });
+  }
+
+  function renderAiOpportunities() {
+    const grid = document.querySelector("[data-ai-opportunities]");
+    if (!grid || typeof AI_DISCOVERY_OPPORTUNITIES === "undefined") return;
+    AI_DISCOVERY_OPPORTUNITIES.forEach((item) => {
+      const card = make("article", "opportunity-card");
+      card.appendChild(make("p", "eyebrow", "Discovery tool"));
+      card.appendChild(make("h3", "", item.name));
+      card.appendChild(make("p", "card-meta", item.source));
+      card.appendChild(make("p", "", item.opportunity));
+      card.appendChild(make("p", "project-current-build", item.build));
+      if (item.href && item.href !== "materials.html") {
+        const link = make("a", "card-link", "Research anchor");
+        link.href = item.href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        card.appendChild(link);
+      }
+      grid.appendChild(card);
+    });
+  }
+
+  function renderElementPage() {
+    const symbol = document.body.dataset.elementPage;
+    if (!symbol) return;
+    const element = getElementBySymbol(symbol);
+    if (!element) return;
+
+    document.title = element.name + " (" + element.symbol + ") | Mineral Moonshots";
+    const hero = document.querySelector("[data-element-hero]");
+    if (hero) {
+      hero.querySelector("[data-eyebrow]").textContent = element.lane.replaceAll("-", " ");
+      hero.querySelector("[data-title]").textContent = element.name;
+      hero.querySelector("[data-deck]").textContent = element.summary;
+      hero.querySelector("[data-source]").textContent = element.stream;
+    }
+
+    const symbolNode = document.querySelector("[data-element-symbol]");
+    if (symbolNode) symbolNode.textContent = element.symbol;
+
+    const story = document.querySelector("[data-element-story]");
+    if (story) {
+      story.appendChild(make("p", "", element.localRole));
+      story.appendChild(make("p", "", "The positive action is to turn this element into local learning, repair, stewardship and carefully staged capability, not another raw-material export chase."));
+    }
+
+    const properties = document.querySelector("[data-element-properties]");
+    if (properties) properties.appendChild(makePropertyRows(element));
+
+    const opportunities = document.querySelector("[data-element-opportunities]");
+    if (opportunities) {
+      element.opportunities.forEach((opportunity, index) => {
+        const card = make("article", "experiment-card");
+        card.appendChild(make("span", "", String(index + 1).padStart(2, "0")));
+        card.appendChild(make("h3", "", opportunity.title));
+        card.appendChild(make("p", "", opportunity.body));
+        opportunities.appendChild(card);
+      });
+    }
+
+    const stewardship = document.querySelector("[data-element-stewardship]");
+    if (stewardship) {
+      stewardship.appendChild(make("p", "", element.stewardship));
+      if (element.biologyBridge) stewardship.appendChild(make("p", "biology-bridge", "Later biology link: " + element.biologyBridge));
+    }
+
+    const pager = document.querySelector("[data-element-pager]");
+    if (pager) {
+      const pages = getElementAtlas().filter((item) => item.hasPage);
+      const index = pages.findIndex((item) => item.symbol === element.symbol);
+      const previous = pages[(index - 1 + pages.length) % pages.length];
+      const next = pages[(index + 1) % pages.length];
+      const links = make("div", "pager-links");
+      [
+        ["Previous", previous],
+        ["Next", next]
+      ].forEach(([label, item]) => {
+        const link = make("a", "pager-link");
+        link.href = "../elements/" + item.slug + ".html";
+        link.appendChild(make("span", "", label));
+        link.appendChild(make("strong", "", item.name + " (" + item.symbol + ")"));
+        link.appendChild(make("p", "", item.stream));
+        links.appendChild(link);
+      });
+      pager.appendChild(links);
+    }
   }
 
   function renderHomeLabPreview() {
@@ -692,8 +943,15 @@
   renderHomeBriefs();
   renderLocalProjects();
   renderElementGrid();
+  renderPeriodicExplorer();
+  renderReeBreakdown();
+  renderReeConstituents();
+  renderElementAtlasCards();
+  renderProjectCurrents();
+  renderAiOpportunities();
   renderHomeLabPreview();
   renderBriefPage();
+  renderElementPage();
   renderBackToTop();
   scrollToHashTarget();
 })();

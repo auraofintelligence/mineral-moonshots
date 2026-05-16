@@ -25,15 +25,630 @@ const MINERAL_PALETTE = [
   },
   {
     symbol: "REE",
-    name: "Monazite stream",
+    name: "Rare-earth stream",
     colour: "Rare-earth violet",
-    role: "Magnets, sensors, advanced motors and the hard ethical question of how to handle strategic materials cleanly."
+    role: "Not one material: lanthanides plus yttrium and sometimes scandium, with magnet, sensor, phosphor, ceramic and separation questions."
   },
   {
     symbol: "Fe",
     name: "Iron",
     colour: "Oxide red",
     role: "Structural contrast, magnetic systems, grounding colour and a reminder that civilisation still needs honest metallurgy."
+  }
+];
+
+const REE_BREAKDOWN = [
+  {
+    title: "Light rare earths",
+    symbols: "La, Ce, Pr, Nd, Sm, Eu",
+    story: "Lanthanum and cerium carry glass, catalyst and polishing stories; praseodymium and neodymium move toward strong magnets; samarium and europium point toward specialised magnets, phosphors and sensing. Promethium is named here as a boundary because it is radioactive and not a practical natural mineral-sands stream."
+  },
+  {
+    title: "Heavy rare earths and yttrium",
+    symbols: "Y, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu",
+    story: "Yttrium and the heavier lanthanides carry the high-value edge: heat-tolerant magnets, lasers, phosphors, medical and research imaging, ceramics, microwave devices and precision sensing. These are tiny fractions with big separation and stewardship questions."
+  },
+  {
+    title: "Scandium branch",
+    symbols: "Sc",
+    story: "Scandium is often grouped with rare earths because of similar chemistry, but it is not a lanthanide. The opportunity is lightweight aluminium-scandium alloys, solid-oxide fuel-cell materials, ceramics and aerospace thinking, not a casual add-on."
+  },
+  {
+    title: "Magnet quartet",
+    symbols: "Nd, Pr, Dy, Tb",
+    story: "Neodymium and praseodymium are the permanent-magnet workhorses. Dysprosium and terbium can help magnets hold performance at higher temperatures. This is the motors, generators, actuators, robotics and energy-hardware lane."
+  },
+  {
+    title: "Clean separation and recycling",
+    symbols: "Monazite, xenotime, bastnaesite style questions",
+    story: "A rare-earth stream is only useful if separation, radioactivity, tailings, water, worker safety, public consent and recycling are part of the design from the beginning. The moonshot is clean materials intelligence, not faster extraction theatre."
+  }
+];
+
+const REE_CONSTITUENTS = [
+  {
+    symbol: "La",
+    name: "Lanthanum",
+    material: "Lanthanum oxide / metal",
+    opportunity: "Optical glass, catalysts, hydrogen storage alloys and battery-material literacy."
+  },
+  {
+    symbol: "Ce",
+    name: "Cerium",
+    material: "Ceria / cerium oxide",
+    opportunity: "Glass polishing, catalysts, oxygen-storage ceramics and cleaner workshop chemistry."
+  },
+  {
+    symbol: "Pr",
+    name: "Praseodymium",
+    material: "Pr oxide / NdPr blends",
+    opportunity: "Magnet alloys, green glass, ceramics and small-motor supply-chain questions."
+  },
+  {
+    symbol: "Nd",
+    name: "Neodymium",
+    material: "Neodymium oxide / metal",
+    opportunity: "Permanent magnets for motors, generators, speakers, actuators and robotics."
+  },
+  {
+    symbol: "Pm",
+    name: "Promethium",
+    material: "Radioactive isotope stream",
+    opportunity: "Research boundary only: not an ordinary natural recovery target."
+  },
+  {
+    symbol: "Sm",
+    name: "Samarium",
+    material: "Samarium oxide / SmCo alloys",
+    opportunity: "High-temperature magnets, sensors and specialised aerospace-style components."
+  },
+  {
+    symbol: "Eu",
+    name: "Europium",
+    material: "Europium oxide",
+    opportunity: "Red and blue phosphors, anti-counterfeiting marks and precision display history."
+  },
+  {
+    symbol: "Gd",
+    name: "Gadolinium",
+    material: "Gadolinium oxide",
+    opportunity: "Magnetic refrigeration research, neutron capture, imaging contrast and sensor work."
+  },
+  {
+    symbol: "Tb",
+    name: "Terbium",
+    material: "Terbium oxide",
+    opportunity: "Green phosphors, high-temperature magnet additives and magnetostrictive devices."
+  },
+  {
+    symbol: "Dy",
+    name: "Dysprosium",
+    material: "Dysprosium oxide",
+    opportunity: "Heat-tolerant magnets for hard-working motors, generators and underground machines."
+  },
+  {
+    symbol: "Ho",
+    name: "Holmium",
+    material: "Holmium oxide",
+    opportunity: "Lasers, magnetic research and niche shielding or control-material questions."
+  },
+  {
+    symbol: "Er",
+    name: "Erbium",
+    material: "Erbium oxide",
+    opportunity: "Fibre amplifiers, lasers, glass colour and long-distance communications."
+  },
+  {
+    symbol: "Tm",
+    name: "Thulium",
+    material: "Thulium oxide",
+    opportunity: "Specialised lasers, portable sensing research and careful isotope boundaries."
+  },
+  {
+    symbol: "Yb",
+    name: "Ytterbium",
+    material: "Ytterbium oxide",
+    opportunity: "Fibre lasers, atomic-clock research, quantum devices and precision measurement."
+  },
+  {
+    symbol: "Lu",
+    name: "Lutetium",
+    material: "Lutetium oxide / scintillators",
+    opportunity: "Detector crystals, catalysts, medical-research isotopes and high-value lab materials."
+  },
+  {
+    symbol: "Y",
+    name: "Yttrium",
+    material: "Yttria / yttria-stabilised zirconia",
+    opportunity: "Ceramics, phosphors, lasers, solid-oxide fuel cells and high-temperature components."
+  },
+  {
+    symbol: "Sc",
+    name: "Scandium",
+    material: "Scandium oxide / Al-Sc alloys",
+    opportunity: "Light alloys, solid-oxide fuel-cell materials, ceramics and aerospace build logic."
+  }
+];
+
+const AI_DISCOVERY_OPPORTUNITIES = [
+  {
+    name: "GENESIS Mission interface",
+    source: "U.S. Department of Energy Genesis Mission",
+    href: "https://www.energy.gov/genesis",
+    opportunity: "Treat large AI-science platforms as research weather, not as a master. The local question becomes: which mineral, energy, biology and sensor experiments are worth preparing well enough to plug into serious labs?",
+    build: "First build: a sovereign opportunity docket where each proposed experiment records the public good, data boundary, ecological risk, lab partner, funding path, consent gate and failure record."
+  },
+  {
+    name: "GNoME crystal atlas",
+    source: "Google DeepMind Graph Networks for Materials Exploration",
+    href: "https://deepmind.google/blog/millions-of-new-materials-discovered-with-deep-learning/",
+    opportunity: "Use AI-predicted stable crystals as a research atlas for batteries, solid electrolytes, magnet chemistries, ceramics, semiconductors, superconductors and rare-earth oxide combinations.",
+    build: "First build: a shortlist board that maps mineral-sands-adjacent chemistries to public benefit, required lab partners, synthesis difficulty, toxicity, recyclability and underground-use relevance."
+  },
+  {
+    name: "AlphaFold biology layer",
+    source: "Google DeepMind / EMBL-EBI AlphaFold Database and AlphaFold Server",
+    href: "https://deepmind.google/science/alphafold/",
+    opportunity: "Use protein-structure prediction to explore enzymes, microbes, fungi, algae and biomineralisation pathways for food systems, bioremediation, waste processing, microbiome literacy and living materials.",
+    build: "First build: a non-medical research map linking proteins and organisms to plastic breakdown, soil health, oyster-crete style biomineralisation, in-home farms and environmental monitoring."
+  },
+  {
+    name: "Closed-loop discovery studio",
+    source: "GNoME + AlphaFold + GENESIS + local lab partners",
+    href: "materials.html",
+    opportunity: "Connect inorganic crystals, biomolecules and simulation into one calm discovery loop: predict, rank, simulate, prototype, test, recycle and publish what failed as well as what worked.",
+    build: "First build: a public opportunity matrix for joyful responsible abundance: cleaner energy storage, repairable devices, low-footprint food, safer materials, better sensors and stronger stewardship."
+  }
+];
+
+const ELEMENT_PROPERTIES = {
+  H: { atomicNumber: 1, name: "Hydrogen", atomicMass: "1.008", category: "Reactive nonmetal", phase: "Gas", group: 1, period: 1, tableColumn: 1, tableRow: 1 },
+  C: { atomicNumber: 6, name: "Carbon", atomicMass: "12.011", category: "Reactive nonmetal", phase: "Solid", group: 14, period: 2, tableColumn: 14, tableRow: 2 },
+  N: { atomicNumber: 7, name: "Nitrogen", atomicMass: "14.007", category: "Reactive nonmetal", phase: "Gas", group: 15, period: 2, tableColumn: 15, tableRow: 2 },
+  O: { atomicNumber: 8, name: "Oxygen", atomicMass: "15.999", category: "Reactive nonmetal", phase: "Gas", group: 16, period: 2, tableColumn: 16, tableRow: 2 },
+  Na: { atomicNumber: 11, name: "Sodium", atomicMass: "22.990", category: "Alkali metal", phase: "Solid", group: 1, period: 3, tableColumn: 1, tableRow: 3 },
+  Mg: { atomicNumber: 12, name: "Magnesium", atomicMass: "24.305", category: "Alkaline earth metal", phase: "Solid", group: 2, period: 3, tableColumn: 2, tableRow: 3 },
+  Al: { atomicNumber: 13, name: "Aluminium", atomicMass: "26.982", category: "Post-transition metal", phase: "Solid", group: 13, period: 3, tableColumn: 13, tableRow: 3 },
+  Si: { atomicNumber: 14, name: "Silicon", atomicMass: "28.085", category: "Metalloid", phase: "Solid", group: 14, period: 3, tableColumn: 14, tableRow: 3 },
+  P: { atomicNumber: 15, name: "Phosphorus", atomicMass: "30.974", category: "Reactive nonmetal", phase: "Solid", group: 15, period: 3, tableColumn: 15, tableRow: 3 },
+  K: { atomicNumber: 19, name: "Potassium", atomicMass: "39.098", category: "Alkali metal", phase: "Solid", group: 1, period: 4, tableColumn: 1, tableRow: 4 },
+  Ca: { atomicNumber: 20, name: "Calcium", atomicMass: "40.078", category: "Alkaline earth metal", phase: "Solid", group: 2, period: 4, tableColumn: 2, tableRow: 4 },
+  Sc: { atomicNumber: 21, name: "Scandium", atomicMass: "44.956", category: "Transition metal", phase: "Solid", group: 3, period: 4, tableColumn: 3, tableRow: 4 },
+  Ti: { atomicNumber: 22, name: "Titanium", atomicMass: "47.867", category: "Transition metal", phase: "Solid", group: 4, period: 4, tableColumn: 4, tableRow: 4 },
+  Fe: { atomicNumber: 26, name: "Iron", atomicMass: "55.845", category: "Transition metal", phase: "Solid", group: 8, period: 4, tableColumn: 8, tableRow: 4 },
+  Y: { atomicNumber: 39, name: "Yttrium", atomicMass: "88.906", category: "Transition metal", phase: "Solid", group: 3, period: 5, tableColumn: 3, tableRow: 5 },
+  Zr: { atomicNumber: 40, name: "Zirconium", atomicMass: "91.224", category: "Transition metal", phase: "Solid", group: 4, period: 5, tableColumn: 4, tableRow: 5 },
+  La: { atomicNumber: 57, name: "Lanthanum", atomicMass: "138.905", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 3, tableRow: 8 },
+  Ce: { atomicNumber: 58, name: "Cerium", atomicMass: "140.116", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 4, tableRow: 8 },
+  Pr: { atomicNumber: 59, name: "Praseodymium", atomicMass: "140.908", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 5, tableRow: 8 },
+  Nd: { atomicNumber: 60, name: "Neodymium", atomicMass: "144.242", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 6, tableRow: 8 },
+  Pm: { atomicNumber: 61, name: "Promethium", atomicMass: "(145)", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 7, tableRow: 8 },
+  Sm: { atomicNumber: 62, name: "Samarium", atomicMass: "150.36", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 8, tableRow: 8 },
+  Eu: { atomicNumber: 63, name: "Europium", atomicMass: "151.964", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 9, tableRow: 8 },
+  Gd: { atomicNumber: 64, name: "Gadolinium", atomicMass: "157.25", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 10, tableRow: 8 },
+  Tb: { atomicNumber: 65, name: "Terbium", atomicMass: "158.925", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 11, tableRow: 8 },
+  Dy: { atomicNumber: 66, name: "Dysprosium", atomicMass: "162.500", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 12, tableRow: 8 },
+  Ho: { atomicNumber: 67, name: "Holmium", atomicMass: "164.930", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 13, tableRow: 8 },
+  Er: { atomicNumber: 68, name: "Erbium", atomicMass: "167.259", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 14, tableRow: 8 },
+  Tm: { atomicNumber: 69, name: "Thulium", atomicMass: "168.934", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 15, tableRow: 8 },
+  Yb: { atomicNumber: 70, name: "Ytterbium", atomicMass: "173.045", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 16, tableRow: 8 },
+  Lu: { atomicNumber: 71, name: "Lutetium", atomicMass: "174.967", category: "Lanthanide", phase: "Solid", group: "lanthanide", period: 6, tableColumn: 17, tableRow: 8 },
+  Hf: { atomicNumber: 72, name: "Hafnium", atomicMass: "178.486", category: "Transition metal", phase: "Solid", group: 4, period: 6, tableColumn: 4, tableRow: 6 },
+  Th: { atomicNumber: 90, name: "Thorium", atomicMass: "232.038", category: "Actinide", phase: "Solid", group: "actinide", period: 7, tableColumn: 4, tableRow: 9 },
+  U: { atomicNumber: 92, name: "Uranium", atomicMass: "238.029", category: "Actinide", phase: "Solid", group: "actinide", period: 7, tableColumn: 6, tableRow: 9 }
+};
+
+const ELEMENT_SLUGS = {
+  O: "oxygen",
+  Na: "sodium",
+  Mg: "magnesium",
+  Al: "aluminium",
+  Si: "silicon",
+  P: "phosphorus",
+  K: "potassium",
+  Ca: "calcium",
+  Sc: "scandium",
+  Ti: "titanium",
+  Fe: "iron",
+  Y: "yttrium",
+  Zr: "zirconium",
+  La: "lanthanum",
+  Ce: "cerium",
+  Pr: "praseodymium",
+  Nd: "neodymium",
+  Pm: "promethium",
+  Sm: "samarium",
+  Eu: "europium",
+  Gd: "gadolinium",
+  Tb: "terbium",
+  Dy: "dysprosium",
+  Ho: "holmium",
+  Er: "erbium",
+  Tm: "thulium",
+  Yb: "ytterbium",
+  Lu: "lutetium",
+  Hf: "hafnium",
+  Th: "thorium",
+  U: "uranium"
+};
+
+const MAJOR_SAND_ELEMENTS = [
+  {
+    symbol: "H",
+    lane: "biology-ready",
+    hasPage: false,
+    stream: "Water, future biology and hydrogen chemistry",
+    material: "Water-bound hydrogen",
+    summary: "Hydrogen belongs in the future biology and energy layer rather than the mineral-sands extraction lane.",
+    localRole: "It keeps the periodic table reusable for later protein, enzyme, microbiome, water and fuel-cell stories.",
+    opportunities: [
+      { title: "Future biology bridge", body: "Later pages can connect hydrogen to water, amino acids, enzymes, pH, membranes and living material systems." }
+    ],
+    stewardship: "Do not confuse future hydrogen chemistry with a local sand resource claim.",
+    biologyBridge: "Ready for the biology atlas."
+  },
+  {
+    symbol: "C",
+    lane: "biology-ready",
+    hasPage: false,
+    stream: "Shell, carbonate, biochar and future biology",
+    material: "Carbonates and living carbon",
+    summary: "Carbon is the bridge from sand to shell, oyster-crete, food systems, biochar and later biological design.",
+    localRole: "It lets the same table hold future biomineralisation and microbiome pages without rebuilding the interface.",
+    opportunities: [
+      { title: "Future biology bridge", body: "Later pages can connect carbon to proteins, carbohydrates, fats, mycelium, algae and carbonate structures." }
+    ],
+    stewardship: "Keep carbon claims specific: storage, cycling, food and carbonate chemistry are different stories.",
+    biologyBridge: "Ready for the biology atlas."
+  },
+  {
+    symbol: "N",
+    lane: "biology-ready",
+    hasPage: false,
+    stream: "Future biology and soil systems",
+    material: "Nitrogen in proteins and nutrients",
+    summary: "Nitrogen is not a mineral-sands prize. It is a future biology layer for proteins, soils, algae and food systems.",
+    localRole: "It stays in the table now so biology can later use the same explorer.",
+    opportunities: [
+      { title: "Future biology bridge", body: "Later pages can connect nitrogen to amino acids, microbial loops, fertiliser discipline and food security." }
+    ],
+    stewardship: "Avoid nutrient-runoff fantasies. Nitrogen is powerful because it needs careful cycling.",
+    biologyBridge: "Ready for the biology atlas."
+  },
+  {
+    symbol: "O",
+    lane: "major-sand",
+    hasPage: true,
+    stream: "Quartz, rutile, ilmenite, zircon, monazite and water",
+    material: "Oxides, silicates and phosphates",
+    summary: "Oxygen is the quiet architecture of the local mineral story. The visible materials are mostly oxygen-bound: silica, titanium dioxide, iron titanium oxide, zircon silicate and rare-earth phosphates.",
+    localRole: "The opportunity is chemical literacy: teach oxidation, hydration, ceramics, glass, water and biomineralisation as one connected material language.",
+    opportunities: [
+      { title: "Ceramic and glass literacy", body: "Use oxygen chemistry to explain why silica glass, zirconia ceramics and titanium oxides behave differently under heat, stress and weather." },
+      { title: "Water and tunnel discipline", body: "In wet sand, oxygen also lives in water. Any underground moonshot has to understand water, corrosion, oxygen demand and sealed life-support before it goes deeper." },
+      { title: "Biology-ready bridge", body: "Later biology can reuse oxygen for respiration, proteins, enzymes, algae, shell formation and living materials." }
+    ],
+    stewardship: "Oxygen is not extracted as a prize. It is the reminder that chemistry, water and life-support have to be designed together.",
+    biologyBridge: "Respiration, water, proteins, enzymes and biomineralisation."
+  },
+  {
+    symbol: "Na",
+    lane: "coastal-companion",
+    hasPage: true,
+    stream: "Seawater salts, feldspar traces and glass fluxes",
+    material: "Sodium salts and soda chemistry",
+    summary: "Sodium is a coastal companion: less glamorous than rare earths, but useful in glass, salt chemistry, electrolytes, thermal storage and water systems.",
+    localRole: "A responsible abundance path uses sodium to think about desalination brines, salt-safe infrastructure, glass fluxes and non-toxic battery learning.",
+    opportunities: [
+      { title: "Salt-safe infrastructure", body: "Treat sodium chloride as a design pressure for corrosion, coatings, sensors and coastal maintenance." },
+      { title: "Glass and flux chemistry", body: "Use soda-lime glass as an education bridge from sand to useful transparent objects without pretending it is high-end semiconductor glass." },
+      { title: "Electrolyte learning", body: "Explore saltwater batteries and safe electrolyte demos as public science before any grid-scale claims." }
+    ],
+    stewardship: "Brine is not waste to hide. Any salt or desalination story needs a clear discharge, reuse and ecology plan.",
+    biologyBridge: "Electrolytes, nerve signals and water balance."
+  },
+  {
+    symbol: "Mg",
+    lane: "coastal-companion",
+    hasPage: true,
+    stream: "Seawater, silicates, recycled alloys and titanium processing logic",
+    material: "Magnesium salts, magnesia and magnesium alloys",
+    summary: "Magnesium links seawater, light alloys, cements, thermal storage and titanium-making stories.",
+    localRole: "It belongs in the long-term local capability stack as a repair, alloy, cement and process-chemistry element rather than a bulk export target.",
+    opportunities: [
+      { title: "Titanium process literacy", body: "The Kroll process uses magnesium to reduce titanium tetrachloride. That makes magnesium a teaching bridge into why titanium is hard, not a casual promise." },
+      { title: "Low-carbon binders", body: "Magnesia and magnesium silicate chemistry can sit beside geopolymers, oyster-crete and sand blocks as research paths." },
+      { title: "Light repair alloys", body: "Recycled magnesium-aluminium alloy knowledge could support small local repair, robotics and marine hardware work." }
+    ],
+    stewardship: "Magnesium burns fiercely as a metal and brine chemistry needs care. Keep it in qualified lab and workshop lanes.",
+    biologyBridge: "Enzyme cofactor, chlorophyll centre and muscle function."
+  },
+  {
+    symbol: "Al",
+    lane: "coastal-companion",
+    hasPage: true,
+    stream: "Aluminosilicate traces, clays, waste recovery and aluminium scrap",
+    material: "Aluminosilicates and recycled aluminium",
+    summary: "Aluminium is not the star mineral sand, but it matters through clays, geopolymers, waste recovery, light structures and repairable island hardware.",
+    localRole: "The abundance path is anthropogenic ore first: recover aluminium from waste streams and use local silicate chemistry for binders and blocks.",
+    opportunities: [
+      { title: "Anthropogenic ore", body: "Landfill and scrap streams can become a safer first materials lab than new extraction." },
+      { title: "Geopolymer learning", body: "Aluminosilicate chemistry is central to many geopolymer binders that could turn sand-adjacent materials into useful blocks." },
+      { title: "Light structures", body: "Repaired and remelted aluminium can support frames, carts, coastal fittings and training projects." }
+    ],
+    stewardship: "Primary aluminium is energy-hungry. The local story should prioritise repair, reuse and recycling before new production.",
+    biologyBridge: "Toxicity boundaries and material-contact design."
+  },
+  {
+    symbol: "Si",
+    lane: "major-sand",
+    hasPage: true,
+    stream: "Quartz silica sand",
+    material: "Silica, glass, silicon and silicates",
+    summary: "Silicon is the clearest bridge from local sand into far-out civilisation: glass, solar, silicon logic, sand batteries, geopolymers, optics and transparent public dashboards.",
+    localRole: "The local abundance path is learning and fabrication first: blocks, glass, heat storage, optics and repairable devices before any semiconductor overclaim.",
+    opportunities: [
+      { title: "Glass and optics", body: "Silica can become the public material for lenses, displays, windows, sensors and educational optical benches." },
+      { title: "Thermal storage", body: "Sand batteries and insulated silica masses let the site talk about energy storage without needing exotic materials first." },
+      { title: "Compute literacy", body: "Silicon anchors the story of semiconductors, but the first responsible build is maps, FPGA benches, clean-room education and honest process boundaries." }
+    ],
+    stewardship: "Silica dust is a health hazard and high-purity silicon needs extreme processing. The story must keep safety and reality gates visible.",
+    biologyBridge: "Diatoms, phytoliths and biomineral structures."
+  },
+  {
+    symbol: "P",
+    lane: "heavy-mineral",
+    hasPage: true,
+    stream: "Monazite and xenotime phosphate minerals",
+    material: "Phosphates",
+    summary: "Phosphorus is the phosphate spine of monazite and xenotime. It links rare-earth minerals to fertiliser discipline, batteries, phosphors and biological life.",
+    localRole: "The opportunity is to understand phosphate streams as both material and ecological responsibility, not to leak nutrients or chase unlicensed chemistry.",
+    opportunities: [
+      { title: "Rare-earth host chemistry", body: "Monazite and xenotime are phosphates, so phosphorus helps explain why rare-earth separation is hard and mineral-specific." },
+      { title: "Battery and phosphor research", body: "Phosphate chemistries connect to safer battery materials, phosphors and durable ceramics." },
+      { title: "Food-system bridge", body: "Later biology can link phosphorus to DNA, ATP, bones, soils and nutrient recycling." }
+    ],
+    stewardship: "Phosphorus can feed life or damage waterways. Any recovery or reuse story needs runoff and eutrophication safeguards.",
+    biologyBridge: "DNA, ATP, bones, soils and nutrient cycling."
+  },
+  {
+    symbol: "K",
+    lane: "coastal-companion",
+    hasPage: true,
+    stream: "Feldspar traces, salts and future biology",
+    material: "Potassium salts and silicates",
+    summary: "Potassium is a quiet companion for glass, ceramics, fertiliser discipline, electrolytes and future food-system pages.",
+    localRole: "It helps the site connect mineral literacy with plant nutrition and closed-loop food systems without pretending it is a strategic sand export.",
+    opportunities: [
+      { title: "Glass and ceramic flux", body: "Potassium compounds can influence melting, glaze and glass behaviour in education-scale material work." },
+      { title: "Food loop literacy", body: "Potassium makes the later in-home farm and microbiome layer more grounded in actual plant nutrition." },
+      { title: "Electrolyte education", body: "Use potassium as a simple bridge between materials chemistry and human biology." }
+    ],
+    stewardship: "Keep fertiliser and brine stories tied to water-quality discipline.",
+    biologyBridge: "Plant nutrition, electrolytes and cell signalling."
+  },
+  {
+    symbol: "Ca",
+    lane: "coastal-companion",
+    hasPage: true,
+    stream: "Shell, carbonate, oyster-crete and coastal biominerals",
+    material: "Calcium carbonate and calcium silicate ideas",
+    summary: "Calcium enters through shells, reefs, oyster-crete, cement chemistry, bones, water hardness and biomineralisation.",
+    localRole: "It turns infrastructure away from dead walls and toward reef-like, repairable, habitat-building structures where evidence and permits allow.",
+    opportunities: [
+      { title: "Oyster-crete", body: "Calcium carbonate can help the site imagine living or seeded infrastructure that accretes habitat rather than merely resisting the sea." },
+      { title: "Coastal repair", body: "Shell and reef materials can become education prompts for erosion buffers, fish habitat and aquaculture design." },
+      { title: "Biology bridge", body: "Calcium later connects to bones, muscle contraction, shells, coral, algae and food systems." }
+    ],
+    stewardship: "Shell and reef systems are living habitat. Local use must avoid mining ecology to build fake ecology.",
+    biologyBridge: "Bones, shells, signalling and biomineralisation."
+  },
+  {
+    symbol: "Ti",
+    lane: "heavy-mineral",
+    hasPage: true,
+    stream: "Rutile and ilmenite",
+    material: "Titanium dioxide and titanium metal pathways",
+    summary: "Titanium is the corrosion-resistant coastal machine element in the atlas: strong, light, marine-capable and difficult enough to keep the story honest.",
+    localRole: "The local path begins with titanium dioxide, coatings, pigments, ceramics and repair literacy; full titanium metal production remains an advanced industrial pathway.",
+    opportunities: [
+      { title: "Marine hardware", body: "Titanium alloys suggest long-life fittings, robotics parts and coastal machines that can survive salt and stress." },
+      { title: "Photocatalytic surfaces", body: "Titanium dioxide can anchor research into self-cleaning surfaces, water treatment and sensor housings." },
+      { title: "Spacefaring material logic", body: "Titanium helps the site move from island machinery to aerospace imagination without losing the processing difficulty." }
+    ],
+    stewardship: "Titanium is valuable because it is hard to refine well. Keep production claims staged and energy-aware.",
+    biologyBridge: "Biocompatible implants and surface interactions."
+  },
+  {
+    symbol: "Fe",
+    lane: "heavy-mineral",
+    hasPage: true,
+    stream: "Ilmenite, iron oxides and recycled steel",
+    material: "Iron oxides, iron and steel",
+    summary: "Iron grounds the moonshot. It is ordinary enough to build with, magnetic enough to teach with, and present enough in ilmenite to matter.",
+    localRole: "The opportunity is repair, tools, magnets, shielding, pigments, ballast and honest metallurgy before exotic claims.",
+    opportunities: [
+      { title: "Repair-first metalwork", body: "Repaired steel, iron fittings and workshop skills are more immediately abundant than any rare-earth extraction story." },
+      { title: "Magnet and sensor learning", body: "Iron lets public labs teach magnetism, motors, generators and shielding in a familiar way." },
+      { title: "Pigment and identity", body: "Iron oxides can become colour, signage, ceramics and material storytelling across the site." }
+    ],
+    stewardship: "Corrosion is a teacher. Coastal iron needs maintenance, coating and design humility.",
+    biologyBridge: "Haemoglobin, enzymes and iron balance."
+  },
+  {
+    symbol: "Zr",
+    lane: "heavy-mineral",
+    hasPage: true,
+    stream: "Zircon",
+    material: "Zirconium silicate and zirconia",
+    summary: "Zirconium carries the hard ceramic edge: high-temperature parts, thermal barriers, cutter heads, refractory linings and oxygen-ion ceramics.",
+    localRole: "It belongs in underground and coastal systems where heat, wear, insulation and durability matter more than shiny export stories.",
+    opportunities: [
+      { title: "Ceramic steel", body: "Zirconia can be framed as ceramic toughness for cutter heads, bearings, sensors and high-temperature parts." },
+      { title: "Thermal barriers", body: "Zirconium compounds help explain why turbines, heat stores and extreme environments need specialist materials." },
+      { title: "Fuel-cell bridge", body: "Yttria-stabilised zirconia connects zirconium and yttrium to solid-oxide fuel cells and oxygen sensors." }
+    ],
+    stewardship: "Zircon processing can involve hafnium and trace radiological questions. Treat it as a qualified materials lane.",
+    biologyBridge: "Dental ceramics and biocompatible surfaces."
+  },
+  {
+    symbol: "Hf",
+    lane: "heavy-mineral",
+    hasPage: true,
+    stream: "Trace companion in zircon",
+    material: "Hafnium compounds and metal",
+    summary: "Hafnium is the quiet trace companion of zircon. It is not a bulk island story, but it matters for high-temperature alloys, microelectronics and nuclear-control materials.",
+    localRole: "The local opportunity is awareness and stewardship: know when a trace element changes the value, risk or processing route of a zircon stream.",
+    opportunities: [
+      { title: "Trace intelligence", body: "Hafnium teaches that small fractions can shape entire industrial pathways." },
+      { title: "High-temperature research", body: "Hafnium compounds belong in advanced ceramics, coatings and extreme-environment research conversations." },
+      { title: "Microelectronics boundary", body: "Hafnium oxide is used in advanced chip gate dielectrics, making it a useful education bridge to modern semiconductor stacks." }
+    ],
+    stewardship: "Hafnium is not a casual local product. It is a trace-value and licensing-aware research prompt.",
+    biologyBridge: "Biocompatibility and implant-surface research."
+  },
+  {
+    symbol: "Th",
+    lane: "stewardship",
+    hasPage: true,
+    stream: "Monazite stewardship",
+    material: "Thorium-bearing minerals",
+    summary: "Thorium is the stewardship test. It appears in monazite stories, points toward advanced nuclear speculation, and immediately demands radiological discipline.",
+    localRole: "The local abundance path is not selling thorium. It is monitoring, licensed storage, public trust, long-term research literacy and strict consent gates.",
+    opportunities: [
+      { title: "Radiological literacy", body: "Use thorium to teach why some mineral sands require specialised handling, measurement, regulation and long-term records." },
+      { title: "Future energy research", body: "Thorium molten-salt ideas can stay in the moonshot layer, clearly separated from anything buildable now." },
+      { title: "Trust infrastructure", body: "The element page can model how to talk about dangerous materials without hype or concealment." }
+    ],
+    stewardship: "Licensed professionals, regulators and community consent come before any handling, storage or recovery conversation.",
+    biologyBridge: "Radiation protection and health boundaries."
+  },
+  {
+    symbol: "U",
+    lane: "stewardship",
+    hasPage: true,
+    stream: "Trace radiological stewardship",
+    material: "Uranium traces in mineral systems",
+    summary: "Uranium is included so the atlas does not hide uncomfortable chemistry. It is a monitoring and governance element, not an export fantasy.",
+    localRole: "Its positive role is public confidence: careful measurement, groundwater awareness, worker safety, secure records and honest exclusion from casual project plans.",
+    opportunities: [
+      { title: "Measure before myth", body: "Trace uranium teaches that mineral stories need assays, baselines and independent review." },
+      { title: "Water protection", body: "Groundwater and leachate monitoring matter more than speculative value." },
+      { title: "Security boundary", body: "Some materials need governance strong enough to say no, not just innovation strong enough to say maybe." }
+    ],
+    stewardship: "Keep uranium in a strict radiological and regulatory lane.",
+    biologyBridge: "Radiotoxicity, exposure limits and environmental health."
+  }
+];
+
+const ELEMENT_ATLAS = [
+  ...MAJOR_SAND_ELEMENTS.map((item) => ({
+    ...ELEMENT_PROPERTIES[item.symbol],
+    slug: ELEMENT_SLUGS[item.symbol],
+    ...item
+  })),
+  ...REE_CONSTITUENTS.map((item) => ({
+    ...ELEMENT_PROPERTIES[item.symbol],
+    symbol: item.symbol,
+    slug: ELEMENT_SLUGS[item.symbol],
+    lane: item.symbol === "Sc" || item.symbol === "Y" ? "rare-earth-side" : "rare-earth",
+    hasPage: true,
+    stream: item.symbol === "Sc" ? "Scandium branch" : item.symbol === "Y" ? "Yttrium and xenotime-style questions" : "Rare-earth stream",
+    material: item.material,
+    summary: item.opportunity,
+    localRole: "This element belongs in a long-term capability atlas: recycling first, careful separation research second, and local public benefit before any export-for-profit logic.",
+    opportunities: [
+      { title: "Local capability", body: item.opportunity },
+      { title: "Research pathway", body: "Map uses, hazards, separation difficulty, recycling routes, lab partners and what the community would actually gain before anyone treats it as a commodity." },
+      { title: "Joyful responsible abundance", body: "The positive action is a clean materials library for repairable motors, sensors, displays, ceramics, energy systems and learning labs." }
+    ],
+    stewardship: item.symbol === "Pm"
+      ? "Promethium is radioactive and not a practical natural mineral-sands recovery target. It stays here as a boundary marker."
+      : "Rare-earth separation can involve acids, solvents, radioactivity, water risk and tailings. Recycling, consent and professional review come first.",
+    biologyBridge: "Trace-element biology, imaging, sensors or toxicity can be added later where evidence supports it."
+  }))
+].sort((a, b) => a.atomicNumber - b.atomicNumber);
+
+const PROJECT_CURRENTS = [
+  {
+    lane: "materials",
+    title: "Bladeless tide and wave reefs",
+    eyebrow: "Energy + habitat",
+    narrative: "Amity, Jumpinpin and the ocean side become different kinds of learning edge: stable reef-energy pilots where erosion needs help, lighter touch devices where the inlet needs freedom, and submerged wave reefs where surf, fish habitat and power can be studied together.",
+    build: "The responsible first move is baseline data, co-design, ecological windows, removable prototypes and clear failure rules around whales, dugongs, turtles, mullet runs and fishers.",
+    href: "briefs/sandy-sports-network.html"
+  },
+  {
+    lane: "materials",
+    title: "Civilisation of Sand fund",
+    eyebrow: "Keep value local",
+    narrative: "The material story changes when the goal is not bulk export. Sand, sun, waves, waste, reef modules, energy and expertise become ways to capitalise long-term local capability.",
+    build: "The fundable path is energy, repair, education, circular manufacturing, blue carbon, ecological restoration and public infrastructure that earns its keep without chewing up more surface.",
+    href: "build-path.html"
+  },
+  {
+    lane: "build-path",
+    title: "Sovereign wealth, not royalties",
+    eyebrow: "7th generation capital",
+    narrative: "The new project stack pushes away from passive royalties and toward community-held equity, patient trusts, local reinvestment and decision power that lasts beyond one construction cycle.",
+    build: "A Minjerribah-style future fund should separate commercial agility, cultural authority, public benefit, legal compliance and intergenerational accumulation.",
+    href: "boundaries.html"
+  },
+  {
+    lane: "build-path",
+    title: "Everything app as civic nervous system",
+    eyebrow: "Daily usefulness first",
+    narrative: "The EverythingAPP thread belongs under the far-out work as a practical surface: ferry timing, bookings, events, rosters, meals, aged-care support, deliveries, club notices, news and offline local coordination.",
+    build: "The first useful version is a low-bandwidth PWA with tenant boundaries, local directory, transport cache, ordering/booking stubs and offline disaster mode.",
+    href: "briefs/disaster-kiosks.html"
+  },
+  {
+    lane: "build-path",
+    title: "Heart-first cultural hub",
+    eyebrow: "Ballow Road capability",
+    narrative: "The multicultural grant roadmap turns a site into a warm civic shell: youth drop-in, sandy sports, media, maker training, Indigenous developer pathways and disaster resilience under one practical roof.",
+    build: "Keep the grant story focused on buildable capital works and use the wider ecosystem as value context, not as a claim that permissions already exist.",
+    href: "briefs/multicultural-hub.html"
+  },
+  {
+    lane: "boundaries",
+    title: "Mutual risk branch",
+    eyebrow: "Risk stays visible",
+    narrative: "A serious civilisation stack needs risk infrastructure. The insurance branch proposal is a reminder that reefs, tunnels, health tools, volunteers, co-ops and public events all need coverage logic before scale.",
+    build: "Keep the idea in a legal/research lane: discretionary mutuals, CLG structures, AFSL boundaries, WHS duties, reinsurance and professional governance before public promises.",
+    href: "boundaries.html"
+  },
+  {
+    lane: "boundaries",
+    title: "Indigenous data and governance",
+    eyebrow: "Permission before platforms",
+    narrative: "The sovereign wealth and Indigenous partnership briefs put culture, consent, carried equity, veto power, community trusteeship and long-horizon governance into the centre of the project flow.",
+    build: "Any public site language should leave space for the right people to lead, refuse, reshape or ignore the idea.",
+    href: "boundaries.html"
+  },
+  {
+    lane: "worlds",
+    title: "Oceania health and AI surge",
+    eyebrow: "Care before spectacle",
+    narrative: "The health surge thread belongs in the citizen-care lane, where food waste, dementia pressure, local kiosks, thermal wellness ideas and private-first health twins are treated as public-health imagination, not medical promises.",
+    build: "The site should keep this as a research and policy scenario: evidence gates, clinicians, privacy, non-medical public wording and care infrastructure before any intervention claim.",
+    href: "briefs/loving-longevity.html"
+  },
+  {
+    lane: "worlds",
+    title: "Life game quest log",
+    eyebrow: "Micro-quests",
+    narrative: "The quest-log design turns civilisation work into small moves people can actually take: learn one tool, help one neighbour, test one material, restore one patch, document one failure.",
+    build: "This belongs beside culture and plausible worlds because it makes the big story playable without demanding belief or debt.",
+    href: "briefs/protopian-gambit.html"
+  },
+  {
+    lane: "worlds",
+    title: "Love, consent and group futures",
+    eyebrow: "Adult boundary",
+    narrative: "The GGM philosophy thread carries the warm, relational, spicy edge of the atlas, but the public site should hold it as consent-first culture and private-world design rather than spectacle.",
+    build: "Keep adult themes behind clear boundaries, and let the public layer talk about care, honesty, chosen family, longevity, privacy and emotional infrastructure.",
+    href: "briefs/loving-longevity.html"
   }
 ];
 

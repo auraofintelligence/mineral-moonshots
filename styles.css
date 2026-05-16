@@ -903,12 +903,13 @@ p {
   display: grid;
   justify-items: center;
   margin: 2rem auto 0;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding-left: clamp(0.5rem, 2vw, 1.25rem);
+  padding-right: clamp(0.5rem, 2vw, 1.25rem);
+  width: 100%;
 }
 
 .section.wide > .system-image {
-  max-width: min(1080px, calc(100vw - 2rem));
+  max-width: min(1760px, 100vw);
 }
 
 .system-image img {
@@ -917,10 +918,9 @@ p {
   border-radius: 8px;
   box-shadow: var(--shadow);
   height: auto;
-  max-height: min(58vh, 620px);
   max-width: 100%;
   object-fit: contain;
-  width: auto;
+  width: 100%;
 }
 
 .system-image figcaption {

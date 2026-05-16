@@ -2090,28 +2090,29 @@ const INTERACTIVE_LABS = {
   },
   "peaceful-space": {
     type: "space-path",
+    eyebrow: "Build sequence",
     title: "Ocean To Orbit Path",
-    deck: "A five-step path from local makerspace to space commons. It keeps the orbital dream tied back to island usefulness.",
+    deck: "Build upward only when each Earth-side layer is already useful: repair, resilience, solar data, simulation, then commons governance.",
     steps: [
       {
-        name: "Shed and makerspace",
-        detail: "Start with repair, fabrication, training, local materials literacy and small public prototypes."
+        name: "Repair bench",
+        detail: "Teach repair, fabrication, materials literacy and small public prototypes before any orbital language gets a budget."
       },
       {
-        name: "Island resilience",
-        detail: "Connect kiosks, maps, local power, mesh comms and disaster workflows so infrastructure earns trust on Earth."
+        name: "Useful island systems",
+        detail: "Connect kiosks, maps, local power, mesh comms and public information so the work helps ordinary days first."
       },
       {
         name: "Space weather hub",
-        detail: "Watch the Sun because solar risk is practical for grids, satellites, communications and navigation."
+        detail: "Publish readable Sun-Earth data for grids, satellites, communications, navigation and public science learning."
       },
       {
-        name: "Virtual Solar Swarm",
-        detail: "Model distributed satellites and sensors before anyone pretends a physical swarm is politically or financially simple."
+        name: "Simulate before launch",
+        detail: "Model distributed satellites and sensors before physical hardware, so costs, politics and maintenance stay visible."
       },
       {
-        name: "Purple Space Commons",
-        detail: "Treat space as stewardship: treaty-aware, science-first, peaceful and careful about extraction."
+        name: "Commons rules",
+        detail: "Draft treaty-aware principles for data, access, launch, debris, Indigenous knowledge boundaries and shared science."
       }
     ]
   },
@@ -2154,6 +2155,7 @@ const INTERACTIVE_LABS = {
   },
   "multicultural-hub": {
     type: "space-path",
+    eyebrow: "Build sequence",
     title: "Grant Quest Roadmap",
     deck: "A five-step application quest for the shared game world. Each step is a narrative planning move, not evidence that funding or approvals exist.",
     steps: [

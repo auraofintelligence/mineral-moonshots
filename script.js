@@ -732,31 +732,16 @@
 
   function renderSpacePath(lab, mount) {
     const shell = make("div", "path-lab");
-    const rail = make("div", "path-rail");
-    const detail = make("article", "path-detail");
-    const name = make("h3", "", "");
-    const text = make("p", "", "");
-    detail.append(name, text);
 
     lab.steps.forEach((step, index) => {
-      const button = make("button", "path-step", String(index + 1));
-      button.type = "button";
-      button.setAttribute("aria-label", step.name);
-      button.addEventListener("click", () => setStep(index));
-      rail.appendChild(button);
+      const card = make("article", "path-step-card");
+      card.appendChild(make("span", "", String(index + 1).padStart(2, "0")));
+      card.appendChild(make("h3", "", step.name));
+      card.appendChild(make("p", "", step.detail));
+      if (step.action) card.appendChild(make("p", "path-action", step.action));
+      shell.appendChild(card);
     });
-
-    function setStep(index) {
-      const step = lab.steps[index];
-      [...rail.children].forEach((button) => button.classList.remove("is-active"));
-      rail.children[index].classList.add("is-active");
-      name.textContent = step.name;
-      text.textContent = step.detail;
-    }
-
-    shell.append(rail, detail);
     mount.appendChild(shell);
-    setStep(0);
   }
 
   function renderRealityStack(lab, mount) {
@@ -808,10 +793,11 @@
     if (!lab || !experiments) return;
 
     const section = make("section", "section interactive-section");
+    if (lab.type === "space-path") section.classList.add("is-compact");
     const heading = make("div", "section-heading");
     heading.id = "lab";
     section.setAttribute("aria-labelledby", "lab");
-    heading.appendChild(make("p", "eyebrow", "Interactive prototype"));
+    heading.appendChild(make("p", "eyebrow", lab.eyebrow || "Interactive prototype"));
     heading.appendChild(make("h2", "", lab.title));
     heading.appendChild(make("p", "", lab.deck));
     const mount = make("div", "lab-shell");

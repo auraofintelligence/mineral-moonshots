@@ -1160,6 +1160,21 @@ p {
   max-width: none;
 }
 
+.interactive-section.is-compact {
+  padding-bottom: 3.25rem;
+  padding-top: 3.25rem;
+}
+
+.interactive-section.is-compact .section-heading {
+  margin-bottom: 1.5rem;
+  max-width: 980px;
+}
+
+.interactive-section.is-compact h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  max-width: 20ch;
+}
+
 .interactive-section > * {
   margin-left: auto;
   margin-right: auto;
@@ -1338,7 +1353,6 @@ p {
 .layer-band.is-active,
 .layer-button.is-active,
 .mode-button.is-active,
-.path-step.is-active,
 .island-button.is-active,
 .signal-button.is-active {
   border-color: rgba(242, 193, 94, 0.72);
@@ -1389,32 +1403,41 @@ p {
   padding: 0.45rem 0.6rem;
 }
 
-.path-rail {
-  align-items: center;
-  background:
-    linear-gradient(90deg, transparent 0 7%, rgba(139, 233, 255, 0.32) 7% 93%, transparent 93%),
-    rgba(7, 16, 19, 0.48);
+.path-lab {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.path-step-card {
+  background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
   display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  min-height: 9rem;
+  gap: 0.65rem;
   padding: 1rem;
 }
 
-.path-step {
-  background: var(--panel-strong);
-  border: 1px solid rgba(139, 233, 255, 0.24);
-  border-radius: 999px;
+.path-step-card span {
   color: var(--rutile);
-  cursor: pointer;
   font-family: var(--heading);
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   font-weight: 900;
-  height: 3rem;
-  justify-self: center;
-  width: 3rem;
+}
+
+.path-step-card h3 {
+  color: var(--quartz);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.path-step-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.path-action {
+  color: var(--quartz-soft) !important;
+  font-weight: 700;
 }
 
 .reality-grid {

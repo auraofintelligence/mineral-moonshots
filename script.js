@@ -4,12 +4,43 @@
 
   const routes = [
     { label: "Home", href: "index.html" },
-    { label: "Start", href: "index.html#start" },
-    { label: "Repos", href: "index.html#repo-moonshots" },
-    { label: "Briefs", href: "index.html#briefs" },
-    { label: "Elements", href: "index.html#elements" },
-    { label: "Labs", href: "index.html#labs" }
+    { label: "Moonshots", href: "moonshots.html" },
+    { label: "Materials", href: "materials.html" },
+    { label: "Build Path", href: "build-path.html" },
+    { label: "Worlds", href: "worlds.html" },
+    { label: "Labs", href: "labs.html" },
+    { label: "Boundaries", href: "boundaries.html" }
   ];
+
+  const BRIEF_GROUPS = {
+    moonshots: new Set([
+      "crystal-city",
+      "kardashev",
+      "supercomputers",
+      "master-plan",
+      "peaceful-space",
+      "capsule-hotels",
+      "alien-necklace",
+      "cosmic-nexus"
+    ]),
+    worlds: new Set([
+      "island-abundance",
+      "auto-farm",
+      "protopian-gambit",
+      "loving-longevity",
+      "dreamtime",
+      "archipelago"
+    ]),
+    local: new Set([
+      "disaster-kiosks",
+      "multicultural-hub",
+      "community-coop",
+      "sandy-sports-network",
+      "public-honour-board",
+      "profile",
+      "aura"
+    ])
+  };
 
   function make(tag, className, text) {
     const node = document.createElement(tag);
@@ -59,13 +90,13 @@
     mount.innerHTML = "";
 
     const copy = make("div", "footer-copy");
-    copy.appendChild(make("p", "", "Mineral Moonshots is a connected public collection for trying bigger views from ordinary starting points."));
-    copy.appendChild(make("p", "footer-note", "Public repo links are open doors. Private and local workbenches stay boundaries. Real-world work still needs consent, engineering, ecology, law, culture and community governance."));
+    copy.appendChild(make("p", "", "Mineral Moonshots is a multi-page collection of windows and doors into plausible worlds we can build from now."));
+    copy.appendChild(make("p", "footer-note", "Local projects, public prototypes, private workbenches and speculative moonshots are kept in separate lanes. Real-world work still needs consent, engineering, ecology, law, culture and community governance."));
 
     const links = make("div", "footer-links");
-    SITE_BRIEFS.slice(0, 4).forEach((brief) => {
-      const a = make("a", "", brief.title);
-      a.href = prefix + brief.url;
+    routes.slice(1).forEach((route) => {
+      const a = make("a", "", route.label);
+      a.href = prefix + route.href;
       links.appendChild(a);
     });
     const small = make("small", "", String(year));
@@ -77,7 +108,10 @@
   function renderHomeBriefs() {
     const grid = document.querySelector("[data-brief-grid]");
     if (!grid) return;
-    SITE_BRIEFS.forEach((brief, index) => {
+    const group = grid.dataset.briefGrid || "all";
+    const allowed = BRIEF_GROUPS[group];
+    const briefs = allowed ? SITE_BRIEFS.filter((brief) => allowed.has(brief.slug)) : SITE_BRIEFS;
+    briefs.forEach((brief, index) => {
       const card = make("article", "brief-card");
       card.style.setProperty("--card-index", String(index + 1));
 
@@ -85,7 +119,7 @@
       const title = make("h3", "", brief.title);
       const deck = make("p", "", brief.deck);
       const meta = make("p", "card-meta", brief.material);
-      const link = make("a", "card-link", "Open moonshot");
+      const link = make("a", "card-link", grid.dataset.linkLabel || "Open page");
       link.href = brief.url;
       link.setAttribute("aria-label", "Open " + brief.title);
 
@@ -94,19 +128,19 @@
     });
   }
 
-  function renderRepoMoonshots() {
-    const grid = document.querySelector("[data-repo-moonshots]");
-    if (!grid || typeof REPO_MOONSHOTS === "undefined") return;
+  function renderLocalProjects() {
+    const grid = document.querySelector("[data-local-projects]");
+    if (!grid || typeof LOCAL_PROJECTS === "undefined") return;
 
-    REPO_MOONSHOTS.forEach((repo) => {
+    LOCAL_PROJECTS.forEach((repo) => {
       const card = make("article", "repo-card");
       const visibility = make("p", "repo-status", repo.visibility);
       const title = make("h3", "", repo.name);
-      const moonshot = make("p", "", repo.moonshot);
+      const buildStep = make("p", "", repo.buildStep);
       const bridge = make("p", "repo-bridge", repo.bridge);
       const meta = make("p", "card-meta", repo.repo);
 
-      card.append(visibility, title, moonshot, bridge, meta);
+      card.append(visibility, title, buildStep, bridge, meta);
 
       if (repo.url) {
         const link = make("a", "card-link", "Open repo");
@@ -524,7 +558,7 @@
   renderHeader();
   renderFooter();
   renderHomeBriefs();
-  renderRepoMoonshots();
+  renderLocalProjects();
   renderElementGrid();
   renderHomeLabPreview();
   renderBriefPage();

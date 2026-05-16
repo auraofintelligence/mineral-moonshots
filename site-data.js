@@ -276,7 +276,7 @@ const SITE_BRIEFS = [
     ],
     experiments: [
       "Turn the grant roadmap into a playable five-phase application quest.",
-      "Make a public-facing one-page version that clearly says narrative concept, not approved plan.",
+      "Make a short public-facing project page that clearly says narrative concept, not approved plan.",
       "Create a feedback wall where locals can sort what feels useful, too much, missing or culturally sensitive."
     ],
     elements: ["SiO2", "TiO2", "Fe", "REE"]
@@ -610,14 +610,14 @@ const SITE_BRIEFS = [
   }
 ];
 
-const REPO_MOONSHOTS = [
+const LOCAL_PROJECTS = [
   {
     name: "Straddie Noticeboard Network",
     repo: "auraofintelligence/straddie-noticeboard-network",
     visibility: "Public prototype",
     url: "https://github.com/auraofintelligence/straddie-noticeboard-network",
-    bridge: "The wall, tablet, phone, kiosk and fallback image becomes the real-world media spine for Mineral Moonshots.",
-    moonshot: "A public information commons that is useful on normal days and already trusted when the island needs emergency coordination."
+    bridge: "The wall, tablet, phone, kiosk and fallback image is one practical build surface beneath the bigger civilisation story.",
+    buildStep: "Useful public information on normal days; trusted emergency coordination when the island needs it."
   },
   {
     name: "Strange But True",
@@ -625,7 +625,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public shelf",
     url: "https://github.com/auraofintelligence/strange-but-true",
     bridge: "The friendly front door for tech help, AI help, grant support, public downloads and local trust.",
-    moonshot: "A community support brand that lets practical help, creative work and civic prototypes share one visible doorway."
+    buildStep: "Grounds the far-out work in patient local help so the moonshot does not float away from people."
   },
   {
     name: "Stradbroke Grants Lab",
@@ -633,7 +633,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public prototype",
     url: "https://github.com/auraofintelligence/stradbroke-grants-lab",
     bridge: "Turns local ideas into grant-ready structures without pretending funding or approval already exists.",
-    moonshot: "A grant preparation engine where community imagination becomes evidence, budget, risk and staged delivery."
+    buildStep: "Helps practical projects become evidence, budget, risk, staged delivery and public accountability."
   },
   {
     name: "Shared Table Initiative",
@@ -641,7 +641,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public prototype",
     url: "https://github.com/auraofintelligence/shared-table-initiative",
     bridge: "Starts with the simple question of who is already feeding, welcoming and caring for people here.",
-    moonshot: "A hospitality protocol for joyful responsible abundance, where food becomes social infrastructure."
+    buildStep: "Makes food, welcome and care visible before the system talks about abundance at larger scales."
   },
   {
     name: "Grey Area Commons",
@@ -649,7 +649,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public adult boundary",
     url: "https://github.com/auraofintelligence/grey-area-commons",
     bridge: "Keeps the loving spice consent-first, adult-only, privacy-preserving and gentle enough for real humans.",
-    moonshot: "A warmer relationship commons where adults can ask better questions before intimacy, pressure or confusion takes over."
+    buildStep: "Protects the relationship and intimacy layer with consent, privacy and adult boundaries."
   },
   {
     name: "i C. infinity Music Universe",
@@ -657,7 +657,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public culture",
     url: "https://github.com/auraofintelligence/i-C-infinity-music-universe",
     bridge: "Carries the protopian mood through songs, albums, mythic language and public-facing story worlds.",
-    moonshot: "A music catalogue that works like emotional infrastructure for hope, repair and future courage."
+    buildStep: "Gives the civilisation work an emotional doorway through music, hope, repair and future courage."
   },
   {
     name: "Agent Markdown Form Navigator",
@@ -665,7 +665,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public tool",
     url: "https://github.com/auraofintelligence/agent-md-form-navigator",
     bridge: "Shows how public forms can become agent-ready markdown without burying people in technical setup.",
-    moonshot: "A civic input layer where visitors can shape useful AI briefs from plain-language forms."
+    buildStep: "Lets people turn plain-language input into useful AI briefs one structured page at a time."
   },
   {
     name: "Legal Memory Workbench",
@@ -673,7 +673,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public workbench",
     url: "https://github.com/auraofintelligence/legal-memory-workbench",
     bridge: "Adds sober legal-memory boundaries to a site that otherwise wants to run toward the stars.",
-    moonshot: "A personal and project legal context layer that helps AI assist without pretending to be a lawyer."
+    buildStep: "Keeps legal context, disclaimers and evidence discipline close to the speculative work."
   },
   {
     name: "Amity Outdoor Fitness",
@@ -681,7 +681,7 @@ const REPO_MOONSHOTS = [
     visibility: "Public proposal",
     url: "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
     bridge: "Grounds longevity and abundance in ordinary public movement, access, safety and outdoor activity.",
-    moonshot: "A health and confidence node where bodies, place, ageing and community care meet in daylight."
+    buildStep: "Starts longevity in daylight: movement, safer access, bodies, ageing and community care."
   },
   {
     name: "Strange But True Field Library",
@@ -689,7 +689,7 @@ const REPO_MOONSHOTS = [
     visibility: "Private workbench",
     url: "",
     bridge: "The deeper archive catalogue stays private while public-safe summaries can feed future moonshots.",
-    moonshot: "A field library that lets the whole repo garden remember itself without leaking private source material."
+    buildStep: "Keeps the source archive useful without leaking private material into the public site."
   },
   {
     name: "Strange But True Travel Oracle",
@@ -697,7 +697,7 @@ const REPO_MOONSHOTS = [
     visibility: "Private workbench",
     url: "",
     bridge: "Keeps travel, hospitality, reciprocity and Shared Table logic in a private planning lane for now.",
-    moonshot: "A world-travel oracle where every destination begins with care, culture, reciprocity and practical safety."
+    buildStep: "Treats travel as a care and reciprocity problem before it becomes a bigger world system."
   },
   {
     name: "Aura Health Twin",
@@ -705,7 +705,7 @@ const REPO_MOONSHOTS = [
     visibility: "Private-first health",
     url: "",
     bridge: "Keeps longevity, health context and personal reflection private unless the person deliberately chooses otherwise.",
-    moonshot: "A longevity twin that supports life, limits and care without turning a person into a dashboard product."
+    buildStep: "Keeps health and longevity context private-first while public pages stay careful and non-medical."
   }
 ];
 

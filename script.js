@@ -17,6 +17,9 @@
       "crystal-city",
       "kardashev",
       "supercomputers",
+      "aura-geode",
+      "web3-sensorium",
+      "space-weather-hub",
       "master-plan",
       "peaceful-space",
       "capsule-hotels",
@@ -485,8 +488,72 @@
     if (lab.type === "space-path") renderSpacePath(lab, mount);
     if (lab.type === "reality-stack") renderRealityStack(lab, mount);
     if (lab.type === "archipelago-map") renderArchipelagoMap(lab, mount);
+    if (lab.type === "ifttt-matrix") renderIftttMatrix(lab, mount);
 
     experiments.closest(".section").before(section);
+  }
+
+  function renderIftttMatrix(lab, mount) {
+    const shell = make("div", "ifttt-lab");
+    const buttons = make("div", "signal-buttons");
+    const detail = make("article", "signal-detail");
+    const name = make("h3", "", "");
+    const source = make("p", "card-meta", "");
+    const query = make("p", "", "");
+    const list = make("ul", "signal-list");
+    detail.append(name, source, query, list);
+
+    lab.signals.forEach((signal, index) => {
+      const button = make("button", "signal-button", signal.name);
+      button.type = "button";
+      button.addEventListener("click", () => setSignal(index));
+      buttons.appendChild(button);
+    });
+
+    function setSignal(index) {
+      const signal = lab.signals[index];
+      [...buttons.children].forEach((button) => button.classList.remove("is-active"));
+      buttons.children[index].classList.add("is-active");
+      name.textContent = signal.name;
+      source.textContent = signal.stream;
+      query.textContent = signal.query;
+      list.innerHTML = "";
+      signal.outputs.forEach((output) => list.appendChild(make("li", "", output)));
+    }
+
+    shell.append(buttons, detail);
+    mount.appendChild(shell);
+    setSignal(0);
+  }
+
+  function renderDepthSections(brief) {
+    if (!brief.depth || !brief.depth.length) return;
+    const modules = document.querySelector("[data-modules]");
+    if (!modules) return;
+
+    const section = make("section", "section project-depth");
+    const heading = make("div", "section-heading");
+    heading.appendChild(make("p", "eyebrow", "Project depth"));
+    heading.appendChild(make("h2", "", "From the source documents"));
+    heading.appendChild(make("p", "", brief.depthIntro || "The project documents are treated as working source material: narrative spine, technical stack, research questions and build path."));
+
+    const stack = make("div", "depth-stack");
+    brief.depth.forEach((item, index) => {
+      const card = make("article", "depth-card");
+      card.appendChild(make("span", "depth-index", String(index + 1).padStart(2, "0")));
+      card.appendChild(make("h3", "", item.title));
+      if (item.body) card.appendChild(make("p", "", item.body));
+      if (item.points && item.points.length) {
+        const list = make("ul", "depth-list");
+        item.points.forEach((point) => list.appendChild(make("li", "", point)));
+        card.appendChild(list);
+      }
+      if (item.note) card.appendChild(make("p", "depth-note", item.note));
+      stack.appendChild(card);
+    });
+
+    section.append(heading, stack);
+    modules.closest(".section").before(section);
   }
 
   function scrollToHashTarget() {
@@ -509,10 +576,22 @@
       hero.querySelector("[data-eyebrow]").textContent = brief.eyebrow;
       hero.querySelector("[data-title]").textContent = brief.title;
       hero.querySelector("[data-deck]").textContent = brief.deck;
-      hero.querySelector("[data-source]").textContent = "Source brief: " + brief.source;
+      hero.querySelector("[data-source]").textContent = brief.sourceLabel || ("Source brief: " + brief.source);
     }
 
     const briefList = document.querySelector("[data-brief-points]");
+    const sourcePanel = document.querySelector(".source-panel");
+    if (sourcePanel) {
+      const eyebrow = sourcePanel.querySelector(".eyebrow");
+      const title = sourcePanel.querySelector("h2");
+      if (eyebrow) eyebrow.textContent = "Source document";
+      if (title) title.textContent = "Project spine";
+    }
+    const moonshotPanel = document.querySelector(".moonshot-panel");
+    if (moonshotPanel) {
+      const title = moonshotPanel.querySelector("h2");
+      if (title) title.textContent = "Moonshot horizon";
+    }
     brief.brief.forEach((point) => {
       const li = make("li", "", point);
       briefList.appendChild(li);
@@ -545,6 +624,7 @@
         elements.appendChild(card);
       });
 
+    renderDepthSections(brief);
     const more = document.querySelector("[data-more-briefs]");
     SITE_BRIEFS.filter((item) => item.slug !== brief.slug).slice(0, 4).forEach((item) => {
       const a = make("a", "mini-link", item.title);

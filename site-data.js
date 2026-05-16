@@ -101,21 +101,62 @@ const SITE_BRIEFS = [
     source: "Super-Computers_of_North_Straddie.md",
     deck: "A first-principles route from mineral sand imagination to sovereign compute, edge AI, simulation tools and consciousness architecture experiments.",
     brief: [
-      "The source thread moves from flatland and maze theory into chip design, neuromorphic ideas and resilient compute.",
-      "The grounded version starts with simulation, FPGAs, old-node chips, local cloud, edge AI and robust hardware literacy.",
-      "The science-fiction edge asks what a 'keystone of consciousness' would demand from memory, randomness, recovery, security and embodiment."
+      "The source document begins with Flatland, maze theory and pathfinding because dimensional thinking is the doorway into chip architecture.",
+      "It then drills into semiconductor reality: quartz to silicon, purification, crystal growth, doping, MOSFETs, FinFETs, GAA FETs, lithography, etching, deposition and cleanroom constraints.",
+      "The island version is small-batch rapid evolution: simulate first, prototype with FPGAs, learn from ASML-scale industry, and use local mineral sands where plausible without pretending a full fab appears by magic."
     ],
     moonshot: "A coastal compute commons where every kiosk, capsule, auto-farm and lab becomes part of a distributed island simulator.",
     modules: [
-      "Local AI cluster for mapping, planning and education",
-      "Neuromorphic and probabilistic compute thought experiments",
-      "Chip design learning pathway from sand to silicon",
-      "Self-healing node pattern for disaster resilience"
+      "Dimensional thinking and maze-solving curriculum",
+      "Quartz-to-silicon material pathway",
+      "FPGA and EDA rapid-prototyping bench",
+      "Island compute commons for simulation, education and resilience"
     ],
     experiments: [
-      "Start with a local dashboard running on ordinary PCs before inventing chips.",
-      "Use FPGA demos to teach logic gates, memory and signal flow visually.",
-      "Build a simulation map where each kiosk or capsule adds compute to the island."
+      "Build a local dashboard running on ordinary PCs before inventing chips.",
+      "Use FPGA demos to teach logic gates, memory, timing and signal flow visually.",
+      "Make a sand-to-silicon process map that clearly marks which steps are local, regional, national, global or science fiction.",
+      "Build a simulation map where each kiosk, capsule or lab adds compute and heat-reuse potential to the island."
+    ],
+    depthIntro: "This page now follows the actual source document: from geometry and mazes, through semiconductor physics, into a practical first build path and then out toward sovereign compute fiction.",
+    depth: [
+      {
+        title: "Flatland to maze theory",
+        body: "The opening move is not a chip. It is a way of thinking: start with lower-dimensional worlds, then ask how agents find paths through constraints.",
+        points: [
+          "Flatland becomes the mental model for seeing hidden dimensions, layers and design spaces.",
+          "Maze theory introduces graphs, nodes, edges, search, path cost and dead-end recovery.",
+          "Dijkstra, A-star and breadth-first search become teaching tools for routing, chip layout, logistics and AI planning."
+        ]
+      },
+      {
+        title: "Sand to semiconductor",
+        body: "The document gets technical about why local silica is inspiring but not simple.",
+        points: [
+          "Silica sand is reduced from SiO2 into metallurgical-grade silicon, then pushed toward electronic-grade purity.",
+          "Purification uses chemical vapour routes, zone refining and crystal growth through Czochralski or float-zone processes.",
+          "Semiconductor-grade silicon needs extreme impurity control, so the honest build path starts with learning and prototyping before local fabrication claims."
+        ]
+      },
+      {
+        title: "Device physics stack",
+        body: "Once silicon is plausible as a concept, the source moves into the device layer.",
+        points: [
+          "Band theory and doping explain how p-type and n-type regions let circuits control electron flow.",
+          "MOSFETs are the ordinary building blocks; scaling pressure introduces leakage, short-channel effects and quantum tunnelling.",
+          "FinFETs and gate-all-around FETs become reference points for why advanced chips are architectural objects, not just smaller transistors."
+        ]
+      },
+      {
+        title: "Small-batch rapid evolution",
+        body: "The source explicitly avoids mass-production fantasy. The interesting move is fast iteration toward useful compute.",
+        points: [
+          "EDA simulation comes first so designs can fail cheaply.",
+          "Reusable IP cores and modular blocks let the team change one part without remaking the whole system.",
+          "FPGAs become the bridge between software imagination and physical logic, before any ASIC conversation."
+        ],
+        note: "Local mineral sands are part of the mythic and material spine, not an excuse to overclaim a backyard semiconductor industry."
+      }
     ],
     elements: ["SiO2", "TiO2", "ZrSiO4", "Fe"]
   },
@@ -128,21 +169,62 @@ const SITE_BRIEFS = [
     source: "Subterranean_Super_Civilization_Master_Plan.md",
     deck: "A maximalist blueprint for a protected underground civilisation that can store, grow, compute, govern and surface again.",
     brief: [
-      "The master plan imagines a Silica Citadel beneath the island with energy, food, compute and cultural memory built into its layers.",
-      "It includes extreme concepts like sandworm tunnelling, living materials, acoustic architecture and braided economics.",
-      "For a website, this becomes a mythic systems map: not a promise, but a place to organise moonshot thinking."
+      "The master plan treats Minjerribah as a silica stack: quartz, rutile, ilmenite, zircon and monazite become a fictional atomic inventory for a Type I prototype.",
+      "Its centrepiece is the Silica Citadel: a subterranean megalopolis with wet-sand tunnelling, acoustic metamaterials, oyster-crete, sand batteries and sovereign compute.",
+      "The responsible public version keeps the far-out parts visible as design fiction while turning the buildable pieces into material boards, simulations, consent gates and staged prototypes."
     ],
     moonshot: "A full-stack civilisation shelter that is less bunker and more underground ecological operating system.",
     modules: [
-      "Wet-sand tunnelling concept gallery",
-      "Oyster-crete and biomineral material experiments",
-      "Acoustic architecture and resonance rooms",
+      "Silica Citadel cross-section",
+      "Wet-sand Sandworm tunnelling concept",
+      "Osteomorphic blocks, oyster-crete and acoustic metamaterials",
       "Braided economy layer for work, care, energy and public value"
     ],
     experiments: [
       "Separate the fiction layer, research layer and buildable prototype layer on the page.",
       "Sketch one room-scale module for food, one for compute, one for archives and one for water.",
-      "Use the site as a living index of what needs verification."
+      "Turn the mineral table into a public material board with plausible uses and explicit uncertainty.",
+      "Use the site as a living index of what needs verification, consent and professional review."
+    ],
+    depthIntro: "The master plan is intentionally huge. This page now preserves that scale while sorting it into readable project layers instead of flattening it into a novelty bunker blurb.",
+    depth: [
+      {
+        title: "Geological premise",
+        body: "The document frames Minjerribah as a sand-island fortress and material inventory, not because that is proven infrastructure, but because the geology gives the story a specific place to think from.",
+        points: [
+          "The Pleistocene dune mass is imagined as a shock-absorbing buffer rather than brittle continental crust.",
+          "The freshwater lens becomes both drinking reserve and thermal / hydraulic system.",
+          "Quartz, rutile, ilmenite, zircon and monazite form the Silica Stack: glass, titanium, magnetic cores, ceramics, rare earths and long-term energy questions."
+        ]
+      },
+      {
+        title: "Extreme engineering spine",
+        body: "The infrastructure layer is pure moonshot: a wet-sand tunnelling system that prints and mines as it goes.",
+        points: [
+          "The Sandworm concept uses slurry-shield pressure control to hold saturated sand open.",
+          "In-situ laser or plasma sintering turns excavated silica into a vitreous tunnel liner.",
+          "Lateral wall mining extracts mineral streams while creating habitable voids, making tunnelling part excavation and part material refinery."
+        ]
+      },
+      {
+        title: "Living material layer",
+        body: "The master plan keeps returning to structures that heal, flex or resonate rather than just sit there.",
+        points: [
+          "Osteomorphic blocks interlock by shape and dissipate motion instead of cracking like brittle monoliths.",
+          "Phononic void patterns become acoustic metamaterials for vibration control and design-fiction stealth.",
+          "Oyster-crete imagines biomineral infrastructure that accretes calcium carbonate from seawater and repairs itself."
+        ]
+      },
+      {
+        title: "Energy and civilisation operating system",
+        body: "The most far-out energy layer is Project Jupiter, but the transferable idea is energy sovereignty and storage discipline.",
+        points: [
+          "Lightning harvesting and thorium-radon ionisation belong in the speculative layer and need strong evidence gates.",
+          "The sand battery is a more grounded bridge: store heat in silica mass and insulate it well.",
+          "The Braided Economy and C-Hour layer ask how care, repair, ecological work and public value get recognised when survival is the design target."
+        ],
+        note: "This page should feel like a moonshot dossier, with the mythic material intact and the real-world boundaries still visible."
+      }
     ],
     elements: ["SiO2", "ZrSiO4", "FeTiO3", "REE"]
   },
@@ -172,6 +254,231 @@ const SITE_BRIEFS = [
       "Create a plain-English page explaining why peaceful space infrastructure matters to an island."
     ],
     elements: ["TiO2", "SiO2", "REE"]
+  },
+  {
+    slug: "web3-sensorium",
+    url: "briefs/web3-sensorium.html",
+    title: "Web3 Global Sensorium",
+    eyebrow: "Planetary Twin",
+    material: "DIDs, CRDTs, digital twin, DeSci",
+    source: "Web3_Sensorium_for_Science_Debate.md",
+    deck: "A decentralised Earth-and-space digital twin where known science, wild hypotheses, open debate and resilient sovereign nodes can be tested against data.",
+    brief: [
+      "The source document defines the Global Sensorium as a persistent 1:1 Earth and local-space digital twin fed by real-time sensors, archives and simulation models.",
+      "Its architecture rejects one central server in favour of sovereign nodes, P2P sync, CRDT state, decentralised identity and verifiable contribution trails.",
+      "The moonshot is not just a VR globe. It is a scientific debate arena where mainstream models and fringe hypotheses can be run, compared, challenged and improved in public."
+    ],
+    moonshot: "A planetary nervous system where science is not trapped in journals, wild ideas are not mistaken for proof, and communities can test futures together without surrendering sovereignty.",
+    modules: [
+      "Sovereign node architecture with offline-first replicas",
+      "Signed CRDT state for shared models and sensor readings",
+      "DID / VC trust layer for people, sensors, models and reviews",
+      "Fractal DeSci governance for protocols, domains and contributor guilds"
+    ],
+    experiments: [
+      "Build a tiny browser demo that compares two models against one shared dataset.",
+      "Prototype a contribution credential for data curation, peer review or model replication.",
+      "Map which parts belong in Git, which in a knowledge graph, and which in an immersive twin.",
+      "Create a public reality sorter for evidence, model, speculation, fiction and governance decision."
+    ],
+    depthIntro: "The Sensorium document is the deep architecture behind many of the other moonshots: it gives the site a way to hold data, debate, simulation and sovereignty in one system.",
+    depth: [
+      {
+        title: "Purpose",
+        body: "The source frames the Sensorium as a shared environment for observing Earth, space weather, climate, geology, biology and infrastructure as connected systems.",
+        points: [
+          "It democratises access to complex data and modelling tools instead of leaving them inside silos.",
+          "It lets students, researchers, citizens and institutions explore the same world model at different depths.",
+          "It explicitly includes fringe and wild ideas, but only by making their assumptions runnable, inspectable and testable."
+        ]
+      },
+      {
+        title: "Sovereignty stack",
+        body: "The key technical move is offline-first decentralisation.",
+        points: [
+          "Each node keeps its own world-state replica and can keep working during network disruption.",
+          "CRDTs let independent edits converge without a central arbiter.",
+          "DIDs and verifiable credentials create provenance: who supplied a sensor feed, model, review or governance vote."
+        ]
+      },
+      {
+        title: "Digital twin build path",
+        body: "The document grounds the immersive world in GIS and open data rather than pure spectacle.",
+        points: [
+          "Digital elevation models, satellite imagery, hydrology, vegetation and infrastructure become the geospatial foundation.",
+          "QGIS-style processing, open 3D formats, WebSockets, WebRTC and JSON APIs keep it interoperable.",
+          "Unreal or Unity can render the world, but the important design principle is separating data, logic and visual layer."
+        ]
+      },
+      {
+        title: "Science debate engine",
+        body: "The Sensorium is a way to keep high-strangeness curiosity honest.",
+        points: [
+          "Every hypothesis states its mechanism, assumptions, parameters and expected observations.",
+          "Multiple models can be run side by side against the same input data.",
+          "Community review, model versioning and provenance let debate happen around evidence instead of vibes."
+        ]
+      }
+    ],
+    elements: ["SiO2", "REE", "ZrSiO4", "Fe"]
+  },
+  {
+    slug: "aura-geode",
+    url: "briefs/aura-geode.html",
+    title: "Aura Geode And Genesis Protocol",
+    eyebrow: "Qualified Self",
+    material: "Straddie quartz, AuraOS, clinical wrapper, digital twin",
+    source: "AURA_GEODE_to_MACRO.md / Clinical_Research_Path_for_Aura_of_Dementia.md / Version7_Aura_of_Intelligence_2023_July.md",
+    sourceLabel: "Source documents: Aura Geode macro blueprint, dementia clinical pathway and Version 7 Aura subprojects.",
+    deck: "A cosmic-egg digital twin system that travels from XR Aura Builder, geopoetic capsule and AuraOS into dementia-care evidence, clinical governance and Live Aid 2035 scale culture.",
+    brief: [
+      "Version 7 frames Aura as a meta-program for building the tool: body scan, goals, values, mind palace, data visualisations, world maps, XR scaffolding and safe plug-and-play modules.",
+      "The Geode document turns that into a capsule ecosystem: pressure-rated shell, personalised atmosphere delivery, modality stack, Bayesian session engine, 60-session Genesis Protocol and privacy-preserving Aura Twin fabric.",
+      "The clinical document grounds the dementia-care branch in Australian evidence pathways: DOMS-aligned assessment, BPSD support, TGA / HREC work, phased trials and NDIS / My Aged Care positioning."
+    ],
+    moonshot: "An external, consent-first digital twin and care companion that helps people map their own mind, health, memory, values, relationships and future without surrendering their body or their data.",
+    modules: [
+      "XR Aura Builder and private/public mind palace shell",
+      "Aura Geode capsule with material ID and session timeline",
+      "Clinical wrapper for dementia care and carer support",
+      "GAJRA culture layer with Live Aid 2035 and world-scale value mapping"
+    ],
+    experiments: [
+      "Build the first Aura Builder as a local-only questionnaire and visual scaffold before any device claims.",
+      "Turn the 60-session Genesis Protocol into a staged data map with clear consent checkpoints.",
+      "Create a demo clinical report format that maps narrative inputs to validated domains without pretending it is approved healthcare.",
+      "List Version 7 subprojects as lanes, with only Live Aid 2035 carried forward."
+    ],
+    depthIntro: "This page keeps the wildness of Aura intact while giving it a proper dossier shape: personal builder, capsule system, clinical pathway, subprojects and cultural scale.",
+    depth: [
+      {
+        title: "Version 7 builder spine",
+        body: "The early Aura document is a tool-building manifesto: build an interface that helps people construct richer Auras with LLM prompts, mixed reality, safe code and personal context.",
+        points: [
+          "Inputs begin with body scan, goals, values, interests, preferred emotions, colours, skills, travel, activity rhythms and conscious direction.",
+          "The Mind Palace holds private objects, memories and maps, while the outer shell can expose public or social layers.",
+          "The XR builder uses a 12 x 24 matrix, vector-space objects, body-relative scale, chakras, geosphere maps and explicit inside-private / outside-public boundaries."
+        ]
+      },
+      {
+        title: "Aura Geode system",
+        body: "The Geode document turns Aura from software into a physical ritual and engineering brief.",
+        points: [
+          "The capsule shell is imagined as pressure-rated geopolymer with a Straddie quartz base and a material composition ID.",
+          "The personalised atmosphere delivery system keeps the main capsule air normal while delivering controlled gas mixes through a medical-grade mask.",
+          "AuraOS sequences light, scent, audio, haptics, atmosphere and dialogue across programmed two-hour sessions."
+        ]
+      },
+      {
+        title: "60-session Genesis Protocol",
+        body: "The source gives Aura a staged user journey instead of an instant digital twin fantasy.",
+        points: [
+          "Sessions 1-20 map resilience and dose-response through short micro-exposures.",
+          "Sessions 21-40 let the AI compose personalised chrono-therapeutic sessions from early data.",
+          "Sessions 41-60 validate and refine the user's prime protocol while studying expectation, response and subjective experience."
+        ]
+      },
+      {
+        title: "Clinical dementia pathway",
+        body: "The clinical research plan is the sober bridge from poetic twin to Australian health-system evidence.",
+        points: [
+          "Persona mapping keeps life story and preferences, then maps them to clinical domains such as memory, function, quality of life, BPSD and carer wellbeing.",
+          "The clinical wrapper augments familiar tools such as RUDAS, GPCOG, DAD, NPI, DEMQOL and carer-burden scales instead of asking clinicians to trust a black box.",
+          "The regulatory pathway treats AoI as likely SaMD / clinical decision support software, requiring TGA planning, HREC approval, privacy governance and human-factors evidence."
+        ],
+        note: "Public wording must stay non-medical until trials, approvals and qualified partners exist."
+      },
+      {
+        title: "Version 7 subprojects",
+        body: "The subprojects become lanes for the atlas rather than one overloaded promise.",
+        points: [
+          "Traveller hardware kits, capsule / quarantine hotels, retirement villages, NDIS and rehabilitation clinics, health retreats, family-size display centres and major nightclub systems.",
+          "Aura Affinity Marketplace and Internet of Good: values clothing, Aura-related wellbeing and creative businesses, safe marketplace flows and cultural mapping.",
+          "GAJRA / Aura DAO work: newsletters, outreach, grants, marketplace transactions, game assets, distributed compute and open-world AI agents.",
+          "Live Aid 2035: synchronised concerts, 72 hours of art and music, and a world vote across past, present and future values."
+        ]
+      }
+    ],
+    elements: ["SiO2", "REE", "ZrSiO4", "TiO2"]
+  },
+  {
+    slug: "space-weather-hub",
+    url: "briefs/space-weather-hub.html",
+    title: "Space Weather News Hub",
+    eyebrow: "Sun-Earth Studio",
+    material: "NOAA feeds, InfluxDB, Kafka, Unity XR",
+    source: "Space_Weather_Data_IFTTT.md / Space_Weather_Hub_Pseudo_Code.md / 1-page_Earthquake_Prediction_with_the_Space_Weather_News.md / Modular_Unity_Development_&_Deployment_Plan_for___SpaceWeather_News_Hub__.md",
+    sourceLabel: "Source documents: Space Weather IFTTT, pseudo-code, earthquake prediction brief and Unity deployment plan.",
+    deck: "A live XR news studio for solar wind, geomagnetic storms, ionospheric shifts, earthquakes, alerts, AI narration and public science literacy.",
+    brief: [
+      "The source files turn space weather into a working system: data feeds, IFTTT rules, timestamped storage, correlation analysis, Unity visualisation and AI narration.",
+      "The earthquake material is handled as frontier forecasting research, not certainty: many signals are tracked, but precise one-hour predictions remain beyond standard practice.",
+      "The build path runs from Python / InfluxDB / Kafka and WebSocket data flow into a cross-platform Unity XR experience with mobile, Quest, PC VR, WebXR and mixed-reality targets."
+    ],
+    moonshot: "A cheerful but disciplined Sun-Earth newsroom where a student, island resident, researcher or emergency planner can see invisible solar-terrestrial systems become visible, explorable and discussable.",
+    modules: [
+      "IFTTT matrix for solar, geomagnetic, seismic, volcanic, infrastructure and public-health triggers",
+      "Timestamped data layer using Python, InfluxDB and event streams",
+      "Unity XR newsroom with live dashboards, 3D Earth, magnetosphere, CME and aurora layers",
+      "AI anchor for reviewed scripts, adaptive explanations, multilingual narration and calm alerts"
+    ],
+    experiments: [
+      "Start with a static dashboard that ingests one NOAA space-weather feed and one earthquake feed.",
+      "Add timestamp alignment and show lagged correlations without claiming causation.",
+      "Prototype the IFTTT rules as visible cards before wiring any alerting workflow.",
+      "Build the first Unity or WebXR scene with dummy data so the visual grammar exists before real-time complexity arrives."
+    ],
+    depthIntro: "These files contain the most implementation-ready moonshot in the set: data streams, rule logic, backend shape, XR deployment plan, narration pipeline and caveats.",
+    depth: [
+      {
+        title: "Signals to ingest",
+        body: "The IFTTT documents name the data families the studio needs to watch.",
+        points: [
+          "Space weather: solar flares, solar wind speed and density, IMF orientation, CMEs, solar proton events and geomagnetic indices.",
+          "Earth systems: seismic feeds, foreshocks, TEC, ULF electromagnetic anomalies, radon, groundwater, InSAR deformation, thermal infrared and acoustic emissions.",
+          "Human systems: infrastructure sensors, public reports, education interactions and sentiment or misinformation signals during events."
+        ]
+      },
+      {
+        title: "Rule engine",
+        body: "The source material repeatedly uses IFTTT logic because the first public version needs to be readable before it becomes clever.",
+        points: [
+          "IF X-class flare, THEN evaluate satellite, radio and geomagnetic impacts.",
+          "IF solar wind is fast and Bz turns strongly southward, THEN raise geomagnetic storm watch.",
+          "IF ULF anomalies, TEC shifts, radon spikes or deformation appear together, THEN increase research attention rather than issuing false certainty."
+        ]
+      },
+      {
+        title: "Backend architecture",
+        body: "The pseudo-code points toward a practical streaming stack.",
+        points: [
+          "Python or Node microservices fetch external APIs and normalise the data.",
+          "Kafka-style topics carry live events such as solar_wind, quakes, alerts and summaries.",
+          "InfluxDB stores timestamped time-series so the system can replay events, compare lags and generate trend panels.",
+          "REST and WebSocket gateways deliver live and historical slices into the XR client."
+        ]
+      },
+      {
+        title: "XR news studio",
+        body: "The Unity plan turns the data stack into an experience.",
+        points: [
+          "Mobile VR, WebXR, AR Foundation, Quest, PC VR and Vision Pro are treated as tiers of one modular Unity project.",
+          "Dashboard panels show live values; 3D Earth layers show auroras, quakes, TEC and geospatial context.",
+          "Solar flares and CMEs become time-compressed 4D sequences so people can understand events that unfold over hours or days."
+        ]
+      },
+      {
+        title: "AI narration and public trust",
+        body: "The AI anchor is useful only if it stays tied to data and review.",
+        points: [
+          "LLMs draft daily scripts from structured summaries, but human review or strict templates protect factuality.",
+          "TTS, lip-sync and gestures make the anchor feel alive without pretending the AI is the authority.",
+          "Age, region and language settings let the same event be explained to children, the general public, specialists or decision-makers."
+        ],
+        note: "Earthquake prediction stays framed as probabilistic research and preparedness, not a public promise of precise warnings."
+      }
+    ],
+    elements: ["SiO2", "REE", "TiO2", "Fe"]
   },
   {
     slug: "auto-farm",
@@ -761,6 +1068,89 @@ const INTERACTIVE_LABS = {
       accelerators: "Accelerators per node",
       utilisation: "Useful utilisation"
     }
+  },
+  "web3-sensorium": {
+    type: "reality-stack",
+    title: "Sensorium Reality Sorter",
+    deck: "The Sensorium only works if every claim knows what lane it is in: data, model, speculation or governance.",
+    lanes: [
+      {
+        name: "Observed data",
+        items: ["satellite feeds", "seismic feeds", "DEM maps", "sensor calibration", "timestamped archives"]
+      },
+      {
+        name: "Runnable model",
+        items: ["assumptions", "parameters", "versioned code", "input data", "validation result"]
+      },
+      {
+        name: "Wild idea",
+        items: ["micro-nova scenario", "galactic wave", "underwater technate", "consciousness physics", "user hypothesis"]
+      },
+      {
+        name: "Governance",
+        items: ["DID identity", "verifiable credentials", "peer review", "domain DAO", "public decision trail"]
+      }
+    ]
+  },
+  "aura-geode": {
+    type: "reality-stack",
+    title: "Aura Subproject Lanes",
+    deck: "Sort the Aura universe into builder, hardware, clinical and culture lanes. Live Aid 2035 belongs in the culture lane as the only Live Aid target carried forward.",
+    lanes: [
+      {
+        name: "Personal builder",
+        items: ["body scan", "goals", "values", "mind palace", "data visualisations", "known-world maps"]
+      },
+      {
+        name: "Hardware habitats",
+        items: ["traveller kits", "capsule hotels", "retirement villages", "NDIS clinics", "health retreats", "nightclub systems"]
+      },
+      {
+        name: "Clinical path",
+        items: ["DOMS mapping", "BPSD support", "TGA pathway", "HREC approval", "Queensland trials", "carer outcomes"]
+      },
+      {
+        name: "Global culture",
+        items: ["GAJRA", "Aura Affinity", "Internet of Good", "Live Aid 2035", "world vote", "values mapping"]
+      }
+    ]
+  },
+  "space-weather-hub": {
+    type: "ifttt-matrix",
+    title: "Sun-Earth IFTTT Matrix",
+    deck: "Click a signal to see how the source documents turn live data into careful alerts, visualisations and research prompts.",
+    signals: [
+      {
+        name: "X-class flare",
+        stream: "Solar imaging and X-ray flux",
+        query: "IF a major flare is detected, THEN evaluate satellite, radio, aviation, grid and public-communication impacts.",
+        outputs: ["VR alert card", "Sun flare animation", "reviewed AI news segment", "radio and satellite impact notes"]
+      },
+      {
+        name: "Southward Bz",
+        stream: "Solar wind and interplanetary magnetic field",
+        query: "IF Bz turns strongly southward while solar wind speed is elevated, THEN raise geomagnetic storm probability.",
+        outputs: ["magnetosphere compression visual", "Kp / Dst dashboard watch", "grid and navigation context", "plain-language calm notice"]
+      },
+      {
+        name: "TEC and ULF shift",
+        stream: "GNSS TEC maps plus electromagnetic anomaly feeds",
+        query: "IF TEC disturbance and ULF anomalies overlap in a known seismic region, THEN flag the pattern for research review.",
+        outputs: ["research-only risk layer", "correlation panel", "no deterministic public warning", "request for additional sensor checks"]
+      },
+      {
+        name: "Radon spike",
+        stream: "Ground radon and hydrochemical sensors",
+        query: "IF local radon or groundwater chemistry changes suddenly, THEN cross-check against foreshocks, deformation and meteorology.",
+        outputs: ["local sensor confidence score", "InSAR and seismic cross-check", "human review queue", "community observation request"]
+      },
+      {
+        name: "Public concern surge",
+        stream: "Reports, sentiment and education interactions",
+        query: "IF public concern rises faster than the physical-risk signal, THEN add a clarifying segment before panic fills the gap.",
+        outputs: ["AI explainer draft", "editor review", "misinformation note", "age-appropriate learning path"]
+      }
+    ]
   },
   "master-plan": {
     type: "reality-stack",

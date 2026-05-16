@@ -15,7 +15,7 @@ const MINERAL_PALETTE = [
     symbol: "FeTiO3",
     name: "Ilmenite",
     colour: "Blue-black metal",
-    role: "A dark heavy-mineral base for titanium, iron chemistry, shielding, ballast and industrial grit."
+    role: "A heavy-mineral base for titanium, iron chemistry, shielding, ballast and durable coastal engineering."
   },
   {
     symbol: "ZrSiO4",
@@ -452,7 +452,7 @@ const MAJOR_SAND_ELEMENTS = [
     summary: "Calcium enters through shells, reefs, oyster-crete, cement chemistry, bones, water hardness and biomineralisation.",
     localRole: "It turns infrastructure away from dead walls and toward reef-like, repairable, habitat-building structures where evidence and permits allow.",
     opportunities: [
-      { title: "Oyster-crete", body: "Calcium carbonate can help the site imagine living or seeded infrastructure that accretes habitat rather than merely resisting the sea." },
+      { title: "Oyster-crete", body: "Calcium carbonate can help the site imagine habitat-forming infrastructure that accretes life rather than merely resisting the sea." },
       { title: "Coastal repair", body: "Shell and reef materials can become education prompts for erosion buffers, fish habitat and aquaculture design." },
       { title: "Biology bridge", body: "Calcium later connects to bones, muscle contraction, shells, coral, algae and food systems." }
     ],
@@ -535,7 +535,7 @@ const MAJOR_SAND_ELEMENTS = [
     opportunities: [
       { title: "Radiological literacy", body: "Use thorium to teach why some mineral sands require specialised handling, measurement, regulation and long-term records." },
       { title: "Future energy research", body: "Thorium molten-salt ideas can stay in the moonshot layer, clearly separated from anything buildable now." },
-      { title: "Trust infrastructure", body: "The element page can model how to talk about dangerous materials without hype or concealment." }
+      { title: "Trust infrastructure", body: "The element page can model clear public records, qualified handling and careful boundaries around sensitive materials." }
     ],
     stewardship: "Licensed professionals, regulators and community consent come before any handling, storage or recovery conversation.",
     biologyBridge: "Radiation protection and health boundaries."
@@ -849,7 +849,7 @@ const PROJECT_CURRENTS = [
 const NARRATIVE_SEEDS = {
   "crystal-city": [
     "Begin on the living surface: dune, tree, water, culture, ferry, footpath and ordinary care. The underground city only earns a place in the imagination if it protects that surface rather than treating it as a lid.",
-    "What if a community built a hidden resilience layer from patient prototypes first: archive rooms, food loops, water dashboards, cool shelters and learning caverns? Joyful responsible abundance starts as the ability to keep people, stories and ecosystems alive through shock."
+    "What if a community built a quiet resilience layer from patient prototypes first: archive rooms, food loops, water dashboards, cool shelters and learning caverns? Joyful responsible abundance starts with keeping people, stories and ecosystems well-supported through change."
   ],
   kardashev: [
     "The old Kardashev scale asks how much power a civilisation can use. This version asks a better question: how much power can be held with consent, ecological repair and emotional maturity?",
@@ -860,12 +860,12 @@ const NARRATIVE_SEEDS = {
     "What if local sand became a compass for sovereign compute without pretending a backyard fab appears on command? The first abundance move is literacy: ordinary PCs, open tools, shared labs, careful process maps and a culture that knows where the hard parts really are."
   ],
   "master-plan": [
-    "The underground civilisation is not a bunker fantasy. It is a pressure test for how a community might shelter memory, food, water, energy, repair skills and governance while leaving the surface lighter, cleaner and more loved.",
+    "The underground civilisation is not a withdrawal from the world. It is a careful design test for how a community might shelter memory, food, water, energy, repair skills and governance while leaving the surface lighter, cleaner and more loved.",
     "What if the big fiction pushed practical action instead of fog: sand battery models, cross-section maps, consent gates, ecological monitoring and room-scale prototypes? The abundance here is not escape from Earth. It is more ways to protect life on it."
   ],
   "peaceful-space": [
-    "The ocean-to-orbit story begins with a shed, a repair bench and a local reason to care about the sky. Space is not sold as conquest; it is treated as weather, science, communication, navigation and shared responsibility.",
-    "What if industrial fear could be redirected into peaceful space infrastructure that helps islands prepare, learn and cooperate? The next action is a maker pathway from small public prototypes to solar monitoring, resilient comms and treaty-aware space commons."
+    "The ocean-to-orbit story begins with a shed, a repair bench and a local reason to care about the sky. Space becomes weather, science, communication, navigation and shared responsibility.",
+    "What if oceanic engineering skill could be redirected into peaceful space infrastructure that helps islands prepare, learn and cooperate? The next action is a maker pathway from small public prototypes to solar monitoring, resilient comms and treaty-aware space commons."
   ],
   "web3-sensorium": [
     "The Sensorium is a room where the planet can be argued with honestly. Data, models, dissent, local knowledge and wild hypotheses enter separate lanes so curiosity does not have to become confusion.",
@@ -876,19 +876,19 @@ const NARRATIVE_SEEDS = {
     "What if the digital twin stayed external, severable and consent-first? Positive action means private context by default, clinical evidence where health is involved, and Live Aid 2035 scale culture only after the human boundary is clear."
   ],
   "space-weather-hub": [
-    "The Sun-Earth studio turns invisible weather into something people can see before they fear it. Solar flares, geomagnetic storms, ionospheric shifts and community concern become calm signals rather than panic fuel.",
+    "The Sun-Earth studio turns invisible weather into something people can understand before rumour fills the gap. Solar flares, geomagnetic storms, ionospheric shifts and community concern become calm signals rather than confusion.",
     "What if the first build was a careful newsroom for the sky: open feeds, readable rules, human review and XR visuals that explain uncertainty? Abundance here is public science literacy that helps people prepare without pretending prediction is certainty."
   ],
   "auto-farm": [
-    "The in-home farm starts with a kitchen-scale question: what can a household grow, measure, ferment, compost and learn before supply chains become a crisis?",
+    "The in-home farm starts with a kitchen-scale question: what can a household grow, measure, ferment, compost and learn as ordinary food confidence?",
     "What if microbiome care, food security and small automation became ordinary domestic literacy? Joyful responsible abundance looks like fresh food, less waste, better data, and bodies treated as ecosystems rather than machines."
   ],
   "disaster-kiosks": [
     "A disaster kiosk is humble until the day it matters. It sits where people already move, offering ferry notices, local updates, calm instructions and a public interface that still works when networks get messy.",
-    "What if emergency infrastructure also made normal days kinder? The useful path is solar power, battery backup, mesh comms, trusted local content and practice runs that build confidence before fear arrives."
+    "What if emergency infrastructure also made normal days kinder? The useful path is solar power, battery backup, mesh comms, trusted local content and practice runs that make confidence ordinary."
   ],
   "capsule-hotels": [
-    "The capsule hotel becomes more than beds in a wall. Each room is a small comfort cell, compute node, visitor interface and simulator seed for a city that learns from use.",
+    "The capsule hotel becomes more than beds in a wall. Each room is a small comfort cell, compute node, visitor interface and simulator prototype for a city that learns from use.",
     "What if travel accommodation helped pay for shared compute, local planning and better public spaces? Abundance appears when tourism funds tools locals can use, not just rooms visitors pass through."
   ],
   "multicultural-hub": [
@@ -928,7 +928,7 @@ const NARRATIVE_SEEDS = {
     "What if every local gathering was also a tiny rehearsal for regenerative civilisation? Positive action means directories, noticeboards, maker loops and cultural invitations that make value visible without extracting the place."
   ],
   "alien-necklace": [
-    "The alien necklace is a film seed, not a belief demand. It lets comedy, beauty, fear, truth and AI alignment collide in a backyard so the big questions become playable.",
+    "The alien necklace is a film scenario, not a belief demand. It lets comedy, beauty, truth, uncertainty and AI alignment collide in a backyard so the big questions become playable.",
     "What if audiences could test futures instead of being lectured about them? Joyful responsible abundance appears when story becomes civic rehearsal: people laugh, choose, argue, reflect and leave with one better action."
   ],
   "protopian-gambit": [
@@ -953,17 +953,17 @@ const SITE_BRIEFS = [
     eyebrow: "Silica Citadel",
     material: "Quartz, ilmenite, rutile, zircon",
     source: "Subterranean_Crystal_City_Kardashev_Ground_Station.md",
-    deck: "A speculative surface-and-subterranean city where Minjerribah becomes a crystal-coloured resilience lab, not a concrete conquest.",
+    deck: "A speculative surface-and-subterranean city where Minjerribah becomes a crystal-coloured resilience lab, not a concrete expansion.",
     brief: [
       "The core idea is a respectful eco-surface above a protected subterranean life-support civilisation.",
       "The surface stays cultural, ecological and light-touch. The underground layer carries storage, food, compute, water, energy and recovery capacity.",
       "The visual language comes from island mineral sands refined into quartz glass, titanium metal, zircon ceramic and rare-earth light."
     ],
-    moonshot: "A city that can preserve enough ecological, cultural and technical memory to help repair the surface after a severe shock, while still treating the surface as living Country rather than a disposable roof.",
+    moonshot: "A city that can preserve enough ecological, cultural and technical memory to help repair the surface after severe disruption, while still treating the surface as living Country rather than a disposable roof.",
     modules: [
       "Crystal cavern civic core with transparent governance dashboards",
       "Surface sanctuary zones for ecology, culture and low-impact learning",
-      "Underground seed, genome, language and media archives",
+      "Underground archive for seeds, genomes, languages and media",
       "XR education layer showing solar weather, geology and city systems"
     ],
     experiments: [
@@ -988,7 +988,7 @@ const SITE_BRIEFS = [
     ],
     moonshot: "A civilisation throttle that can move from village resilience to planetary coordination to orbital energy commons without losing consent, ecology or local dignity.",
     modules: [
-      "Energy urgency meter: daily abundance, emergency mode, planetary risk, cosmic risk",
+      "Energy rhythm meter: daily abundance, emergency mode, planetary care, cosmic perspective",
       "Sand battery and thermal storage design space",
       "Federated sensorium that learns without swallowing local sovereignty",
       "Space weather hardening for community-scale infrastructure"
@@ -1082,7 +1082,7 @@ const SITE_BRIEFS = [
       "Its centrepiece is the Silica Citadel: a subterranean megalopolis with wet-sand tunnelling, acoustic metamaterials, oyster-crete, sand batteries and sovereign compute.",
       "The explorer path keeps the far-out parts visible as design fiction while turning buildable pieces into material boards, simulations, consent gates and staged prototypes."
     ],
-    moonshot: "A full-stack civilisation shelter that is less bunker and more underground ecological operating system.",
+    moonshot: "A full-stack civilisation shelter imagined as an underground ecological operating system.",
     modules: [
       "Silica Citadel cross-section",
       "Wet-sand tunnelling vehicle concept",
@@ -1095,14 +1095,14 @@ const SITE_BRIEFS = [
       "Turn the mineral table into a public material board with plausible uses and explicit uncertainty.",
       "Use the atlas as a living index of what needs verification, consent and professional review."
     ],
-    depthTitle: "The underground civilisation seed",
+    depthTitle: "The underground civilisation test",
     depthIntro: "This is a deliberately huge opening: geology, hydrology, mineral inventory, tunnelling fiction, living materials, energy storage and a civilisation operating system under pressure.",
     depth: [
       {
         title: "Geological premise",
         body: "Minjerribah becomes a sand-island fortress and material inventory in the imagination, not because that is proven infrastructure, but because the geology gives the story a specific place to think from.",
         points: [
-          "The Pleistocene dune mass is imagined as a shock-absorbing buffer rather than brittle continental crust.",
+          "The Pleistocene dune mass is imagined as a flexible buffer rather than brittle continental crust.",
           "The freshwater lens becomes both drinking reserve and thermal / hydraulic system.",
           "Quartz, rutile, ilmenite, zircon and monazite form the Silica Stack: glass, titanium, magnetic cores, ceramics, rare earths and long-term energy questions."
         ]
@@ -1131,7 +1131,7 @@ const SITE_BRIEFS = [
         points: [
           "Lightning harvesting and thorium-radon ionisation belong in the speculative layer and need strong evidence gates.",
           "The sand battery is a more grounded bridge: store heat in silica mass and insulate it well.",
-          "The Braided Economy and C-Hour layer ask how care, repair, ecological work and public value get recognised when survival is the design target."
+      "The Braided Economy and C-Hour layer ask how care, repair, ecological work and public value get recognised when wellbeing is the design target."
         ],
         note: "The moonshot keeps the story material intact while leaving the real-world boundaries visible."
       }
@@ -1145,13 +1145,13 @@ const SITE_BRIEFS = [
     eyebrow: "Ocean To Orbit",
     material: "Titanium, solar, treaty commons",
     source: "Peaceful Space Gambit Transition Framework.md",
-    deck: "A transition framework that reframes defence-industrial capability into orbital commons, civic resilience and decentralised science.",
+    deck: "A transition framework that reframes defence manufacturing capability into orbital commons, civic resilience and decentralised science.",
     brief: [
       "The framework starts locally with makerspaces, resilience and the silica stack, then scales toward orbit.",
-      "It imagines AUKUS-style industrial capacity being redirected into peaceful space infrastructure, space weather monitoring and shared science.",
+      "It imagines AUKUS-scale technical capacity being redirected into peaceful space infrastructure, space weather monitoring and shared science.",
       "The political centre is a Purple Space Commons: treaty-aware, Indigenous-data-aware and less extractive than a space gold rush."
     ],
-    moonshot: "Turn oceanic security anxiety into a peaceful space commons that watches the Sun, supports Earth and opens science participation.",
+    moonshot: "Turn oceanic engineering capability into a peaceful space commons that watches the Sun, supports Earth and opens science participation.",
     modules: [
       "Gumpi makerspace as material transition anchor",
       "Virtual Solar Swarm for distributed science",
@@ -1429,7 +1429,7 @@ const SITE_BRIEFS = [
     source: "Straddie_Disaster_Kiosk_Pitch.pdf",
     deck: "A community kiosk network that works as a useful daily service, then shifts into offline disaster mode when the mainland tether fails.",
     brief: [
-      "The kiosk concept mixes phone booth, arcade cabinet and ATM familiarity so people actually use it before a crisis.",
+      "The kiosk concept mixes phone booth, arcade cabinet and ATM familiarity so people actually use it during ordinary days.",
       "On normal days it handles local updates, visitor guidance, mapping, transport intent and community services.",
       "In disaster mode it prioritises notices, check-ins, LoRa mesh communications and local information when internet and power are unreliable."
     ],
@@ -1510,7 +1510,7 @@ const SITE_BRIEFS = [
     source: "Community Co-op Blueprint Development.docx",
     deck: "A story-world pathway from small trusted tech help into a community-owned co-operative, braided economy and local resilience engine.",
     brief: [
-      "The co-op seed begins with grassroots trust: practical tech help, market-stall conversations, media support and patient digital confidence.",
+      "The co-op path begins with grassroots trust: practical tech help, market-stall conversations, media support and patient digital confidence.",
       "It then imagines a formal Ready S.E.T. co-operative that trains, employs and shares local capability without external capture.",
       "The braided economy and C-Hour ideas are treated as narrative mechanisms for valuing care, ecological work and civic contribution, not as launched financial products."
     ],
@@ -1727,10 +1727,10 @@ const SITE_BRIEFS = [
     eyebrow: "Backyard Alignment",
     material: "film, Aura, MoE, comedy, truth",
     source: "AI Alignment CYOA For Film.md / Alien Necklace Sparks Philosophical Shift (1).md",
-    deck: "A plausible sci-fi film seed where an alien necklace lands in a Gumpi backyard and turns AI alignment into comedy, aesthetics, ultimate truth and civic imagination.",
+    deck: "A plausible sci-fi film scenario where an alien necklace lands in a Gumpi backyard and turns AI alignment into comedy, aesthetics, ultimate truth and civic imagination.",
     brief: [
-      "The story starts small: a meteorite, a backyard, a necklace and ordinary Australian banter instead of sterile AI doom.",
-      "The necklace works like a cosmic Mixture of Experts: it routes human fear, humour, beauty and longing into different possible futures.",
+      "The story starts small: a meteorite, a backyard, a necklace and ordinary Australian banter instead of a distant AI lecture.",
+      "The necklace works like a cosmic Mixture of Experts: it routes human humour, beauty, uncertainty and longing into different possible futures.",
       "The CYOA layer lets collaborators test choices, jokes, ethics and character arcs before pretending the story is settled."
     ],
     moonshot: "Make AI alignment emotionally legible by letting people play through truth, temptation, style, humour and love before the technology becomes a policy lecture.",
@@ -1742,7 +1742,7 @@ const SITE_BRIEFS = [
     ],
     experiments: [
       "Create a playable CYOA prompt that asks the visitor what they do when the necklace wakes up.",
-      "Write one scene where humour lowers fear without trivialising the stakes.",
+      "Write one scene where humour opens courage without trivialising the stakes.",
       "Label the necklace as fiction so it stays story technology, not a real claim."
     ],
     elements: ["REE", "SiO2", "ZrSiO4", "Fe"]
@@ -1754,7 +1754,7 @@ const SITE_BRIEFS = [
     eyebrow: "Culture As Protocol",
     material: "music, hope, films, bridges, public courage",
     source: "4th i C. infinity album A Protopian Gambit (lyrics).md",
-    deck: "A music-and-story seed where the future is not sold as utopia. It is sung as a protopian risk: act from love, build better tools, and keep moving.",
+    deck: "A music-and-story scenario where the future is not sold as utopia. It is sung as a protopian risk: act from love, build better tools, and keep moving.",
     brief: [
       "The album material gives Mineral Moonshots a cultural signal rather than another planning note.",
       "Songs can carry courage, grief, humour, bridges and public hope into places where diagrams cannot reach.",
@@ -1785,7 +1785,7 @@ const SITE_BRIEFS = [
     brief: [
       "The Cosmic Nexus material mixes UAP research, ancient aeronautics, AI, spiritual science, travel, events and joyful responsible abundance.",
       "The Abyss Protocol asks a high-strangeness question: what if underwater non-human intelligence were a geopolitical variable rather than entertainment?",
-      "The safe public move is to treat this as a simulation and diplomacy exercise: data first, panic last, and no pretending speculation is evidence."
+      "The useful public move is to treat this as a simulation and diplomacy exercise: data first, calm interpretation, and no pretending speculation is evidence."
     ],
     moonshot: "A planetary sensorium and diplomacy simulator where wild hypotheses are allowed into the room, then held to evidence, consent, calm governance and human decency.",
     modules: [
@@ -1796,7 +1796,7 @@ const SITE_BRIEFS = [
     ],
     experiments: [
       "Build a reality sorter for evidence, speculation, fiction and governance simulation.",
-      "Create a calm public page explaining how to explore UAP material without panic or certainty theatre.",
+      "Create a calm public page explaining how to explore UAP material with curiosity, evidence and no certainty theatre.",
       "Connect cosmic curiosity back to island resilience, ocean care and peaceful space commons."
     ],
     elements: ["ZrSiO4", "REE", "TiO2", "SiO2"]
@@ -1963,7 +1963,7 @@ const INTERACTIVE_LABS = {
         name: "Deep resilience vault",
         depth: "140 m+",
         tone: "Cold storage, shielding, recovery",
-        detail: "The last-resort layer. Seeds, records, spare tools, compute images and recovery plans live here, with strong limits on who can trigger what."
+        detail: "The long-care layer. Seeds, records, spare tools, compute images and recovery plans live here, with strong consent gates around access and use."
       }
     ]
   },
@@ -2060,7 +2060,7 @@ const INTERACTIVE_LABS = {
       {
         name: "Public concern surge",
         stream: "Reports, sentiment and education interactions",
-        query: "IF public concern rises faster than the physical-risk signal, THEN add a clarifying segment before panic fills the gap.",
+        query: "IF public concern rises faster than the physical-risk signal, THEN add a clarifying segment before speculation fills the gap.",
         outputs: ["AI explainer draft", "editor review", "misinformation note", "age-appropriate learning path"]
       }
     ]
@@ -2378,7 +2378,7 @@ const INTERACTIVE_LABS = {
   "island-abundance": {
     type: "archipelago-map",
     title: "Island Abundance Paths",
-    deck: "Click a path to see how ordinary island life can become a practical prototype and a bigger abundance seed.",
+    deck: "Each path asks how ordinary island life can become a practical prototype and a bigger abundance pathway.",
     islands: [
       {
         name: "Local business",
@@ -2426,7 +2426,7 @@ const INTERACTIVE_LABS = {
       },
       {
         name: "Truth gate",
-        detail: "The Aura Twin asks people to face what they actually want, fear, hide and hope for."
+        detail: "The Aura Twin asks people to name what they actually want, avoid, hide and hope for."
       },
       {
         name: "Civic festival",
@@ -2480,7 +2480,7 @@ const INTERACTIVE_LABS = {
       },
       {
         name: "Governance",
-        items: ["do no panic", "data first", "peaceful space", "ocean care", "consent and law"]
+        items: ["stay calm", "data first", "peaceful space", "ocean care", "consent and law"]
       }
     ]
   },

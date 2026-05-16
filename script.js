@@ -95,7 +95,7 @@
     mount.innerHTML = "";
 
     const copy = make("div", "footer-copy");
-    copy.appendChild(make("p", "", "Mineral Moonshots is a multi-page atlas of narrative seeds, build paths and plausible worlds we can begin from now."));
+    copy.appendChild(make("p", "", "Mineral Moonshots is a multi-page atlas of careful openings, build paths and plausible worlds we can begin from now."));
     copy.appendChild(make("p", "footer-note", "Local projects, public prototypes, private workbenches and speculative moonshots are kept in separate lanes. Real-world work still needs consent, engineering, ecology, law, culture and community governance."));
 
     const links = make("div", "footer-links");
@@ -676,8 +676,8 @@
     const headline = make("strong", "", "");
     const energyPerson = make("p", "", "");
     const volumePerson = make("p", "", "");
-    const warning = make("p", "", "");
-    readout.append(headline, energyPerson, volumePerson, warning);
+    const guidance = make("p", "", "");
+    readout.append(headline, energyPerson, volumePerson, guidance);
 
     function update() {
       const p = Number(people.input.value);
@@ -685,11 +685,11 @@
       const v = Number(volume.input.value);
       const epp = e / p;
       const vpp = v / p;
-      headline.textContent = epp >= 12 && vpp >= 80 ? "Research comfort zone" : "High-pressure prototype";
+      headline.textContent = epp >= 12 && vpp >= 80 ? "Research comfort zone" : "Constrained prototype";
       energyPerson.textContent = epp.toFixed(1) + " kWh per person per day";
       volumePerson.textContent = Math.round(vpp) + " L active volume per person";
-      warning.textContent = epp < 8 || vpp < 60
-        ? "This would need ruthless crop choices, microbial efficiency and careful failure testing."
+      guidance.textContent = epp < 8 || vpp < 60
+        ? "This version needs modest crop choices, microbial efficiency and careful reliability testing."
         : "This is where the design conversation gets interesting, especially with algae, fungi and sensors.";
     }
 
@@ -986,15 +986,15 @@
     if (sourcePanel) {
       const eyebrow = sourcePanel.querySelector(".eyebrow");
       const title = sourcePanel.querySelector("h2");
-      if (eyebrow) eyebrow.textContent = "Narrative seed";
-      if (title) title.textContent = brief.narrativeTitle || "Where the trail begins";
+      if (eyebrow) eyebrow.textContent = "Careful beginning";
+      if (title) title.textContent = brief.narrativeTitle || "First careful question";
     }
     const moonshotPanel = document.querySelector(".moonshot-panel");
     if (moonshotPanel) {
       const eyebrow = moonshotPanel.querySelector(".eyebrow");
       const title = moonshotPanel.querySelector("h2");
-      if (eyebrow) eyebrow.textContent = "Build spark";
-      if (title) title.textContent = "What wants building";
+      if (eyebrow) eyebrow.textContent = "Prototype boundary";
+      if (title) title.textContent = "What might be tested";
     }
     if (briefList) {
       const narrative = make("div", "narrative-copy");

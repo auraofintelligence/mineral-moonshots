@@ -293,6 +293,21 @@ p {
   padding-top: 5rem;
 }
 
+.section.is-compact {
+  padding-bottom: 3.25rem;
+  padding-top: 3.25rem;
+}
+
+.section.is-compact .section-heading {
+  margin-bottom: 1.5rem;
+  max-width: 980px;
+}
+
+.section.is-compact .section-heading h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  max-width: 20ch;
+}
+
 .section.wide {
   max-width: none;
   padding-left: 0;

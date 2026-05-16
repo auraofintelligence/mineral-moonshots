@@ -1145,7 +1145,7 @@ const SITE_BRIEFS = [
     eyebrow: "Ocean To Orbit",
     material: "Titanium, solar, treaty commons",
     source: "Peaceful Space Gambit Transition Framework.md",
-    deck: "A transition framework that reframes defence manufacturing capability into orbital commons, civic resilience and decentralised science.",
+    deck: "A transition framework that reframes advanced manufacturing capability into orbital commons, civic resilience and decentralised science.",
     brief: [
       "The framework starts locally with makerspaces, resilience and the silica stack, then scales toward orbit.",
       "It imagines AUKUS-scale technical capacity being redirected into peaceful space infrastructure, space weather monitoring and shared science.",
@@ -1158,10 +1158,22 @@ const SITE_BRIEFS = [
       "Space weather hub connected back to island resilience",
       "Treaty model inspired by Antarctic-style stewardship"
     ],
+    experimentsEyebrow: "Island relevance",
+    experimentsTitle: "Useful before orbit.",
+    experimentsIntro: "The space layer earns its place only when it improves ordinary island capability first.",
     experiments: [
-      "Build a visual path from Amity Point to orbit in five steps.",
-      "Map which pieces are local, state, national, international and science-fiction.",
-      "Create a plain-English page explaining why peaceful space infrastructure matters to an island."
+      {
+        title: "Sun and signal dashboard",
+        body: "Turn space weather into a small public status board for solar power, radio, navigation, school science and local operators."
+      },
+      {
+        title: "Resilient comms drill",
+        body: "Use the makerspace path to test mesh radios, power banks, kiosk updates and ferry-day coordination before any orbital hardware is discussed."
+      },
+      {
+        title: "Commons rules first",
+        body: "Draft plain rules for data, debris, launch access and Indigenous knowledge boundaries so peaceful space remains public-good infrastructure."
+      }
     ],
     elements: ["TiO2", "SiO2", "REE"]
   },

@@ -1001,10 +1001,29 @@
     });
 
     const experiments = document.querySelector("[data-experiments]");
+    const experimentsSection = experiments ? experiments.closest(".section") : null;
+    if (experimentsSection) {
+      const eyebrow = experimentsSection.querySelector(".section-heading .eyebrow");
+      const title = experimentsSection.querySelector(".section-heading h2");
+      const heading = experimentsSection.querySelector(".section-heading");
+      if (eyebrow && brief.experimentsEyebrow) eyebrow.textContent = brief.experimentsEyebrow;
+      if (title && brief.experimentsTitle) title.textContent = brief.experimentsTitle;
+      if (brief.experimentsTitle || brief.experimentsIntro) experimentsSection.classList.add("is-compact");
+      if (heading && brief.experimentsIntro) {
+        const intro = heading.querySelector("p:not(.eyebrow)");
+        if (intro) intro.textContent = brief.experimentsIntro;
+        else heading.appendChild(make("p", "", brief.experimentsIntro));
+      }
+    }
     brief.experiments.forEach((experiment, index) => {
       const card = make("article", "experiment-card");
       card.appendChild(make("span", "", String(index + 1).padStart(2, "0")));
-      card.appendChild(make("p", "", experiment));
+      if (typeof experiment === "string") {
+        card.appendChild(make("p", "", experiment));
+      } else {
+        card.appendChild(make("h3", "", experiment.title));
+        card.appendChild(make("p", "", experiment.body));
+      }
       experiments.appendChild(card);
     });
 

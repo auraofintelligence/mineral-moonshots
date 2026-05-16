@@ -533,9 +533,9 @@
 
     const section = make("section", "section project-depth");
     const heading = make("div", "section-heading");
-    heading.appendChild(make("p", "eyebrow", "Project depth"));
-    heading.appendChild(make("h2", "", "From the source documents"));
-    heading.appendChild(make("p", "", brief.depthIntro || "The project documents are treated as working source material: narrative spine, technical stack, research questions and build path."));
+    heading.appendChild(make("p", "eyebrow", brief.depthEyebrow || "Deep thread"));
+    heading.appendChild(make("h2", "", brief.depthTitle || "A world to think with"));
+    heading.appendChild(make("p", "", brief.depthIntro || "For explorers with time, tools or capital, this is the deeper project thread: enough detail to imagine a first experiment, a research path or a serious moonshot team."));
 
     const stack = make("div", "depth-stack");
     brief.depth.forEach((item, index) => {
@@ -576,7 +576,7 @@
       hero.querySelector("[data-eyebrow]").textContent = brief.eyebrow;
       hero.querySelector("[data-title]").textContent = brief.title;
       hero.querySelector("[data-deck]").textContent = brief.deck;
-      hero.querySelector("[data-source]").textContent = brief.sourceLabel || ("Source brief: " + brief.source);
+      hero.querySelector("[data-source]").textContent = brief.sourceLabel || brief.material;
     }
 
     const briefList = document.querySelector("[data-brief-points]");
@@ -584,13 +584,15 @@
     if (sourcePanel) {
       const eyebrow = sourcePanel.querySelector(".eyebrow");
       const title = sourcePanel.querySelector("h2");
-      if (eyebrow) eyebrow.textContent = "Source document";
-      if (title) title.textContent = "Project spine";
+      if (eyebrow) eyebrow.textContent = "Window";
+      if (title) title.textContent = "What this plausible world reveals";
     }
     const moonshotPanel = document.querySelector(".moonshot-panel");
     if (moonshotPanel) {
+      const eyebrow = moonshotPanel.querySelector(".eyebrow");
       const title = moonshotPanel.querySelector("h2");
-      if (title) title.textContent = "Moonshot horizon";
+      if (eyebrow) eyebrow.textContent = "Door";
+      if (title) title.textContent = "What we can try from now";
     }
     brief.brief.forEach((point) => {
       const li = make("li", "", point);

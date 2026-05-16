@@ -3,7 +3,7 @@ const MINERAL_PALETTE = [
     symbol: "SiO2",
     name: "Quartz / Silica",
     colour: "Crystal white",
-    role: "Glass, optics, solar panels, silicon logic, sand batteries and the visual language of the whole site."
+    role: "Glass, optics, solar panels, silicon logic, sand batteries and the visual language of the whole atlas."
   },
   {
     symbol: "TiO2",
@@ -74,7 +74,7 @@ const SITE_BRIEFS = [
     source: "GenesisAI,_Sands,_and_Kardashev_Civilization.md",
     deck: "A practical-to-wild ladder for scaling energy, compute and coordination only as need, urgency and ethics justify it.",
     brief: [
-      "This page treats the Kardashev scale as a dashboard, not a macho scoreboard.",
+      "The Kardashev scale becomes a living dashboard, not a macho scoreboard.",
       "Type I begins as local energy literacy, closed loops, durable governance and planetary sensorium thinking.",
       "Type II becomes relevant only when the community has the maturity to handle space energy without exporting the same old power games upward."
     ],
@@ -101,7 +101,7 @@ const SITE_BRIEFS = [
     source: "Super-Computers_of_North_Straddie.md",
     deck: "A first-principles route from mineral sand imagination to sovereign compute, edge AI, simulation tools and consciousness architecture experiments.",
     brief: [
-      "The source document begins with Flatland, maze theory and pathfinding because dimensional thinking is the doorway into chip architecture.",
+      "Flatland, maze theory and pathfinding become the doorway into chip architecture and island-scale compute.",
       "It then drills into semiconductor reality: quartz to silicon, purification, crystal growth, doping, MOSFETs, FinFETs, GAA FETs, lithography, etching, deposition and cleanroom constraints.",
       "The island version is small-batch rapid evolution: simulate first, prototype with FPGAs, learn from ASML-scale industry, and use local mineral sands where plausible without pretending a full fab appears by magic."
     ],
@@ -118,7 +118,8 @@ const SITE_BRIEFS = [
       "Make a sand-to-silicon process map that clearly marks which steps are local, regional, national, global or science fiction.",
       "Build a simulation map where each kiosk, capsule or lab adds compute and heat-reuse potential to the island."
     ],
-    depthIntro: "This page now follows the actual source document: from geometry and mazes, through semiconductor physics, into a practical first build path and then out toward sovereign compute fiction.",
+    depthTitle: "From maze to machine mind",
+    depthIntro: "A small island of sand becomes a thought experiment in dimensional thinking, semiconductor discipline and sovereign compute. The invitation is to start with maps, mazes and FPGAs before dreaming about custom chips.",
     depth: [
       {
         title: "Flatland to maze theory",
@@ -131,7 +132,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "Sand to semiconductor",
-        body: "The document gets technical about why local silica is inspiring but not simple.",
+        body: "Local silica is inspiring precisely because it is not simple. The romance only matters if the purification chain is treated honestly.",
         points: [
           "Silica sand is reduced from SiO2 into metallurgical-grade silicon, then pushed toward electronic-grade purity.",
           "Purification uses chemical vapour routes, zone refining and crystal growth through Czochralski or float-zone processes.",
@@ -140,7 +141,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "Device physics stack",
-        body: "Once silicon is plausible as a concept, the source moves into the device layer.",
+        body: "Once silicon is plausible as a concept, the path moves into the device layer.",
         points: [
           "Band theory and doping explain how p-type and n-type regions let circuits control electron flow.",
           "MOSFETs are the ordinary building blocks; scaling pressure introduces leakage, short-channel effects and quantum tunnelling.",
@@ -149,7 +150,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "Small-batch rapid evolution",
-        body: "The source explicitly avoids mass-production fantasy. The interesting move is fast iteration toward useful compute.",
+        body: "The interesting move is not instant mass production. It is fast iteration toward useful compute.",
         points: [
           "EDA simulation comes first so designs can fail cheaply.",
           "Reusable IP cores and modular blocks let the team change one part without remaking the whole system.",
@@ -171,7 +172,7 @@ const SITE_BRIEFS = [
     brief: [
       "The master plan treats Minjerribah as a silica stack: quartz, rutile, ilmenite, zircon and monazite become a fictional atomic inventory for a Type I prototype.",
       "Its centrepiece is the Silica Citadel: a subterranean megalopolis with wet-sand tunnelling, acoustic metamaterials, oyster-crete, sand batteries and sovereign compute.",
-      "The responsible public version keeps the far-out parts visible as design fiction while turning the buildable pieces into material boards, simulations, consent gates and staged prototypes."
+      "The explorer path keeps the far-out parts visible as design fiction while turning buildable pieces into material boards, simulations, consent gates and staged prototypes."
     ],
     moonshot: "A full-stack civilisation shelter that is less bunker and more underground ecological operating system.",
     modules: [
@@ -184,13 +185,14 @@ const SITE_BRIEFS = [
       "Separate the fiction layer, research layer and buildable prototype layer on the page.",
       "Sketch one room-scale module for food, one for compute, one for archives and one for water.",
       "Turn the mineral table into a public material board with plausible uses and explicit uncertainty.",
-      "Use the site as a living index of what needs verification, consent and professional review."
+      "Use the atlas as a living index of what needs verification, consent and professional review."
     ],
-    depthIntro: "The master plan is intentionally huge. This page now preserves that scale while sorting it into readable project layers instead of flattening it into a novelty bunker blurb.",
+    depthTitle: "The underground civilisation seed",
+    depthIntro: "This is a deliberately huge doorway: geology, hydrology, mineral inventory, tunnelling fiction, living materials, energy storage and a civilisation operating system under pressure.",
     depth: [
       {
         title: "Geological premise",
-        body: "The document frames Minjerribah as a sand-island fortress and material inventory, not because that is proven infrastructure, but because the geology gives the story a specific place to think from.",
+        body: "Minjerribah becomes a sand-island fortress and material inventory in the imagination, not because that is proven infrastructure, but because the geology gives the story a specific place to think from.",
         points: [
           "The Pleistocene dune mass is imagined as a shock-absorbing buffer rather than brittle continental crust.",
           "The freshwater lens becomes both drinking reserve and thermal / hydraulic system.",
@@ -223,7 +225,7 @@ const SITE_BRIEFS = [
           "The sand battery is a more grounded bridge: store heat in silica mass and insulate it well.",
           "The Braided Economy and C-Hour layer ask how care, repair, ecological work and public value get recognised when survival is the design target."
         ],
-        note: "This page should feel like a moonshot dossier, with the mythic material intact and the real-world boundaries still visible."
+        note: "The moonshot keeps the mythic material intact while leaving the real-world boundaries visible."
       }
     ],
     elements: ["SiO2", "ZrSiO4", "FeTiO3", "REE"]
@@ -264,7 +266,7 @@ const SITE_BRIEFS = [
     source: "Web3_Sensorium_for_Science_Debate.md",
     deck: "A decentralised Earth-and-space digital twin where known science, wild hypotheses, open debate and resilient sovereign nodes can be tested against data.",
     brief: [
-      "The source document defines the Global Sensorium as a persistent 1:1 Earth and local-space digital twin fed by real-time sensors, archives and simulation models.",
+      "The Global Sensorium is a persistent 1:1 Earth and local-space digital twin fed by real-time sensors, archives and simulation models.",
       "Its architecture rejects one central server in favour of sovereign nodes, P2P sync, CRDT state, decentralised identity and verifiable contribution trails.",
       "The moonshot is not just a VR globe. It is a scientific debate arena where mainstream models and fringe hypotheses can be run, compared, challenged and improved in public."
     ],
@@ -281,11 +283,12 @@ const SITE_BRIEFS = [
       "Map which parts belong in Git, which in a knowledge graph, and which in an immersive twin.",
       "Create a public reality sorter for evidence, model, speculation, fiction and governance decision."
     ],
-    depthIntro: "The Sensorium document is the deep architecture behind many of the other moonshots: it gives the site a way to hold data, debate, simulation and sovereignty in one system.",
+    depthTitle: "A planetary nervous system",
+    depthIntro: "A serious explorer can enter here as a scientist, coder, cartographer, funder, sceptic or worldbuilder. The prize is a shared arena where models have to show their assumptions.",
     depth: [
       {
         title: "Purpose",
-        body: "The source frames the Sensorium as a shared environment for observing Earth, space weather, climate, geology, biology and infrastructure as connected systems.",
+        body: "The Sensorium becomes a shared environment for observing Earth, space weather, climate, geology, biology and infrastructure as connected systems.",
         points: [
           "It democratises access to complex data and modelling tools instead of leaving them inside silos.",
           "It lets students, researchers, citizens and institutions explore the same world model at different depths.",
@@ -303,7 +306,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "Digital twin build path",
-        body: "The document grounds the immersive world in GIS and open data rather than pure spectacle.",
+        body: "The immersive world is grounded in GIS and open data rather than pure spectacle.",
         points: [
           "Digital elevation models, satellite imagery, hydrology, vegetation and infrastructure become the geospatial foundation.",
           "QGIS-style processing, open 3D formats, WebSockets, WebRTC and JSON APIs keep it interoperable.",
@@ -329,12 +332,12 @@ const SITE_BRIEFS = [
     eyebrow: "Qualified Self",
     material: "Straddie quartz, AuraOS, clinical wrapper, digital twin",
     source: "AURA_GEODE_to_MACRO.md / Clinical_Research_Path_for_Aura_of_Dementia.md / Version7_Aura_of_Intelligence_2023_July.md",
-    sourceLabel: "Source documents: Aura Geode macro blueprint, dementia clinical pathway and Version 7 Aura subprojects.",
+    sourceLabel: "Thread mix: Geode capsule, dementia pathway and Version 7 builder lanes.",
     deck: "A cosmic-egg digital twin system that travels from XR Aura Builder, geopoetic capsule and AuraOS into dementia-care evidence, clinical governance and Live Aid 2035 scale culture.",
     brief: [
       "Version 7 frames Aura as a meta-program for building the tool: body scan, goals, values, mind palace, data visualisations, world maps, XR scaffolding and safe plug-and-play modules.",
-      "The Geode document turns that into a capsule ecosystem: pressure-rated shell, personalised atmosphere delivery, modality stack, Bayesian session engine, 60-session Genesis Protocol and privacy-preserving Aura Twin fabric.",
-      "The clinical document grounds the dementia-care branch in Australian evidence pathways: DOMS-aligned assessment, BPSD support, TGA / HREC work, phased trials and NDIS / My Aged Care positioning."
+      "The Geode layer turns that into a capsule ecosystem: pressure-rated shell, personalised atmosphere delivery, modality stack, Bayesian session engine, 60-session Genesis Protocol and privacy-preserving Aura Twin fabric.",
+      "The dementia-care branch is grounded in Australian evidence pathways: DOMS-aligned assessment, BPSD support, TGA / HREC work, phased trials and NDIS / My Aged Care positioning."
     ],
     moonshot: "An external, consent-first digital twin and care companion that helps people map their own mind, health, memory, values, relationships and future without surrendering their body or their data.",
     modules: [
@@ -349,11 +352,12 @@ const SITE_BRIEFS = [
       "Create a demo clinical report format that maps narrative inputs to validated domains without pretending it is approved healthcare.",
       "List Version 7 subprojects as lanes, with only Live Aid 2035 carried forward."
     ],
-    depthIntro: "This page keeps the wildness of Aura intact while giving it a proper dossier shape: personal builder, capsule system, clinical pathway, subprojects and cultural scale.",
+    depthTitle: "External twin, human sovereignty",
+    depthIntro: "Aura starts as a personal builder, grows into a capsule and clinical research path, then opens into culture at world scale. The hard boundary is simple: the twin stays external, severable and consent-first.",
     depth: [
       {
         title: "Version 7 builder spine",
-        body: "The early Aura document is a tool-building manifesto: build an interface that helps people construct richer Auras with LLM prompts, mixed reality, safe code and personal context.",
+        body: "Version 7 is a tool-building manifesto: an interface for constructing richer Auras with LLM prompts, mixed reality, safe code and personal context.",
         points: [
           "Inputs begin with body scan, goals, values, interests, preferred emotions, colours, skills, travel, activity rhythms and conscious direction.",
           "The Mind Palace holds private objects, memories and maps, while the outer shell can expose public or social layers.",
@@ -362,7 +366,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "Aura Geode system",
-        body: "The Geode document turns Aura from software into a physical ritual and engineering brief.",
+        body: "The Geode turns Aura from software into physical ritual, therapeutic environment and engineering challenge.",
         points: [
           "The capsule shell is imagined as pressure-rated geopolymer with a Straddie quartz base and a material composition ID.",
           "The personalised atmosphere delivery system keeps the main capsule air normal while delivering controlled gas mixes through a medical-grade mask.",
@@ -371,7 +375,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "60-session Genesis Protocol",
-        body: "The source gives Aura a staged user journey instead of an instant digital twin fantasy.",
+        body: "The Genesis Protocol gives Aura a staged user journey instead of an instant digital twin fantasy.",
         points: [
           "Sessions 1-20 map resilience and dose-response through short micro-exposures.",
           "Sessions 21-40 let the AI compose personalised chrono-therapeutic sessions from early data.",
@@ -408,10 +412,10 @@ const SITE_BRIEFS = [
     eyebrow: "Sun-Earth Studio",
     material: "NOAA feeds, InfluxDB, Kafka, Unity XR",
     source: "Space_Weather_Data_IFTTT.md / Space_Weather_Hub_Pseudo_Code.md / 1-page_Earthquake_Prediction_with_the_Space_Weather_News.md / Modular_Unity_Development_&_Deployment_Plan_for___SpaceWeather_News_Hub__.md",
-    sourceLabel: "Source documents: Space Weather IFTTT, pseudo-code, earthquake prediction brief and Unity deployment plan.",
+    sourceLabel: "Thread mix: IFTTT rules, Sun-Earth pseudo-code, earthquake research and Unity XR deployment.",
     deck: "A live XR news studio for solar wind, geomagnetic storms, ionospheric shifts, earthquakes, alerts, AI narration and public science literacy.",
     brief: [
-      "The source files turn space weather into a working system: data feeds, IFTTT rules, timestamped storage, correlation analysis, Unity visualisation and AI narration.",
+      "Space weather becomes a working system: data feeds, IFTTT rules, timestamped storage, correlation analysis, Unity visualisation and AI narration.",
       "The earthquake material is handled as frontier forecasting research, not certainty: many signals are tracked, but precise one-hour predictions remain beyond standard practice.",
       "The build path runs from Python / InfluxDB / Kafka and WebSocket data flow into a cross-platform Unity XR experience with mobile, Quest, PC VR, WebXR and mixed-reality targets."
     ],
@@ -428,11 +432,12 @@ const SITE_BRIEFS = [
       "Prototype the IFTTT rules as visible cards before wiring any alerting workflow.",
       "Build the first Unity or WebXR scene with dummy data so the visual grammar exists before real-time complexity arrives."
     ],
-    depthIntro: "These files contain the most implementation-ready moonshot in the set: data streams, rule logic, backend shape, XR deployment plan, narration pipeline and caveats.",
+    depthTitle: "The Sun-Earth newsroom",
+    depthIntro: "This is one of the most buildable moonshots in the set: data streams, rule logic, backend shape, XR deployment, narration and caveats already point toward a first serious prototype.",
     depth: [
       {
         title: "Signals to ingest",
-        body: "The IFTTT documents name the data families the studio needs to watch.",
+        body: "The studio watches several signal families at once so invisible solar-terrestrial systems become discussable.",
         points: [
           "Space weather: solar flares, solar wind speed and density, IMF orientation, CMEs, solar proton events and geomagnetic indices.",
           "Earth systems: seismic feeds, foreshocks, TEC, ULF electromagnetic anomalies, radon, groundwater, InSAR deformation, thermal infrared and acoustic emissions.",
@@ -441,7 +446,7 @@ const SITE_BRIEFS = [
       },
       {
         title: "Rule engine",
-        body: "The source material repeatedly uses IFTTT logic because the first public version needs to be readable before it becomes clever.",
+        body: "The first rule engine stays readable before it becomes clever.",
         points: [
           "IF X-class flare, THEN evaluate satellite, radio and geomagnetic impacts.",
           "IF solar wind is fast and Bz turns strongly southward, THEN raise geomagnetic storm watch.",
@@ -570,8 +575,8 @@ const SITE_BRIEFS = [
     source: "Roadmap for Multicultural Grant.docx",
     deck: "A narrative grant-world sketch for a multicultural sandy sports and cultural hub at 10-12 Ballow Road, framed as a safe harbour rather than a certainty.",
     brief: [
-      "The page imagines a physical community hub as the central game-board piece: youth drop-in, sandy sports, media, training, resilience and gathering.",
-      "The document keeps the physical build as the grant-story core, then layers a support ecosystem around it to show public value.",
+      "A physical community hub becomes the central game-board piece: youth drop-in, sandy sports, media, training, resilience and gathering.",
+      "The physical build stays at the centre, with a support ecosystem layered around it so public value is easy to see.",
       "The tone is heart-first: a warm place for youth, Elders, multicultural locals and visitors to meet without pretending approvals or partnerships already exist."
     ],
     moonshot: "A modular cultural sports hub that can be reconfigured like a giant construction kit, turning local sand, local learning and local care into a living civic stage.",
@@ -597,7 +602,7 @@ const SITE_BRIEFS = [
     source: "Community Co-op Blueprint Development.docx",
     deck: "A story-world pathway from small trusted tech help into a community-owned co-operative, braided economy and local resilience engine.",
     brief: [
-      "The co-op page begins with grassroots trust: practical tech help, market-stall conversations, media support and patient digital confidence.",
+      "The co-op seed begins with grassroots trust: practical tech help, market-stall conversations, media support and patient digital confidence.",
       "It then imagines a formal Ready S.E.T. co-operative that trains, employs and shares local capability without external capture.",
       "The braided economy and C-Hour ideas are treated as narrative mechanisms for valuing care, ecological work and civic contribution, not as launched financial products."
     ],
@@ -624,9 +629,9 @@ const SITE_BRIEFS = [
     source: "Sports Facility Research for Minjerribah.docx",
     deck: "A distributed sports-facility story map linking Dunwich, Amity Point and Point Lookout with sandy sports, cultural gathering and resilient infrastructure.",
     brief: [
-      "This page treats sports facilities as shared game-world nodes: not just recreation, but places for youth, culture, training, visitors and resilience.",
+      "Sports facilities become shared game-world nodes: not just recreation, but places for youth, culture, training, visitors and resilience.",
       "Dunwich becomes the capability and logistics hub, Point Lookout the managed performance node, and Amity the resilient coastal adaptation node.",
-      "The page keeps the Olympic and national-scale language as narrative pressure, while clearly separating it from certainty."
+      "Olympic and national-scale language acts as narrative pressure, while the boundary between possibility and certainty stays visible."
     ],
     moonshot: "A Civilisation of Sand sports network where courts, clubs, reefs, kiosks and training loops become one playful public map for health, culture and resilience.",
     modules: [
@@ -733,9 +738,9 @@ const SITE_BRIEFS = [
     eyebrow: "Fiction Door",
     material: "Story, ethics, science fiction, cultural caution",
     source: "New dreamtime.md fiction and science-fiction threshold",
-    deck: "A fictional doorway where the site openly crosses into mythic science fiction, while stating that real cultural stories belong to their custodians.",
+    deck: "A fictional doorway where the atlas crosses into mythic science fiction, while stating that real cultural stories belong to their custodians.",
     brief: [
-      "This page uses Dreamtime as a requested fiction threshold, not as cultural authority, sacred teaching or a claim about Quandamooka knowledge.",
+      "This threshold uses Dreamtime as a requested fiction doorway, not as cultural authority, sacred teaching or a claim about Quandamooka knowledge.",
       "Its job is to mark where Mineral Moonshots leaves civic planning and enters dream logic, speculative systems and science-fiction tests.",
       "The ethical rule is simple: real cultural stories need custodianship, invitation and care. The fiction layer can be wild, but it cannot pretend to own what it does not own."
     ],
@@ -747,9 +752,9 @@ const SITE_BRIEFS = [
       "Return-to-reality consent gate"
     ],
     experiments: [
-      "Write the page as a clear portal from narrative planning into fiction.",
+      "Shape the threshold as a clear portal from narrative planning into fiction.",
       "Add a ritual of returning: every wild idea must name what would need consent or evidence.",
-      "Invite readers to treat the page as a story room, not a source of cultural facts."
+      "Invite readers to treat the threshold as a story room, not a source of cultural facts."
     ],
     elements: ["SiO2", "ZrSiO4", "REE", "Fe"]
   },
@@ -762,8 +767,8 @@ const SITE_BRIEFS = [
     source: "archipelago-intelligence-ecosystem-2026-05-03T05-40.opml",
     deck: "A navigation map connecting Aura, Minjerribah resilience, P4A, I See Infinity and Strange but True into one island-scale ecosystem.",
     brief: [
-      "The OPML file is the sitemap of the bigger universe: Aura of Intelligence, local resilience, Sandy Sports, P4A, I See Infinity and Strange but True.",
-      "For this website, it acts as the bridge between practical local services and the moonshot civilisation layer.",
+      "The OPML map is the constellation of the bigger universe: Aura of Intelligence, local resilience, Sandy Sports, P4A, I See Infinity and Strange but True.",
+      "In this atlas, it becomes the bridge between practical local services and the moonshot civilisation layer.",
       "It keeps the wild ideas findable without forcing every visitor to understand the whole cosmology at once."
     ],
     moonshot: "A public map where each project becomes an island in an archipelago, with bridges for people who want to travel deeper.",
@@ -776,7 +781,7 @@ const SITE_BRIEFS = [
     experiments: [
       "Turn the OPML into an interactive constellation map.",
       "Give each island a practical door and a moonshot door.",
-      "Let the main page stay simple while the deep pages hold the wildness."
+      "Let the front door stay simple while the deep pages hold the wildness."
     ],
     elements: ["SiO2", "REE", "FeTiO3"]
   },
@@ -899,7 +904,7 @@ const SITE_BRIEFS = [
     brief: [
       "The longevity material links in-home food systems, microbiome reflection, HBOT ideas and private-first health context.",
       "The relationship material asks whether internet-connected abundance needs more flexible, honest and consent-based forms of love than default scripts allow.",
-      "The public version must stay warm, adult, privacy-preserving and non-medical: invitation first, pressure never."
+      "The outward-facing doorway stays warm, adult, privacy-preserving and non-medical: invitation first, pressure never."
     ],
     moonshot: "A loving abundance layer where people can explore health, intimacy, friendship, family, desire, care and long life without surrendering consent, privacy or evidence.",
     modules: [
@@ -1032,7 +1037,7 @@ const INTERACTIVE_LABS = {
         name: "Mineral lens",
         depth: "5-40 m",
         tone: "Quartz, ilmenite, rutile, zircon",
-        detail: "A material memory band. The site language treats mineral sands as colour, story, chemistry and responsibility before extraction."
+        detail: "A material memory band. Mineral sands become colour, story, chemistry and responsibility before extraction."
       },
       {
         name: "Water and food deck",
@@ -1057,7 +1062,7 @@ const INTERACTIVE_LABS = {
   kardashev: {
     type: "kardashev-dial",
     title: "Adaptive Kardashev Dial",
-    deck: "Move the sliders and the site recommends a civilisation mode. The point is not maximum power. The point is matching power to need, consent and ecological cost."
+    deck: "Move the sliders and the dial finds a civilisation mode. The point is not maximum power. The point is matching power to need, consent and ecological cost."
   },
   supercomputers: {
     type: "compute-network",
@@ -1118,7 +1123,7 @@ const INTERACTIVE_LABS = {
   "space-weather-hub": {
     type: "ifttt-matrix",
     title: "Sun-Earth IFTTT Matrix",
-    deck: "Click a signal to see how the source documents turn live data into careful alerts, visualisations and research prompts.",
+    deck: "Click a signal to see how live data can become careful alerts, visualisations and research prompts.",
     signals: [
       {
         name: "X-class flare",
@@ -1159,7 +1164,7 @@ const INTERACTIVE_LABS = {
     lanes: [
       {
         name: "Build now",
-        items: ["Static site", "cross-section map", "wooden kiosk mock-up", "local archive index", "simple biosphere calculator"]
+        items: ["public atlas", "cross-section map", "wooden kiosk mock-up", "local archive index", "simple biosphere calculator"]
       },
       {
         name: "Research next",
@@ -1406,7 +1411,7 @@ const INTERACTIVE_LABS = {
   dreamtime: {
     type: "space-path",
     title: "Fiction Threshold Path",
-    deck: "A five-step path that lets the site enter science fiction while returning to respect, consent and evidence.",
+    deck: "A five-step path that lets the atlas cross into science fiction while returning to respect, consent and evidence.",
     steps: [
       {
         name: "Ordinary island",

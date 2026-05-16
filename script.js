@@ -239,6 +239,10 @@
         table.querySelectorAll(".periodic-tile").forEach((tile) => {
           tile.classList.toggle("is-active", tile.dataset.symbol === element.symbol);
         });
+        const activeTile = table.querySelector('.periodic-tile[data-symbol="' + element.symbol + '"]');
+        if (activeTile) {
+          tableWrap.scrollLeft = Math.max(0, activeTile.offsetLeft - ((tableWrap.clientWidth - activeTile.offsetWidth) / 2));
+        }
 
         detail.innerHTML = "";
         detail.appendChild(make("p", "eyebrow", element.lane.replaceAll("-", " ")));

@@ -801,7 +801,7 @@ const PROJECT_CURRENTS = [
     title: "Heart-first cultural hub",
     eyebrow: "Ballow Road capability",
     narrative: "The multicultural grant roadmap turns a site into a warm civic shell: youth drop-in, sandy sports, media, maker training, Indigenous developer pathways and disaster resilience under one practical roof.",
-    build: "Keep the grant story focused on buildable capital works and use the wider ecosystem as value context, not as a claim that permissions already exist.",
+    build: "The grounded path is buildable capital works first, with the wider ecosystem as value context rather than a claim that permissions already exist.",
     href: "briefs/multicultural-hub.html"
   },
   {
@@ -809,7 +809,7 @@ const PROJECT_CURRENTS = [
     title: "Mutual risk branch",
     eyebrow: "Risk stays visible",
     narrative: "A serious civilisation stack needs risk infrastructure. The insurance branch proposal is a reminder that reefs, tunnels, health tools, volunteers, co-ops and public events all need coverage logic before scale.",
-    build: "Keep the idea in a legal/research lane: discretionary mutuals, CLG structures, AFSL boundaries, WHS duties, reinsurance and professional governance before public promises.",
+    build: "The legal/research path starts with discretionary mutuals, CLG structures, AFSL boundaries, WHS duties, reinsurance and professional governance before public promises.",
     href: "boundaries.html"
   },
   {
@@ -817,15 +817,15 @@ const PROJECT_CURRENTS = [
     title: "Indigenous data and governance",
     eyebrow: "Permission before platforms",
     narrative: "The sovereign wealth and Indigenous partnership briefs put culture, consent, carried equity, veto power, community trusteeship and long-horizon governance into the centre of the project flow.",
-    build: "Any public site language should leave space for the right people to lead, refuse, reshape or ignore the idea.",
+    build: "Responsible abundance leaves room for the right people to lead, refuse, reshape or ignore the idea.",
     href: "boundaries.html"
   },
   {
     lane: "worlds",
     title: "Oceania health and AI surge",
     eyebrow: "Care before spectacle",
-    narrative: "The health surge thread belongs in the citizen-care lane, where food waste, dementia pressure, local kiosks, thermal wellness ideas and private-first health twins are treated as public-health imagination, not medical promises.",
-    build: "The site should keep this as a research and policy scenario: evidence gates, clinicians, privacy, non-medical public wording and care infrastructure before any intervention claim.",
+    narrative: "A citizen-care moonshot can start with ordinary pressure points: food waste, ageing, memory support, carer load, local kiosks, thermal wellness ideas and person-owned health records imagined as care infrastructure, not diagnosis or treatment.",
+    build: "The credible path is research and policy: evidence gates, clinicians, privacy-by-design, non-medical public language, opt-in trials and care infrastructure before any intervention claim.",
     href: "briefs/loving-longevity.html"
   },
   {
@@ -833,15 +833,15 @@ const PROJECT_CURRENTS = [
     title: "Life game quest log",
     eyebrow: "Micro-quests",
     narrative: "The quest-log design turns civilisation work into small moves people can actually take: learn one tool, help one neighbour, test one material, restore one patch, document one failure.",
-    build: "This belongs beside culture and plausible worlds because it makes the big story playable without demanding belief or debt.",
+    build: "The practical gift is a playable path into the big story without demanding belief, debt or heroic self-reinvention.",
     href: "briefs/protopian-gambit.html"
   },
   {
     lane: "worlds",
     title: "Love, consent and group futures",
     eyebrow: "Adult boundary",
-    narrative: "The GGM philosophy thread carries the warm, relational, spicy edge of the atlas, but the public site should hold it as consent-first culture and private-world design rather than spectacle.",
-    build: "Keep adult themes behind clear boundaries, and let the public layer talk about care, honesty, chosen family, longevity, privacy and emotional infrastructure.",
+    narrative: "The GGM philosophy thread carries the warm, relational, spicy edge of the atlas as consent-first culture and private-world design rather than spectacle.",
+    build: "Clear adult boundaries protect the public layer, where the useful themes are care, honesty, chosen family, longevity, privacy and emotional infrastructure.",
     href: "briefs/loving-longevity.html"
   }
 ];
@@ -1240,18 +1240,18 @@ const SITE_BRIEFS = [
     eyebrow: "Qualified Self",
     material: "Straddie quartz, AuraOS, clinical wrapper, digital twin",
     source: "AURA_GEODE_to_MACRO.md / Clinical_Research_Path_for_Aura_of_Dementia.md / Version7_Aura_of_Intelligence_2023_July.md",
-    sourceLabel: "Thread mix: Geode capsule, dementia pathway and Version 7 builder lanes.",
-    deck: "A cosmic-egg digital twin system that travels from XR Aura Builder, geopoetic capsule and AuraOS into dementia-care evidence, clinical governance and Live Aid 2035 scale culture.",
+    sourceLabel: "Thread mix: Geode capsule, memory-care research path and Version 7 builder lanes.",
+    deck: "A cosmic-egg digital twin system that travels from XR Aura Builder, geopoetic capsule and AuraOS into memory-care evidence, clinical governance and Live Aid 2035 scale culture.",
     brief: [
       "Version 7 frames Aura as a meta-program for building the tool: body scan, goals, values, mind palace, data visualisations, world maps, XR scaffolding and safe plug-and-play modules.",
       "The Geode layer turns that into a capsule ecosystem: pressure-rated shell, personalised atmosphere delivery, modality stack, Bayesian session engine, 60-session Genesis Protocol and privacy-preserving Aura Twin fabric.",
-      "The dementia-care branch is grounded in Australian evidence pathways: DOMS-aligned assessment, BPSD support, TGA / HREC work, phased trials and NDIS / My Aged Care positioning."
+      "The memory-care branch is grounded in Australian evidence pathways: DOMS-aligned assessment, BPSD support, TGA / HREC work, phased trials and NDIS / My Aged Care positioning."
     ],
     moonshot: "An external, consent-first digital twin and care companion that helps people map their own mind, health, memory, values, relationships and future without surrendering their body or their data.",
     modules: [
       "XR Aura Builder and private/public mind palace shell",
       "Aura Geode capsule with material ID and session timeline",
-      "Clinical wrapper for dementia care and carer support",
+      "Clinical wrapper for memory care and carer support",
       "GAJRA culture layer with Live Aid 2035 and world-scale value mapping"
     ],
     experiments: [
@@ -1291,14 +1291,14 @@ const SITE_BRIEFS = [
         ]
       },
       {
-        title: "Clinical dementia pathway",
+        title: "Clinical memory-care pathway",
         body: "The clinical research plan is the sober bridge from poetic twin to Australian health-system evidence.",
         points: [
           "Persona mapping keeps life story and preferences, then maps them to clinical domains such as memory, function, quality of life, BPSD and carer wellbeing.",
           "The clinical wrapper augments familiar tools such as RUDAS, GPCOG, DAD, NPI, DEMQOL and carer-burden scales instead of asking clinicians to trust a black box.",
           "The regulatory pathway treats AoI as likely SaMD / clinical decision support software, requiring TGA planning, HREC approval, privacy governance and human-factors evidence."
         ],
-        note: "Public wording must stay non-medical until trials, approvals and qualified partners exist."
+        note: "Before trials, approvals and qualified partners exist, the public promise is care infrastructure, not treatment."
       },
       {
         title: "Version 7 subprojects",
@@ -1416,7 +1416,7 @@ const SITE_BRIEFS = [
     experiments: [
       "Design the minimum viable biosphere per person as a simple calculator.",
       "Track kWh, water, protein, calories, fats and failure modes.",
-      "Keep medical claims out of the prototype until evidence and professionals are involved."
+      "Frame health ideas as nutrition and research prompts until evidence and professionals are involved."
     ],
     elements: ["SiO2", "Fe", "REE"]
   },
@@ -1608,7 +1608,7 @@ const SITE_BRIEFS = [
     experiments: [
       "Make three fictional sample profiles for a maker, a mentor and a sceptical local.",
       "Add a privacy checklist before any honour board connection.",
-      "Keep the profile format readable in a browser, text editor and future builder app."
+      "Test the profile format in a browser, text editor and future builder app."
     ],
     elements: ["SiO2", "Fe", "REE"]
   },
@@ -1743,7 +1743,7 @@ const SITE_BRIEFS = [
     experiments: [
       "Create a playable CYOA prompt that asks the visitor what they do when the necklace wakes up.",
       "Write one scene where humour lowers fear without trivialising the stakes.",
-      "Keep the fiction label visible so the necklace stays story technology, not a real claim."
+      "Label the necklace as fiction so it stays story technology, not a real claim."
     ],
     elements: ["REE", "SiO2", "ZrSiO4", "Fe"]
   },
@@ -1823,7 +1823,7 @@ const SITE_BRIEFS = [
     ],
     experiments: [
       "Create public-safe cards that separate health ideas, adult relationship prompts, private notes and fiction.",
-      "Keep medical claims out until evidence and qualified professionals are involved.",
+      "Frame health ideas as research prompts until evidence and qualified professionals are involved.",
       "Let the page feel warm and spicy without publishing private life or pressuring anyone into visibility."
     ],
     elements: ["SiO2", "REE", "Fe", "ZrSiO4"]
@@ -1909,7 +1909,7 @@ const LOCAL_PROJECTS = [
     visibility: "Private workbench",
     url: "",
     bridge: "The deeper archive catalogue stays private while public-safe summaries can feed future moonshots.",
-    buildStep: "Keeps the source archive useful without leaking private material into the public site."
+    buildStep: "Keeps the source archive useful without leaking private material into public layers."
   },
   {
     name: "Strange But True Travel Oracle",

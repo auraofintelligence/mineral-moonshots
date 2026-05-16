@@ -596,7 +596,6 @@
   function renderLayerMap(lab, mount) {
     const grid = make("div", "layer-lab");
     const visual = make("div", "layer-visual");
-    const controls = make("div", "layer-controls");
     const detail = make("article", "layer-detail");
     const nameNode = make("h3", "", "");
     const depthNode = make("p", "card-meta", "");
@@ -604,29 +603,29 @@
     detail.append(nameNode, depthNode, textNode);
 
     lab.layers.forEach((layer, index) => {
-      const band = make("button", "layer-band", layer.name);
+      const band = make("button", "layer-band");
       band.type = "button";
       band.style.setProperty("--layer", String(index));
+      band.setAttribute("aria-label", layer.name + ", " + layer.depth + ", " + layer.tone);
+      band.appendChild(make("strong", "", layer.name));
+      band.appendChild(make("span", "", layer.depth + " | " + layer.tone));
       visual.appendChild(band);
-
-      const button = make("button", "layer-button", layer.name);
-      button.type = "button";
-      button.addEventListener("click", () => setLayer(index));
       band.addEventListener("click", () => setLayer(index));
-      controls.appendChild(button);
     });
 
     function setLayer(index) {
       const layer = lab.layers[index];
       [...grid.querySelectorAll("button")].forEach((button) => button.classList.remove("is-active"));
-      controls.children[index].classList.add("is-active");
+      [...visual.children].forEach((button, buttonIndex) => {
+        button.setAttribute("aria-pressed", buttonIndex === index ? "true" : "false");
+      });
       visual.children[index].classList.add("is-active");
       nameNode.textContent = layer.name;
       depthNode.textContent = layer.depth + " | " + layer.tone;
       textNode.textContent = layer.detail;
     }
 
-    grid.append(visual, controls, detail);
+    grid.append(visual, detail);
     mount.appendChild(grid);
     setLayer(0);
   }
@@ -809,8 +808,9 @@
     if (!lab || !experiments) return;
 
     const section = make("section", "section interactive-section");
-    section.id = "lab";
     const heading = make("div", "section-heading");
+    heading.id = "lab";
+    section.setAttribute("aria-labelledby", "lab");
     heading.appendChild(make("p", "eyebrow", "Interactive prototype"));
     heading.appendChild(make("h2", "", lab.title));
     heading.appendChild(make("p", "", lab.deck));
@@ -898,7 +898,10 @@
     const target = document.getElementById(location.hash.slice(1));
     if (!target) return;
     window.setTimeout(() => {
-      target.scrollIntoView({ block: "start" });
+      const header = document.querySelector(".site-header");
+      const offset = (header ? header.offsetHeight : 0) + 22;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo(0, Math.max(0, top));
     }, 80);
   }
 

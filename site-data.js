@@ -1933,7 +1933,7 @@ const INTERACTIVE_LABS = {
   "crystal-city": {
     type: "layer-map",
     title: "Subterranean Layer Map",
-    deck: "Click a layer to see what lives there. This keeps the city legible: surface first, then sand, water, archives, food, compute and deep shelter.",
+    deck: "The city stays legible when the surface remains light and the deeper systems carry mineral memory, water, food, archives, compute and shelter.",
     layers: [
       {
         name: "Eco-surface",

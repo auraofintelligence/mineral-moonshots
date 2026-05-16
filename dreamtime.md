@@ -15,7 +15,7 @@ It marks the point where the website openly leaves civic planning and enters dre
 - Do not use sacred material without invitation.
 - Bring every wild idea back through consent, evidence, engineering, ecology, law and local governance.
 
-## Story doorway
+## Story threshold
 
 The island becomes a crystal instrument.
 

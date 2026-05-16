@@ -37,6 +37,105 @@ const MINERAL_PALETTE = [
   }
 ];
 
+const NARRATIVE_SEEDS = {
+  "crystal-city": [
+    "Begin on the living surface: dune, tree, water, culture, ferry, footpath and ordinary care. The underground city only earns a place in the imagination if it protects that surface rather than treating it as a lid.",
+    "What if a community built a hidden resilience layer from patient prototypes first: archive rooms, food loops, water dashboards, cool shelters and learning caverns? Joyful responsible abundance starts as the ability to keep people, stories and ecosystems alive through shock."
+  ],
+  kardashev: [
+    "The old Kardashev scale asks how much power a civilisation can use. This version asks a better question: how much power can be held with consent, ecological repair and emotional maturity?",
+    "What if an island learned to move between comfort mode, emergency mode and moonshot mode without becoming addicted to scale? The positive action is an energy dashboard that rewards restraint, shared benefit and readiness before spectacle."
+  ],
+  supercomputers: [
+    "The trail starts with a maze, not a chip. A visitor learns to see paths, constraints and hidden dimensions, then follows that thinking into logic gates, FPGA benches, simulation clusters and heat that can be reused instead of wasted.",
+    "What if local sand became a compass for sovereign compute without pretending a backyard fab appears on command? The first abundance move is literacy: ordinary PCs, open tools, shared labs, careful process maps and a culture that knows where the hard parts really are."
+  ],
+  "master-plan": [
+    "The underground civilisation is not a bunker fantasy. It is a pressure test for how a community might shelter memory, food, water, energy, repair skills and governance while leaving the surface lighter, cleaner and more loved.",
+    "What if the big fiction pushed practical action instead of fog: sand battery models, cross-section maps, consent gates, ecological monitoring and room-scale prototypes? The abundance here is not escape from Earth. It is more ways to protect life on it."
+  ],
+  "peaceful-space": [
+    "The ocean-to-orbit story begins with a shed, a repair bench and a local reason to care about the sky. Space is not sold as conquest; it is treated as weather, science, communication, navigation and shared responsibility.",
+    "What if industrial fear could be redirected into peaceful space infrastructure that helps islands prepare, learn and cooperate? The next action is a maker pathway from small public prototypes to solar monitoring, resilient comms and treaty-aware space commons."
+  ],
+  "web3-sensorium": [
+    "The Sensorium is a room where the planet can be argued with honestly. Data, models, dissent, local knowledge and wild hypotheses enter separate lanes so curiosity does not have to become confusion.",
+    "What if public debate had shared simulations instead of shouting matches? Joyful responsible abundance looks like students, scientists, sceptics and builders testing assumptions together while communities keep sovereignty over their data."
+  ],
+  "aura-geode": [
+    "Aura begins as a personal builder, then becomes a capsule, a clinical pathway and a cultural-scale question: how can technology help a person map themselves without swallowing them?",
+    "What if the digital twin stayed external, severable and consent-first? Positive action means private context by default, clinical evidence where health is involved, and Live Aid 2035 scale culture only after the human boundary is clear."
+  ],
+  "space-weather-hub": [
+    "The Sun-Earth studio turns invisible weather into something people can see before they fear it. Solar flares, geomagnetic storms, ionospheric shifts and community concern become calm signals rather than panic fuel.",
+    "What if the first build was a careful newsroom for the sky: open feeds, readable rules, human review and XR visuals that explain uncertainty? Abundance here is public science literacy that helps people prepare without pretending prediction is certainty."
+  ],
+  "auto-farm": [
+    "The in-home farm starts with a kitchen-scale question: what can a household grow, measure, ferment, compost and learn before supply chains become a crisis?",
+    "What if microbiome care, food security and small automation became ordinary domestic literacy? Joyful responsible abundance looks like fresh food, less waste, better data, and bodies treated as ecosystems rather than machines."
+  ],
+  "disaster-kiosks": [
+    "A disaster kiosk is humble until the day it matters. It sits where people already move, offering ferry notices, local updates, calm instructions and a public interface that still works when networks get messy.",
+    "What if emergency infrastructure also made normal days kinder? The useful path is solar power, battery backup, mesh comms, trusted local content and practice runs that build confidence before fear arrives."
+  ],
+  "capsule-hotels": [
+    "The capsule hotel becomes more than beds in a wall. Each room is a small comfort cell, compute node, visitor interface and simulator seed for a city that learns from use.",
+    "What if travel accommodation helped pay for shared compute, local planning and better public spaces? Abundance appears when tourism funds tools locals can use, not just rooms visitors pass through."
+  ],
+  "multicultural-hub": [
+    "The hub story begins with a place to gather: youth, Elders, sport, culture, media, training, meals and safe ordinary welcome.",
+    "What if a community building could become a civic stage without pretending approvals already exist? Positive action means playable grant phases, feedback walls, cultural care and a clear line between concept and commitment."
+  ],
+  "community-coop": [
+    "The co-op starts where trust is earned: patient tech help, market conversations, media support and people learning enough to participate without being captured by outsiders.",
+    "What if local capability could be owned by the people building it? Joyful responsible abundance becomes training, care, repair, mentoring and ecological work that can be recognised without turning community into a spreadsheet."
+  ],
+  "sandy-sports-network": [
+    "The sports network treats play as infrastructure. Courts, beaches, clubs, ferry links and reefs become places where health, youth work, visitors, culture and resilience can meet.",
+    "What if a 2032 legacy was not one grand venue but a distributed practice field for community strength? The positive action is mapping ordinary upgrades beside bigger dreams, so fun remains useful and scale stays honest."
+  ],
+  "public-honour-board": [
+    "The honour board asks how support can be visible without making private life public. It is a civic surface for chosen gratitude, not a surveillance wall.",
+    "What if contribution became as celebrated as sporting wins? Abundance here means public-safe profiles, consent gates, broad summaries and visible trails of care that people can opt into without pressure."
+  ],
+  profile: [
+    "A public profile is a small public entry. It says who someone is comfortable being, what they care about and what they may want to offer, without forcing the rest of their life into view.",
+    "What if identity on a community platform began with boundaries instead of extraction? Positive action means plain text, chosen visibility and a format that helps people join projects without surrendering privacy."
+  ],
+  aura: [
+    "The private Aura file is the workshop behind the public entry. It can hold style, goals, limits, memories, support needs and creative worlds where an AI helper can be useful without becoming entitled.",
+    "What if personal context stayed local and deliberate? Joyful responsible abundance begins when help becomes more humane, while private health, legal, emotional and relational material stays behind stronger walls."
+  ],
+  dreamtime: [
+    "This threshold marks the moment the atlas enters fiction while keeping cultural authority outside the fiction room. It can use symbol, time and imagination, but it cannot pretend to own stories that need custodianship.",
+    "What if every speculative ritual had a return gate? Positive action means wild ideas come back through consent, evidence, engineering, ecology, law and local governance before they touch reality."
+  ],
+  archipelago: [
+    "The archipelago turns many projects into islands that can be visited without needing to understand the whole ocean at once. Aura, resilience, music, media, P4A and Strange But True become connected but not collapsed.",
+    "What if a visitor could choose their own depth: practical help, cultural story, civic simulation or moonshot research? Abundance is navigation that lets people join from where they are."
+  ],
+  "island-abundance": [
+    "Island abundance begins with ordinary signals: events, artists, businesses, care, visitor welcome, food, transport and public art. The future becomes believable when it improves daily life first.",
+    "What if every local gathering was also a tiny rehearsal for regenerative civilisation? Positive action means directories, noticeboards, maker loops and cultural invitations that make value visible without extracting the place."
+  ],
+  "alien-necklace": [
+    "The alien necklace is a film seed, not a belief demand. It lets comedy, beauty, fear, truth and AI alignment collide in a backyard so the big questions become playable.",
+    "What if audiences could test futures instead of being lectured about them? Joyful responsible abundance appears when story becomes civic rehearsal: people laugh, choose, argue, reflect and leave with one better action."
+  ],
+  "protopian-gambit": [
+    "The music layer carries the emotional permission to try. Songs can hold hope, humour, grief, courage and love long enough for people to imagine building again.",
+    "What if culture became the front edge of practical change? Positive action means every anthem, film prompt or public phrase points back to a form, map, prototype, event, repair act or bridge between people."
+  ],
+  "cosmic-nexus": [
+    "The cosmic nexus allows high-strangeness curiosity into the room, then gives it manners. UAP, ocean mysteries and non-human intelligence scenarios become simulations, not commands to believe.",
+    "What if fringe questions trained better evidence habits, calmer governance and deeper ocean care? Abundance here is curiosity that makes people more useful, not more detached from reality."
+  ],
+  "loving-longevity": [
+    "The longevity commons begins with care for bodies, kitchens, relationships and privacy. It keeps warmth and adult possibility alive without turning health or intimacy into public performance.",
+    "What if longer life meant more honesty, better food, stronger consent and more graceful forms of love? Joyful responsible abundance is desire with boundaries, health with evidence and private context held carefully."
+  ]
+};
+
 const SITE_BRIEFS = [
   {
     slug: "crystal-city",
@@ -101,9 +200,9 @@ const SITE_BRIEFS = [
     source: "Super-Computers_of_North_Straddie.md",
     deck: "A first-principles route from mineral sand imagination to sovereign compute, edge AI, simulation tools and consciousness architecture experiments.",
     brief: [
-      "Flatland, maze theory and pathfinding become the doorway into chip architecture and island-scale compute.",
+      "Flatland, maze theory and pathfinding become the entry into chip architecture and island-scale compute.",
       "It then drills into semiconductor reality: quartz to silicon, purification, crystal growth, doping, MOSFETs, FinFETs, GAA FETs, lithography, etching, deposition and cleanroom constraints.",
-      "The island version is small-batch rapid evolution: simulate first, prototype with FPGAs, learn from ASML-scale industry, and use local mineral sands where plausible without pretending a full fab appears by magic."
+      "The island version is small-batch rapid evolution: simulate first, prototype with FPGAs, learn from ASML-scale industry, and use local mineral sands where plausible without pretending a full fab appears on command."
     ],
     moonshot: "A coastal compute commons where every kiosk, capsule, auto-farm and lab becomes part of a distributed island simulator.",
     modules: [
@@ -156,7 +255,7 @@ const SITE_BRIEFS = [
           "Reusable IP cores and modular blocks let the team change one part without remaking the whole system.",
           "FPGAs become the bridge between software imagination and physical logic, before any ASIC conversation."
         ],
-        note: "Local mineral sands are part of the mythic and material spine, not an excuse to overclaim a backyard semiconductor industry."
+        note: "Local mineral sands are part of the story and material spine, not an excuse to overclaim a backyard semiconductor industry."
       }
     ],
     elements: ["SiO2", "TiO2", "ZrSiO4", "Fe"]
@@ -166,7 +265,7 @@ const SITE_BRIEFS = [
     url: "briefs/master-plan.html",
     title: "Subterranean Super-Civilisation",
     eyebrow: "Respawn Layer",
-    material: "Oyster-crete, sandworm, mineral memory",
+    material: "Oyster-crete, subsurface tunnelling, mineral memory",
     source: "Subterranean_Super_Civilization_Master_Plan.md",
     deck: "A maximalist blueprint for a protected underground civilisation that can store, grow, compute, govern and surface again.",
     brief: [
@@ -177,7 +276,7 @@ const SITE_BRIEFS = [
     moonshot: "A full-stack civilisation shelter that is less bunker and more underground ecological operating system.",
     modules: [
       "Silica Citadel cross-section",
-      "Wet-sand Sandworm tunnelling concept",
+      "Wet-sand tunnelling vehicle concept",
       "Osteomorphic blocks, oyster-crete and acoustic metamaterials",
       "Braided economy layer for work, care, energy and public value"
     ],
@@ -188,7 +287,7 @@ const SITE_BRIEFS = [
       "Use the atlas as a living index of what needs verification, consent and professional review."
     ],
     depthTitle: "The underground civilisation seed",
-    depthIntro: "This is a deliberately huge doorway: geology, hydrology, mineral inventory, tunnelling fiction, living materials, energy storage and a civilisation operating system under pressure.",
+    depthIntro: "This is a deliberately huge opening: geology, hydrology, mineral inventory, tunnelling fiction, living materials, energy storage and a civilisation operating system under pressure.",
     depth: [
       {
         title: "Geological premise",
@@ -203,7 +302,7 @@ const SITE_BRIEFS = [
         title: "Extreme engineering spine",
         body: "The infrastructure layer is pure moonshot: a wet-sand tunnelling system that prints and mines as it goes.",
         points: [
-          "The Sandworm concept uses slurry-shield pressure control to hold saturated sand open.",
+          "The tunnelling vehicle concept uses slurry-shield pressure control to hold saturated sand open.",
           "In-situ laser or plasma sintering turns excavated silica into a vitreous tunnel liner.",
           "Lateral wall mining extracts mineral streams while creating habitable voids, making tunnelling part excavation and part material refinery."
         ]
@@ -225,7 +324,7 @@ const SITE_BRIEFS = [
           "The sand battery is a more grounded bridge: store heat in silica mass and insulate it well.",
           "The Braided Economy and C-Hour layer ask how care, repair, ecological work and public value get recognised when survival is the design target."
         ],
-        note: "The moonshot keeps the mythic material intact while leaving the real-world boundaries visible."
+        note: "The moonshot keeps the story material intact while leaving the real-world boundaries visible."
       }
     ],
     elements: ["SiO2", "ZrSiO4", "FeTiO3", "REE"]
@@ -681,12 +780,12 @@ const SITE_BRIEFS = [
     slug: "profile",
     url: "briefs/profile.html",
     title: "profile.md",
-    eyebrow: "Public Doorway",
+    eyebrow: "Public Entry",
     material: "Plain text, consent, skills, place connection",
     source: "Strange but True community ledger profile.md notes",
     deck: "A simple public profile file for people who choose to appear beside community support, skills, interests and future-building roles.",
     brief: [
-      "profile.md is the public doorway: who someone is comfortable being, what they care about and what they may want to offer.",
+      "profile.md is the public entry: who someone is comfortable being, what they care about and what they may want to offer.",
       "It can connect to a public honour board only when the person chooses that level of visibility.",
       "The useful version is deliberately plain text so locals do not need to become coders before they can describe themselves."
     ],
@@ -735,12 +834,12 @@ const SITE_BRIEFS = [
     slug: "dreamtime",
     url: "briefs/dreamtime.html",
     title: "Dreamtime Threshold",
-    eyebrow: "Fiction Door",
+    eyebrow: "Fiction Threshold",
     material: "Story, ethics, science fiction, cultural caution",
     source: "New dreamtime.md fiction and science-fiction threshold",
-    deck: "A fictional doorway where the atlas crosses into mythic science fiction, while stating that real cultural stories belong to their custodians.",
+    deck: "A fictional threshold where the atlas crosses into mythic science fiction, while stating that real cultural stories belong to their custodians.",
     brief: [
-      "This threshold uses Dreamtime as a requested fiction doorway, not as cultural authority, sacred teaching or a claim about Quandamooka knowledge.",
+      "This threshold uses Dreamtime as a requested fiction layer, not as cultural authority, sacred teaching or a claim about Quandamooka knowledge.",
       "Its job is to mark where Mineral Moonshots leaves civic planning and enters dream logic, speculative systems and science-fiction tests.",
       "The ethical rule is simple: real cultural stories need custodianship, invitation and care. The fiction layer can be wild, but it cannot pretend to own what it does not own."
     ],
@@ -780,8 +879,8 @@ const SITE_BRIEFS = [
     ],
     experiments: [
       "Turn the OPML into an interactive constellation map.",
-      "Give each island a practical door and a moonshot door.",
-      "Let the front door stay simple while the deep pages hold the wildness."
+      "Give each island a practical path and a moonshot path.",
+      "Let the first entry stay simple while the deep pages hold the wildness."
     ],
     elements: ["SiO2", "REE", "FeTiO3"]
   },
@@ -792,7 +891,7 @@ const SITE_BRIEFS = [
     eyebrow: "Joyful Responsible Abundance",
     material: "local businesses, events, artists, care, public art",
     source: "Stradbroke Island Research Project.pdf",
-    deck: "A practical research doorway into Minjerribah after sand mining: local businesses, community groups, events, artists, visitors and public conversation becoming a regenerative civic matrix.",
+    deck: "A practical research entry into Minjerribah after sand mining: local businesses, community groups, events, artists, visitors and public conversation becoming a regenerative civic matrix.",
     brief: [
       "The research project frames North Stradbroke Island / Minjerribah as a place moving from extraction toward joyful responsible abundance.",
       "The useful public layer is not a top-down technology pitch. It is a map of businesses, events, organisations, artists and public touchpoints where conversation can start gently.",
@@ -806,7 +905,7 @@ const SITE_BRIEFS = [
       "Visitor-facing notices that invite empathy rather than consumption"
     ],
     experiments: [
-      "Turn the research directory into a public map of practical doors and moonshot doors.",
+      "Turn the research directory into a public map of practical paths and moonshot paths.",
       "Use the noticeboard network image as the bridge between wall, tablet, phone, kiosk and fallback emergency modes.",
       "Label every public pathway with consent, custodianship and plain-language boundaries."
     ],
@@ -819,7 +918,7 @@ const SITE_BRIEFS = [
     eyebrow: "Backyard Alignment",
     material: "film, Aura, MoE, comedy, truth",
     source: "AI Alignment CYOA For Film.md / Alien Necklace Sparks Philosophical Shift (1).md",
-    deck: "A plausible sci-fi film doorway where an alien necklace lands in a Gumpi backyard and turns AI alignment into comedy, aesthetics, ultimate truth and civic imagination.",
+    deck: "A plausible sci-fi film seed where an alien necklace lands in a Gumpi backyard and turns AI alignment into comedy, aesthetics, ultimate truth and civic imagination.",
     brief: [
       "The story starts small: a meteorite, a backyard, a necklace and ordinary Australian banter instead of sterile AI doom.",
       "The necklace works like a cosmic Mixture of Experts: it routes human fear, humour, beauty and longing into different possible futures.",
@@ -846,7 +945,7 @@ const SITE_BRIEFS = [
     eyebrow: "Culture As Protocol",
     material: "music, hope, films, bridges, public courage",
     source: "4th i C. infinity album A Protopian Gambit (lyrics).md",
-    deck: "A music-and-story doorway where the future is not sold as utopia. It is sung as a protopian risk: act from love, build better tools, and keep moving.",
+    deck: "A music-and-story seed where the future is not sold as utopia. It is sung as a protopian risk: act from love, build better tools, and keep moving.",
     brief: [
       "The album material gives Mineral Moonshots a cultural signal rather than another planning note.",
       "Songs can carry courage, grief, humour, bridges and public hope into places where diagrams cannot reach.",
@@ -854,7 +953,7 @@ const SITE_BRIEFS = [
     ],
     moonshot: "A public culture engine where songs, films, local events and repo tools help people feel the future before they are asked to build it.",
     modules: [
-      "I See Infinity music universe as emotional front door",
+      "I See Infinity music universe as emotional first entry",
       "Film prompts that make civilisation design playable",
       "Public performances linked to noticeboards and market tables",
       "Bridge language for people who do not think in code"
@@ -873,7 +972,7 @@ const SITE_BRIEFS = [
     eyebrow: "Wild Ideas, Data First",
     material: "UAP, underwater civilisations, diplomacy, sensorium",
     source: "Cosmic_Nexus_UAP,_AI,_AA,_R&D.md / What_if_UAP_are_Underwater_Civilizations.md / What_Would_You_Choose_2023.md",
-    deck: "A responsible fringe-science doorway that treats UAP, underwater civilisation and cosmic-risk material as thought experiments for data, diplomacy and resilience, not as belief demands.",
+    deck: "A responsible fringe-science entry that treats UAP, underwater civilisation and cosmic-risk material as thought experiments for data, diplomacy and resilience, not as belief demands.",
     brief: [
       "The Cosmic Nexus material mixes UAP research, ancient aeronautics, AI, spiritual science, travel, events and joyful responsible abundance.",
       "The Abyss Protocol asks a high-strangeness question: what if underwater non-human intelligence were a geopolitical variable rather than entertainment?",
@@ -900,11 +999,11 @@ const SITE_BRIEFS = [
     eyebrow: "Warm Boundaries",
     material: "microbiome, HBOT, relationships, consent, privacy",
     source: "in-home farm and microbiome.md / Global_Group_Marriages___Extended.md / Grey Area Commons / Aura Health Twin",
-    deck: "A public-safe doorway for longevity, microbiome care and consensual adult relationship futures, with enough loving spice to feel alive and enough boundaries to stay responsible.",
+    deck: "A public-safe entry for longevity, microbiome care and consensual adult relationship futures, with enough loving spice to feel alive and enough boundaries to stay responsible.",
     brief: [
       "The longevity material links in-home food systems, microbiome reflection, HBOT ideas and private-first health context.",
       "The relationship material asks whether internet-connected abundance needs more flexible, honest and consent-based forms of love than default scripts allow.",
-      "The outward-facing doorway stays warm, adult, privacy-preserving and non-medical: invitation first, pressure never."
+      "The outward-facing layer stays warm, adult, privacy-preserving and non-medical: invitation first, pressure never."
     ],
     moonshot: "A loving abundance layer where people can explore health, intimacy, friendship, family, desire, care and long life without surrendering consent, privacy or evidence.",
     modules: [
@@ -936,7 +1035,7 @@ const LOCAL_PROJECTS = [
     repo: "auraofintelligence/strange-but-true",
     visibility: "Public shelf",
     url: "https://github.com/auraofintelligence/strange-but-true",
-    bridge: "The friendly front door for tech help, AI help, grant support, public downloads and local trust.",
+    bridge: "The friendly first entry for tech help, AI help, grant support, public downloads and local trust.",
     buildStep: "Grounds the far-out work in patient local help so the moonshot does not float away from people."
   },
   {
@@ -969,7 +1068,7 @@ const LOCAL_PROJECTS = [
     visibility: "Public culture",
     url: "https://github.com/auraofintelligence/i-C-infinity-music-universe",
     bridge: "Carries the protopian mood through songs, albums, mythic language and public-facing story worlds.",
-    buildStep: "Gives the civilisation work an emotional doorway through music, hope, repair and future courage."
+    buildStep: "Gives the civilisation work an emotional entry through music, hope, repair and future courage."
   },
   {
     name: "Agent Markdown Form Navigator",
@@ -1176,7 +1275,7 @@ const INTERACTIVE_LABS = {
       },
       {
         name: "Design fiction",
-        items: ["sandworm tunnelling", "crystal megacity", "acoustic levitation halls", "planetary respawn vault", "inter-dimensional diplomacy"]
+        items: ["subsurface tunnelling vehicle", "crystal civic core", "vibration-safe halls", "recovery vault", "treaty rehearsal"]
       }
     ]
   },
@@ -1349,7 +1448,7 @@ const INTERACTIVE_LABS = {
       },
       {
         name: "Game-world",
-        items: ["fictional supporters", "demo C-Hours", "future badges", "mythic titles", "prototype ceremonies"]
+        items: ["fictional supporters", "demo C-Hours", "future badges", "public gratitude", "prototype ceremonies"]
       }
     ]
   },
@@ -1379,7 +1478,7 @@ const INTERACTIVE_LABS = {
   aura: {
     type: "archipelago-map",
     title: "Aura Context Archipelago",
-    deck: "Aura is best imagined as an archipelago of private context islands, each with a practical door and a moonshot door.",
+    deck: "Aura is best imagined as an archipelago of private context islands, each with a practical path and a moonshot path.",
     islands: [
       {
         name: "Profile",
@@ -1402,7 +1501,7 @@ const INTERACTIVE_LABS = {
         moonshot: "Technology that helps with care before it chases performance."
       },
       {
-        name: "Fiction Door",
+        name: "Fiction Threshold",
         practical: "Clear separation between practical planning and story-world play.",
         moonshot: "An interface where identity, mythology and science fiction can be explored safely."
       }
@@ -1438,7 +1537,7 @@ const INTERACTIVE_LABS = {
   archipelago: {
     type: "archipelago-map",
     title: "Project Archipelago Map",
-    deck: "Click an island to see the practical door and the moonshot door. This keeps the ecosystem navigable.",
+    deck: "Click an island to see the practical path and the moonshot path. This keeps the ecosystem navigable.",
     islands: [
       {
         name: "Aura",
@@ -1463,14 +1562,14 @@ const INTERACTIVE_LABS = {
       {
         name: "Strange but True",
         practical: "Tech help, AI help, scam awareness, grant writing and local support.",
-        moonshot: "The friendly front door into the whole intelligence ecosystem."
+        moonshot: "The friendly first entry into the whole intelligence ecosystem."
       }
     ]
   },
   "island-abundance": {
     type: "archipelago-map",
-    title: "Island Abundance Doors",
-    deck: "Click a door to see how ordinary island life can become a practical prototype and a bigger abundance window.",
+    title: "Island Abundance Paths",
+    deck: "Click a path to see how ordinary island life can become a practical prototype and a bigger abundance window.",
     islands: [
       {
         name: "Local business",
@@ -1564,11 +1663,11 @@ const INTERACTIVE_LABS = {
       },
       {
         name: "Simulation",
-        items: ["UAP scenario", "underwater civilisation hypothesis", "xeno-diplomacy", "risk model", "public calm drill"]
+        items: ["UAP scenario", "underwater civilisation hypothesis", "contact diplomacy scenario", "risk model", "public calm drill"]
       },
       {
         name: "Fiction",
-        items: ["film scene", "game quest", "alien necklace", "abyss protocol myth", "cosmic festival"]
+        items: ["film scene", "game quest", "alien necklace", "abyss protocol scenario", "public science festival"]
       },
       {
         name: "Governance",
@@ -1595,7 +1694,7 @@ const INTERACTIVE_LABS = {
       },
       {
         name: "Fiction room",
-        items: ["abundant love futures", "long-life rituals", "group relationship worlds", "AI companion stories", "joyful spice"]
+        items: ["abundant love futures", "long-life rituals", "consensual relationship futures", "AI companion stories", "joyful spice"]
       }
     ]
   }

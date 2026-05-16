@@ -1,6 +1,6 @@
 # profile.md
 
-This file is a public doorway, not a full identity.
+This file is a public entry, not a full identity.
 
 It is for a person who chooses to be visible beside a community project, public support trail or future honour board.
 

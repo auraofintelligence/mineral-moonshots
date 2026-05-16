@@ -8,7 +8,7 @@ It should not be published by default.
 
 Aura is where a person can keep deeper context: goals, preferences, projects, communication style, support needs, devices, creative worlds and practical limits.
 
-profile.md is the public doorway. aura.md is the private workshop behind it.
+profile.md is the public entry. aura.md is the private workshop behind it.
 
 ## Useful sections
 

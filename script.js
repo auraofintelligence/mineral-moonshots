@@ -93,7 +93,7 @@
     mount.innerHTML = "";
 
     const copy = make("div", "footer-copy");
-    copy.appendChild(make("p", "", "Mineral Moonshots is a multi-page collection of windows and doors into plausible worlds we can build from now."));
+    copy.appendChild(make("p", "", "Mineral Moonshots is a multi-page atlas of narrative seeds, build paths and plausible worlds we can begin from now."));
     copy.appendChild(make("p", "footer-note", "Local projects, public prototypes, private workbenches and speculative moonshots are kept in separate lanes. Real-world work still needs consent, engineering, ecology, law, culture and community governance."));
 
     const links = make("div", "footer-links");
@@ -457,8 +457,8 @@
       [...islands.children].forEach((button) => button.classList.remove("is-active"));
       islands.children[index].classList.add("is-active");
       name.textContent = island.name;
-      practical.textContent = "Practical door: " + island.practical;
-      moonshot.textContent = "Moonshot door: " + island.moonshot;
+      practical.textContent = "Grounded path: " + island.practical;
+      moonshot.textContent = "Moonshot path: " + island.moonshot;
     }
 
     shell.append(islands, detail);
@@ -565,6 +565,68 @@
     }, 80);
   }
 
+  function getNarrativeParagraphs(brief) {
+    if (typeof NARRATIVE_SEEDS !== "undefined" && NARRATIVE_SEEDS[brief.slug]) {
+      return NARRATIVE_SEEDS[brief.slug];
+    }
+    return brief.brief || [brief.deck];
+  }
+
+  function renderBriefPager(brief) {
+    const main = document.querySelector("main");
+    if (!main) return;
+
+    const currentIndex = SITE_BRIEFS.findIndex((item) => item.slug === brief.slug);
+    if (currentIndex < 0) return;
+
+    const previous = SITE_BRIEFS[(currentIndex - 1 + SITE_BRIEFS.length) % SITE_BRIEFS.length];
+    const next = SITE_BRIEFS[(currentIndex + 1) % SITE_BRIEFS.length];
+
+    const section = make("nav", "section brief-pager");
+    section.setAttribute("aria-label", "Moonshot page navigation");
+
+    const heading = make("div", "section-heading");
+    heading.appendChild(make("p", "eyebrow", "Keep exploring"));
+    heading.appendChild(make("h2", "", "Next thread"));
+
+    const links = make("div", "pager-links");
+
+    const previousLink = make("a", "pager-link previous");
+    previousLink.href = prefix + previous.url;
+    previousLink.setAttribute("aria-label", "Previous thread: " + previous.title);
+    previousLink.appendChild(make("span", "", "Previous"));
+    previousLink.appendChild(make("strong", "", previous.title));
+    previousLink.appendChild(make("p", "", previous.deck));
+
+    const nextLink = make("a", "pager-link next");
+    nextLink.href = prefix + next.url;
+    nextLink.setAttribute("aria-label", "Next thread: " + next.title);
+    nextLink.appendChild(make("span", "", "Next"));
+    nextLink.appendChild(make("strong", "", next.title));
+    nextLink.appendChild(make("p", "", next.deck));
+
+    links.append(previousLink, nextLink);
+    section.append(heading, links);
+    main.appendChild(section);
+  }
+
+  function renderBackToTop() {
+    const button = make("button", "to-top-button", "Top");
+    button.type = "button";
+    button.setAttribute("aria-label", "Back to top");
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    function update() {
+      button.classList.toggle("is-visible", window.scrollY > 640);
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+    document.body.appendChild(button);
+  }
+
   function renderBriefPage() {
     if (!isBriefPage) return;
     const brief = SITE_BRIEFS.find((item) => item.slug === isBriefPage);
@@ -584,20 +646,23 @@
     if (sourcePanel) {
       const eyebrow = sourcePanel.querySelector(".eyebrow");
       const title = sourcePanel.querySelector("h2");
-      if (eyebrow) eyebrow.textContent = "Window";
-      if (title) title.textContent = "What this plausible world reveals";
+      if (eyebrow) eyebrow.textContent = "Narrative seed";
+      if (title) title.textContent = brief.narrativeTitle || "Where the trail begins";
     }
     const moonshotPanel = document.querySelector(".moonshot-panel");
     if (moonshotPanel) {
       const eyebrow = moonshotPanel.querySelector(".eyebrow");
       const title = moonshotPanel.querySelector("h2");
-      if (eyebrow) eyebrow.textContent = "Door";
-      if (title) title.textContent = "What we can try from now";
+      if (eyebrow) eyebrow.textContent = "Build spark";
+      if (title) title.textContent = "What wants building";
     }
-    brief.brief.forEach((point) => {
-      const li = make("li", "", point);
-      briefList.appendChild(li);
-    });
+    if (briefList) {
+      const narrative = make("div", "narrative-copy");
+      getNarrativeParagraphs(brief).forEach((paragraph) => {
+        narrative.appendChild(make("p", "", paragraph));
+      });
+      briefList.replaceWith(narrative);
+    }
 
     document.querySelector("[data-moonshot]").textContent = brief.moonshot;
 
@@ -610,31 +675,16 @@
     });
 
     const experiments = document.querySelector("[data-experiments]");
-    brief.experiments.forEach((experiment) => {
-      experiments.appendChild(make("li", "", experiment));
+    brief.experiments.forEach((experiment, index) => {
+      const card = make("article", "experiment-card");
+      card.appendChild(make("span", "", String(index + 1).padStart(2, "0")));
+      card.appendChild(make("p", "", experiment));
+      experiments.appendChild(card);
     });
-
-    const elements = document.querySelector("[data-page-elements]");
-    brief.elements
-      .map((symbol) => MINERAL_PALETTE.find((item) => item.symbol === symbol))
-      .filter(Boolean)
-      .forEach((item) => {
-        const card = make("article", "element-card compact");
-        card.appendChild(make("strong", "", item.symbol));
-        card.appendChild(make("h3", "", item.name));
-        card.appendChild(make("p", "", item.role));
-        elements.appendChild(card);
-      });
 
     renderDepthSections(brief);
-    const more = document.querySelector("[data-more-briefs]");
-    SITE_BRIEFS.filter((item) => item.slug !== brief.slug).slice(0, 4).forEach((item) => {
-      const a = make("a", "mini-link", item.title);
-      a.href = prefix + item.url;
-      more.appendChild(a);
-    });
-
     renderInteractiveLab(brief);
+    renderBriefPager(brief);
   }
 
   renderHeader();
@@ -644,5 +694,6 @@
   renderElementGrid();
   renderHomeLabPreview();
   renderBriefPage();
+  renderBackToTop();
   scrollToHashTarget();
 })();

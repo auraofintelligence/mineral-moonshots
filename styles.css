@@ -627,6 +627,39 @@ p {
   transform: translateY(-1px);
 }
 
+.periodic-tile.is-local-sand {
+  background: rgba(20, 34, 35, 0.96);
+  border-color: rgba(125, 240, 194, 0.62);
+}
+
+.periodic-tile.is-context-element {
+  background: rgba(11, 16, 19, 0.45);
+  border-color: rgba(220, 230, 234, 0.08);
+  color: rgba(220, 230, 234, 0.48);
+  opacity: 0.46;
+}
+
+.periodic-tile.is-context-element strong,
+.periodic-tile.is-context-element .atomic-number,
+.periodic-tile.is-context-element .element-name {
+  color: rgba(220, 230, 234, 0.52);
+}
+
+.periodic-tile.is-companion-context,
+.periodic-tile.lane-future-biology-context {
+  border-color: rgba(139, 233, 255, 0.34);
+  border-style: dashed;
+  opacity: 0.68;
+}
+
+.periodic-tile.is-context-element:hover,
+.periodic-tile.is-context-element:focus,
+.periodic-tile.is-context-element.is-active {
+  background: rgba(125, 240, 194, 0.1);
+  border-color: rgba(125, 240, 194, 0.64);
+  opacity: 1;
+}
+
 .periodic-tile strong {
   color: var(--quartz);
   font-family: var(--heading);
@@ -663,6 +696,46 @@ p {
 .lane-biology-ready {
   border-style: dashed;
   opacity: 0.78;
+}
+
+.periodic-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.8rem;
+}
+
+.legend-chip {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  font-family: var(--heading);
+  font-size: 0.78rem;
+  font-weight: 900;
+  gap: 0.4rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.legend-chip::before {
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 0.58rem;
+  width: 0.58rem;
+}
+
+.legend-local::before {
+  background: var(--rare-earth);
+}
+
+.legend-bridge::before {
+  background: var(--zircon);
+}
+
+.legend-context::before {
+  background: rgba(220, 230, 234, 0.38);
 }
 
 .periodic-detail {

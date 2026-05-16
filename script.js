@@ -178,8 +178,16 @@
     return typeof ELEMENT_ATLAS === "undefined" ? [] : ELEMENT_ATLAS;
   }
 
+  function getPeriodicElements() {
+    return typeof FULL_PERIODIC_TABLE === "undefined" ? getElementAtlas() : FULL_PERIODIC_TABLE;
+  }
+
   function getElementBySymbol(symbol) {
     return getElementAtlas().find((item) => item.symbol === symbol);
+  }
+
+  function getPeriodicElementBySymbol(symbol) {
+    return getPeriodicElements().find((item) => item.symbol === symbol);
   }
 
   function elementPageHref(element) {
@@ -209,7 +217,7 @@
   function renderPeriodicExplorer() {
     const mounts = document.querySelectorAll("[data-periodic-table]");
     if (!mounts.length) return;
-    const elements = getElementAtlas();
+    const elements = getPeriodicElements();
     if (!elements.length) return;
 
     mounts.forEach((mount) => {
@@ -218,15 +226,30 @@
       const tableWrap = make("div", "periodic-table-wrap");
       const table = make("div", "periodic-table");
       const detail = make("article", "periodic-detail");
-      const caption = make("p", "periodic-caption", "Highlighted elements are local sand, coastal companion, rare-earth, stewardship or future biology bridge elements. Empty spaces are left open so the atlas can grow without changing shape.");
+      const legend = make("div", "periodic-legend");
+      [
+        ["Straddie sand elements", "local"],
+        ["Coastal / biology context, not sand claims", "bridge"],
+        ["Periodic context only", "context"]
+      ].forEach(([label, tone]) => {
+        const item = make("span", "legend-chip legend-" + tone, label);
+        legend.appendChild(item);
+      });
+      const caption = make("p", "periodic-caption", "The full periodic table is shown for orientation. Bright tiles are the local Straddie mineral-sands story or clearly marked companion context; muted tiles are not being claimed as local sand elements.");
 
       elements.forEach((element) => {
-        const tile = make("button", "periodic-tile lane-" + element.lane);
+        const tileClasses = [
+          "periodic-tile",
+          "lane-" + element.lane,
+          element.isLocalSand ? "is-local-sand" : "is-context-element",
+          element.isCompanionContext ? "is-companion-context" : ""
+        ];
+        const tile = make("button", tileClasses.filter(Boolean).join(" "));
         tile.type = "button";
         tile.style.gridColumn = String(element.tableColumn);
         tile.style.gridRow = String(element.tableRow);
         tile.dataset.symbol = element.symbol;
-        tile.setAttribute("aria-label", element.name + " properties");
+        tile.setAttribute("aria-label", element.name + " properties, " + (element.tableLabel || "periodic context"));
         tile.appendChild(make("span", "atomic-number", String(element.atomicNumber)));
         tile.appendChild(make("strong", "", element.symbol));
         tile.appendChild(make("span", "element-name", element.name));
@@ -235,17 +258,23 @@
       });
 
       function setActive(symbol) {
-        const element = getElementBySymbol(symbol) || elements[0];
+        const element = getPeriodicElementBySymbol(symbol) || elements[0];
         table.querySelectorAll(".periodic-tile").forEach((tile) => {
           tile.classList.toggle("is-active", tile.dataset.symbol === element.symbol);
         });
         const activeTile = table.querySelector('.periodic-tile[data-symbol="' + element.symbol + '"]');
         if (activeTile) {
-          tableWrap.scrollLeft = Math.max(0, activeTile.offsetLeft - ((tableWrap.clientWidth - activeTile.offsetWidth) / 2));
+          const tileLeft = activeTile.offsetLeft;
+          const tileRight = tileLeft + activeTile.offsetWidth;
+          const visibleLeft = tableWrap.scrollLeft;
+          const visibleRight = visibleLeft + tableWrap.clientWidth;
+          if (tileLeft < visibleLeft || tileRight > visibleRight) {
+            tableWrap.scrollLeft = Math.max(0, tileLeft - ((tableWrap.clientWidth - activeTile.offsetWidth) / 2));
+          }
         }
 
         detail.innerHTML = "";
-        detail.appendChild(make("p", "eyebrow", element.lane.replaceAll("-", " ")));
+        detail.appendChild(make("p", "eyebrow", element.tableLabel || element.lane.replaceAll("-", " ")));
         const heading = make("h3", "", element.name + " (" + element.symbol + ")");
         detail.appendChild(heading);
         detail.appendChild(make("p", "card-meta", element.stream));
@@ -263,7 +292,7 @@
         }
       }
 
-      tableWrap.append(table, caption);
+      tableWrap.append(table, legend, caption);
       shell.append(tableWrap, detail);
       mount.appendChild(shell);
       setActive(mount.dataset.defaultElement || "Si");
@@ -307,7 +336,9 @@
     const grid = document.querySelector("[data-element-card-grid]");
     if (!grid) return;
     getElementAtlas().filter((element) => element.hasPage).forEach((element) => {
+      const tableElement = getPeriodicElementBySymbol(element.symbol) || element;
       const card = make("article", "element-atlas-card");
+      card.appendChild(make("p", "eyebrow", tableElement.tableLabel || element.lane.replaceAll("-", " ")));
       card.appendChild(make("strong", "", element.symbol));
       card.appendChild(make("h3", "", element.name));
       card.appendChild(make("p", "card-meta", element.stream));

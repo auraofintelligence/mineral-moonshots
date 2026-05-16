@@ -115,6 +115,7 @@
     if (!grid) return;
     const group = grid.dataset.briefGrid || "all";
     const allowed = BRIEF_GROUPS[group];
+    const preferProjectUrl = grid.dataset.preferProjectUrl === "true";
     const briefs = allowed ? SITE_BRIEFS.filter((brief) => allowed.has(brief.slug)) : SITE_BRIEFS;
     briefs.forEach((brief, index) => {
       const card = make("article", "brief-card");
@@ -124,11 +125,37 @@
       const title = make("h3", "", brief.title);
       const deck = make("p", "", brief.deck);
       const meta = make("p", "card-meta", brief.material);
-      const link = make("a", "card-link", grid.dataset.linkLabel || "Open page");
-      link.href = brief.url;
-      link.setAttribute("aria-label", "Open " + brief.title);
+      const actions = make("div", "card-actions");
+      const primaryUrl = preferProjectUrl && brief.projectUrl ? brief.projectUrl : brief.url;
+      const primaryLabel = preferProjectUrl && brief.projectUrl
+        ? (brief.projectLabel || grid.dataset.projectLinkLabel || "Open project site")
+        : (grid.dataset.linkLabel || "Open page");
+      const link = make("a", "card-link", primaryLabel);
+      link.href = primaryUrl;
+      link.setAttribute("aria-label", primaryLabel + ": " + brief.title);
+      if (/^https?:\/\//.test(primaryUrl)) {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }
+      actions.appendChild(link);
 
-      card.append(tag, title, deck, meta, link);
+      if (preferProjectUrl && brief.projectUrl && brief.url) {
+        const context = make("a", "card-link secondary-link", grid.dataset.contextLinkLabel || "Atlas context");
+        context.href = brief.url;
+        context.setAttribute("aria-label", "Read atlas context for " + brief.title);
+        actions.appendChild(context);
+      }
+
+      if (grid.dataset.showRepoLinks === "true" && brief.repoUrl) {
+        const repo = make("a", "card-link secondary-link", "GitHub repo");
+        repo.href = brief.repoUrl;
+        repo.target = "_blank";
+        repo.rel = "noopener noreferrer";
+        repo.setAttribute("aria-label", "Open GitHub repo for " + brief.title);
+        actions.appendChild(repo);
+      }
+
+      card.append(tag, title, deck, meta, actions);
       grid.appendChild(card);
     });
   }
@@ -144,15 +171,28 @@
       const buildStep = make("p", "", repo.buildStep);
       const bridge = make("p", "repo-bridge", repo.bridge);
       const meta = make("p", "card-meta", repo.repo);
+      const actions = make("div", "card-actions");
 
       card.append(visibility, title, buildStep, bridge, meta);
 
-      if (repo.url) {
-        const link = make("a", "card-link", "Open repo");
-        link.href = repo.url;
+      if (repo.pageUrl) {
+        const link = make("a", "card-link", "Open project site");
+        link.href = repo.pageUrl;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
-        card.appendChild(link);
+        actions.appendChild(link);
+      }
+
+      if (repo.url) {
+        const source = make("a", "card-link secondary-link", "GitHub repo");
+        source.href = repo.url;
+        source.target = "_blank";
+        source.rel = "noopener noreferrer";
+        actions.appendChild(source);
+      }
+
+      if (actions.childNodes.length) {
+        card.appendChild(actions);
       } else {
         card.appendChild(make("span", "repo-boundary", "Private/local boundary"));
       }

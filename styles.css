@@ -485,6 +485,23 @@ p {
   text-decoration: none;
 }
 
+.card-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin-top: 1rem;
+}
+
+.card-actions .card-link {
+  margin-top: 0;
+}
+
+.secondary-link {
+  color: var(--zircon);
+  font-size: 0.92rem;
+}
+
 .card-link:hover,
 .card-link:focus {
   color: var(--quartz);
@@ -883,10 +900,15 @@ p {
 }
 
 .system-image {
+  display: grid;
+  justify-items: center;
   margin: 2rem auto 0;
-  max-width: var(--max-width);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.section.wide > .system-image {
+  max-width: min(1080px, calc(100vw - 2rem));
 }
 
 .system-image img {
@@ -894,8 +916,11 @@ p {
   border: 1px solid rgba(220, 230, 234, 0.18);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  object-fit: cover;
-  width: 100%;
+  height: auto;
+  max-height: min(58vh, 620px);
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
 }
 
 .system-image figcaption {

@@ -1435,6 +1435,9 @@ const SITE_BRIEFS = [
   {
     slug: "disaster-kiosks",
     url: "briefs/disaster-kiosks.html",
+    projectUrl: "https://auraofintelligence.github.io/straddie-disaster-kiosks/",
+    projectLabel: "Open Disaster Kiosks site",
+    repoUrl: "https://github.com/auraofintelligence/straddie-disaster-kiosks",
     title: "Straddie Disaster Kiosks",
     eyebrow: "Solar-Punk Arcade",
     material: "Solar, battery, mesh, local AI",
@@ -1489,6 +1492,9 @@ const SITE_BRIEFS = [
   {
     slug: "multicultural-hub",
     url: "briefs/multicultural-hub.html",
+    projectUrl: "https://auraofintelligence.github.io/stradbroke-grants-lab/projects.html",
+    projectLabel: "Open Grants Lab projects",
+    repoUrl: "https://github.com/auraofintelligence/stradbroke-grants-lab",
     title: "Cultural And Sandy Sports Hub",
     eyebrow: "Heart-First Hub",
     material: "Ballow Road, youth, culture, sandy sports",
@@ -1516,6 +1522,9 @@ const SITE_BRIEFS = [
   {
     slug: "community-coop",
     url: "briefs/community-coop.html",
+    projectUrl: "https://auraofintelligence.github.io/shared-table-initiative/sovereign-space-builder.html",
+    projectLabel: "Open Shared Table builder",
+    repoUrl: "https://github.com/auraofintelligence/shared-table-initiative",
     title: "Ready S.E.T. Community Co-op",
     eyebrow: "Trust To Infrastructure",
     material: "Care, training, C-Hours, local ownership",
@@ -1543,6 +1552,9 @@ const SITE_BRIEFS = [
   {
     slug: "sandy-sports-network",
     url: "briefs/sandy-sports-network.html",
+    projectUrl: "https://auraofintelligence.github.io/amity-outdoor-fitness-grant/",
+    projectLabel: "Open Amity fitness site",
+    repoUrl: "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
     title: "Sandy Sports Network",
     eyebrow: "2032 Game-World Legacy",
     material: "Dunwich, Amity, Point Lookout, reefs",
@@ -1570,6 +1582,9 @@ const SITE_BRIEFS = [
   {
     slug: "public-honour-board",
     url: "briefs/public-honour-board.html",
+    projectUrl: "https://auraofintelligence.github.io/strange-but-true/community-ledger.html",
+    projectLabel: "Open community ledger",
+    repoUrl: "https://github.com/auraofintelligence/strange-but-true",
     title: "Public Honour Board",
     eyebrow: "Visible Support",
     material: "Public-safe JSON, profile.md, XRP, Solana, trust trails",
@@ -1600,6 +1615,9 @@ const SITE_BRIEFS = [
   {
     slug: "profile",
     url: "briefs/profile.html",
+    projectUrl: "https://auraofintelligence.github.io/sbt_profile_starter/",
+    projectLabel: "Open profile builder",
+    repoUrl: "https://github.com/auraofintelligence/sbt_profile_starter",
     title: "profile.md",
     eyebrow: "Public Entry",
     material: "Plain text, consent, skills, place connection",
@@ -1627,6 +1645,9 @@ const SITE_BRIEFS = [
   {
     slug: "aura",
     url: "briefs/aura.html",
+    projectUrl: "https://auraofintelligence.github.io/sbt_aura_builder/",
+    projectLabel: "Open Aura builder",
+    repoUrl: "https://github.com/auraofintelligence/sbt_aura_builder",
     title: "aura.md",
     eyebrow: "Private Workshop",
     material: "AI context, memory, goals, world-building",
@@ -1847,6 +1868,7 @@ const LOCAL_PROJECTS = [
     name: "Straddie Noticeboard Network",
     repo: "auraofintelligence/straddie-noticeboard-network",
     visibility: "Public prototype",
+    pageUrl: "https://auraofintelligence.github.io/straddie-noticeboard-network/",
     url: "https://github.com/auraofintelligence/straddie-noticeboard-network",
     bridge: "The wall, tablet, phone, kiosk and fallback image is one practical build surface beneath the bigger civilisation story.",
     buildStep: "Useful public information on normal days; trusted emergency coordination when the island needs it."
@@ -1855,6 +1877,7 @@ const LOCAL_PROJECTS = [
     name: "Strange But True",
     repo: "auraofintelligence/strange-but-true",
     visibility: "Public shelf",
+    pageUrl: "https://auraofintelligence.github.io/strange-but-true/",
     url: "https://github.com/auraofintelligence/strange-but-true",
     bridge: "The friendly first entry for tech help, AI help, grant support, public downloads and local trust.",
     buildStep: "Grounds the far-out work in patient local help so the moonshot does not float away from people."
@@ -1863,6 +1886,7 @@ const LOCAL_PROJECTS = [
     name: "Stradbroke Grants Lab",
     repo: "auraofintelligence/stradbroke-grants-lab",
     visibility: "Public prototype",
+    pageUrl: "https://auraofintelligence.github.io/stradbroke-grants-lab/",
     url: "https://github.com/auraofintelligence/stradbroke-grants-lab",
     bridge: "Turns local ideas into grant-ready structures without pretending funding or approval already exists.",
     buildStep: "Helps practical projects become evidence, budget, risk, staged delivery and public accountability."
@@ -1871,6 +1895,7 @@ const LOCAL_PROJECTS = [
     name: "Shared Table Initiative",
     repo: "auraofintelligence/shared-table-initiative",
     visibility: "Public prototype",
+    pageUrl: "https://auraofintelligence.github.io/shared-table-initiative/",
     url: "https://github.com/auraofintelligence/shared-table-initiative",
     bridge: "Starts with the simple question of who is already feeding, welcoming and caring for people here.",
     buildStep: "Makes food, welcome and care visible before the system talks about abundance at larger scales."
@@ -1879,6 +1904,7 @@ const LOCAL_PROJECTS = [
     name: "Grey Area Commons",
     repo: "auraofintelligence/grey-area-commons",
     visibility: "Public adult boundary",
+    pageUrl: "https://auraofintelligence.github.io/grey-area-commons/",
     url: "https://github.com/auraofintelligence/grey-area-commons",
     bridge: "Keeps the loving spice consent-first, adult-only, privacy-preserving and gentle enough for real humans.",
     buildStep: "Protects the relationship and intimacy layer with consent, privacy and adult boundaries."
@@ -1887,6 +1913,7 @@ const LOCAL_PROJECTS = [
     name: "i C. infinity Music Universe",
     repo: "auraofintelligence/i-C-infinity-music-universe",
     visibility: "Public culture",
+    pageUrl: "https://auraofintelligence.github.io/i-C-infinity-music-universe/",
     url: "https://github.com/auraofintelligence/i-C-infinity-music-universe",
     bridge: "Carries the protopian mood through songs, albums, mythic language and public-facing story worlds.",
     buildStep: "Gives the civilisation work an emotional entry through music, hope, repair and future courage."
@@ -1895,6 +1922,7 @@ const LOCAL_PROJECTS = [
     name: "Agent Markdown Form Navigator",
     repo: "auraofintelligence/agent-md-form-navigator",
     visibility: "Public tool",
+    pageUrl: "https://auraofintelligence.github.io/agent-md-form-navigator/",
     url: "https://github.com/auraofintelligence/agent-md-form-navigator",
     bridge: "Shows how public forms can become agent-ready markdown without burying people in technical setup.",
     buildStep: "Lets people turn plain-language input into useful AI briefs one structured page at a time."
@@ -1903,6 +1931,7 @@ const LOCAL_PROJECTS = [
     name: "Legal Memory Workbench",
     repo: "auraofintelligence/legal-memory-workbench",
     visibility: "Public workbench",
+    pageUrl: "https://auraofintelligence.github.io/legal-memory-workbench/",
     url: "https://github.com/auraofintelligence/legal-memory-workbench",
     bridge: "Adds sober legal-memory boundaries to a site that otherwise wants to run toward the stars.",
     buildStep: "Keeps legal context, disclaimers and evidence discipline close to the speculative work."
@@ -1911,6 +1940,7 @@ const LOCAL_PROJECTS = [
     name: "Amity Outdoor Fitness",
     repo: "auraofintelligence/amity-outdoor-fitness-grant",
     visibility: "Public proposal",
+    pageUrl: "https://auraofintelligence.github.io/amity-outdoor-fitness-grant/",
     url: "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
     bridge: "Grounds longevity and abundance in ordinary public movement, access, safety and outdoor activity.",
     buildStep: "Starts longevity in daylight: movement, safer access, bodies, ageing and community care."

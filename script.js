@@ -392,6 +392,35 @@
     });
   }
 
+  function renderMaterialEvidence() {
+    const grid = document.querySelector("[data-material-evidence]");
+    if (!grid || typeof MATERIAL_EVIDENCE_LEDGER === "undefined") return;
+    MATERIAL_EVIDENCE_LEDGER.forEach((item) => {
+      const card = make("article", "evidence-card");
+      card.appendChild(make("p", "eyebrow", item.elements));
+      card.appendChild(make("h3", "", item.title));
+      [
+        ["Evidence", item.evidence],
+        ["History", item.history],
+        ["Current relevance", item.relevance],
+        ["Responsible stewardship", item.stewardship]
+      ].forEach(([label, body]) => {
+        const block = make("div", "evidence-block");
+        block.appendChild(make("strong", "", label));
+        block.appendChild(make("p", "", body));
+        card.appendChild(block);
+      });
+      if (item.href) {
+        const link = make("a", "card-link", item.source || "Source");
+        link.href = item.href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        card.appendChild(link);
+      }
+      grid.appendChild(card);
+    });
+  }
+
   function renderElementPage() {
     const symbol = document.body.dataset.elementPage;
     if (!symbol) return;
@@ -412,8 +441,30 @@
 
     const story = document.querySelector("[data-element-story]");
     if (story) {
-      story.appendChild(make("p", "", element.localRole));
-      story.appendChild(make("p", "", "The positive action is to turn this element into local learning, repair, stewardship and carefully staged capability, not another raw-material export chase."));
+      const sourcePanel = document.querySelector(".source-panel");
+      if (sourcePanel) {
+        const eyebrow = sourcePanel.querySelector(".eyebrow");
+        const title = sourcePanel.querySelector("h2");
+        if (eyebrow) eyebrow.textContent = "Evidence ledger";
+        if (title) title.textContent = element.symbol;
+      }
+      if (element.evidence) {
+        const grid = make("div", "evidence-grid compact-evidence");
+        [
+          ["Evidence", element.evidence.evidence],
+          ["History", element.evidence.history],
+          ["Current relevance", element.evidence.relevance],
+          ["Responsible stewardship", element.evidence.stewardship]
+        ].forEach(([label, body]) => {
+          const card = make("article", "evidence-card");
+          card.appendChild(make("h3", "", label));
+          card.appendChild(make("p", "", body));
+          grid.appendChild(card);
+        });
+        story.appendChild(grid);
+      } else {
+        story.appendChild(make("p", "", element.localRole));
+      }
     }
 
     const properties = document.querySelector("[data-element-properties]");
@@ -984,6 +1035,7 @@
   renderElementAtlasCards();
   renderProjectCurrents();
   renderAiOpportunities();
+  renderMaterialEvidence();
   renderHomeLabPreview();
   renderBriefPage();
   renderElementPage();

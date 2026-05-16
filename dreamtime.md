@@ -4,7 +4,7 @@ This is a fiction and science-fiction threshold for Mineral Moonshots.
 
 Because Dreamtime is a culturally loaded word, this file does not claim cultural authority, sacred teaching or Quandamooka knowledge. Real cultural stories belong to their custodians.
 
-## What this page does
+## Story threshold
 
 It marks the point where the website openly leaves civic planning and enters dream logic, speculative systems, mythic science fiction and impossible prototypes.
 
@@ -14,8 +14,6 @@ It marks the point where the website openly leaves civic planning and enters dre
 - Do not turn cultural language into ownership.
 - Do not use sacred material without invitation.
 - Bring every wild idea back through consent, evidence, engineering, ecology, law and local governance.
-
-## Story threshold
 
 The island becomes a crystal instrument.
 

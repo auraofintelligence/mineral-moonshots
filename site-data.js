@@ -46,7 +46,7 @@ const REE_BREAKDOWN = [
   {
     title: "Practical opportunity lane",
     symbols: "Ce, La, Nd",
-    story: "Cerium and lanthanum keep the glass, polishing, catalyst and battery-literacy doors open. Neodymium carries the magnet story, but only with clean separation, recycling, worker safety, water discipline and public consent."
+    story: "Cerium and lanthanum keep the glass, polishing, catalyst and battery-literacy paths alive. Neodymium carries the magnet story, but only with clean separation, recycling, worker safety, water discipline and public consent."
   },
   {
     title: "Clean separation and recycling",
@@ -75,6 +75,132 @@ const REE_CONSTITUENTS = [
     opportunity: "Permanent magnets for motors, generators, speakers, actuators and robotics."
   }
 ];
+
+const MATERIAL_EVIDENCE_LEDGER = [
+  {
+    title: "Quartz / silica",
+    elements: "Si + O",
+    evidence: "The technical summary says most North Stradbroke Island sand is quartz: silicon dioxide.",
+    history: "Quartz is the ordinary mass of the old coastal dunes and strandlines. It is the ground that made industrial mineral separation possible.",
+    relevance: "The current moonshot relevance is glass, optics, thermal storage, silicon literacy, transparent sensors and public-facing material education.",
+    stewardship: "Silica dust and renewed surface disturbance are the hard boundaries. The future path is learning, repair, reuse and low-footprint processing, not another scrape of the island.",
+    source: "Queensland Health mineral sands technical summary",
+    href: "https://www.health.qld.gov.au/__data/assets/pdf_file/0030/729426/dohdl1819011.pdf"
+  },
+  {
+    title: "Rutile and ilmenite",
+    elements: "Ti + Fe + O",
+    evidence: "The same source names rutile and ilmenite as titanium-bearing oxides in the mineral-sands stream.",
+    history: "These heavy minerals were part of the industrial reason sand mining stayed on Minjerribah for decades.",
+    relevance: "Today they point toward titanium dioxide, corrosion-resistant design, pigments, ceramics, repair literacy, iron oxides and hard coastal machinery.",
+    stewardship: "Titanium and iron stories need energy accounting, dust control, water protection, rehabilitation memory and no casual claims about full metal production.",
+    source: "Queensland Health mineral sands technical summary",
+    href: "https://www.health.qld.gov.au/__data/assets/pdf_file/0030/729426/dohdl1819011.pdf"
+  },
+  {
+    title: "Zircon",
+    elements: "Zr + Si + O",
+    evidence: "The source names zircon as a silicate in the mineral-sands stream.",
+    history: "Zircon sits in the heavy-mineral fraction: small compared with the sand mass, but industrially important.",
+    relevance: "The contemporary use-path is high-temperature ceramics, refractories, cutter heads, oxygen sensors and underground components that survive heat and wear.",
+    stewardship: "Zircon belongs in a qualified materials lane because processing can raise trace-element and radiological questions. Evidence comes before expansion.",
+    source: "Queensland Health mineral sands technical summary",
+    href: "https://www.health.qld.gov.au/__data/assets/pdf_file/0030/729426/dohdl1819011.pdf"
+  },
+  {
+    title: "Monazite",
+    elements: "P + O + La + Ce + Nd + Th",
+    evidence: "The source names monazite as containing cerium, lanthanum, neodymium and thorium.",
+    history: "Monazite makes the rare-earth story inseparable from the radioactive stewardship story.",
+    relevance: "The useful future is not a vague REE bonanza. It is glass polishing, catalysts, magnet literacy, separation science, recycling and public records.",
+    stewardship: "Thorium forces licensed handling, radiological literacy, consent gates, tailings discipline and a strong bias toward recycling before recovery.",
+    source: "Queensland Health mineral sands technical summary",
+    href: "https://www.health.qld.gov.au/__data/assets/pdf_file/0030/729426/dohdl1819011.pdf"
+  },
+  {
+    title: "Mining history",
+    elements: "Landscape memory",
+    evidence: "The technical summary records about 50 million tonnes of sand mined on North Stradbroke Island in 2007.",
+    history: "That number is why the site should not sound like a fresh extraction pitch. The moonshot starts after a very real mining era.",
+    relevance: "Current relevance is cultural repair, site rehabilitation, skills transition, public ledgers and materials knowledge redirected toward local benefit.",
+    stewardship: "History has to stay visible on the page so future abundance does not erase the costs that made the old mineral economy possible.",
+    source: "Queensland Health mineral sands technical summary",
+    href: "https://www.health.qld.gov.au/__data/assets/pdf_file/0030/729426/dohdl1819011.pdf"
+  },
+  {
+    title: "End of mining and return",
+    elements: "Governance",
+    evidence: "Queensland's North Stradbroke Island Protection and Sustainability Act says its object is to end mining in the region by the end of 2019.",
+    history: "That legal line turns the site away from extraction nostalgia and toward a post-mining future.",
+    relevance: "The living question is what replaces the old economy: restoration, tourism, public infrastructure, clean materials research, education and local stewardship capability.",
+    stewardship: "Responsible abundance means rehabilitation, returned land, Quandamooka authority, consent, cultural heritage, water protection and economic paths that do not reopen the same wound.",
+    source: "North Stradbroke Island Protection and Sustainability Act 2011",
+    href: "https://www.legislation.qld.gov.au/view/html/inforce/current/act-2011-011"
+  }
+];
+
+const ELEMENT_EVIDENCE = {
+  O: {
+    evidence: "Oxygen is present across the named minerals as oxides, silicates and phosphates: quartz, rutile, ilmenite, zircon and monazite.",
+    history: "It is the chemistry behind the mined mineral names, not a separate product.",
+    relevance: "It lets the site talk about ceramics, glass, corrosion, water and later biology as one connected material story.",
+    stewardship: "Oxygen chemistry keeps the build honest: dust, water, corrosion, life support and tailings all matter."
+  },
+  Si: {
+    evidence: "Most of the sand is named as quartz, silicon dioxide; zircon adds a second silicate lane in the heavy-mineral stream.",
+    history: "Silicon sits in both the ordinary sand mass and the heavy zircon story.",
+    relevance: "Glass, optics, sand batteries, silicon literacy and transparent sensors are plausible learning paths.",
+    stewardship: "Silica dust and high-purity silicon processing need explicit health and realism gates."
+  },
+  Ti: {
+    evidence: "Rutile and ilmenite are named as titanium-bearing oxides in the mineral-sands stream.",
+    history: "Titanium minerals were a core reason the island's mineral sands were mined.",
+    relevance: "The present relevance is titanium dioxide, hard coatings, marine materials, ceramics and corrosion-resistant design.",
+    stewardship: "Full titanium metal production is energy-intensive and should stay behind serious process evidence."
+  },
+  Fe: {
+    evidence: "Ilmenite is the named titanium-oxide mineral that gives the local atlas its iron-bearing heavy-mineral lane.",
+    history: "Iron is part of the heavy-mineral story and the practical workshop story.",
+    relevance: "Repair metalwork, pigments, magnets, shielding and coastal maintenance are grounded, useful paths.",
+    stewardship: "Corrosion, coatings, waste streams and repair-first thinking keep the story practical."
+  },
+  Zr: {
+    evidence: "Zircon is named as a silicate in the local mineral-sands stream.",
+    history: "Zircon is a heavy-mineral fraction with high-temperature industrial relevance.",
+    relevance: "Zirconia ceramics, thermal barriers, refractories and underground components are the local moonshot edge.",
+    stewardship: "Trace and radiological questions require assays and qualified handling before any claim expands."
+  },
+  P: {
+    evidence: "Monazite is a phosphate mineral.",
+    history: "Phosphate chemistry is the host structure for the source-backed rare-earth story.",
+    relevance: "Phosphate literacy connects rare-earth separation, safer batteries, phosphors and later food-system biology.",
+    stewardship: "Phosphorus can damage waterways, so runoff and nutrient discipline belong in the design."
+  },
+  La: {
+    evidence: "Lanthanum is named in the source as a monazite constituent.",
+    history: "It belongs to the narrow, source-backed rare-earth stream, not a broad REE wish-list.",
+    relevance: "Optical glass, catalysts, battery-material literacy and separation science are the honest opportunity path.",
+    stewardship: "Rare-earth handling needs water, tailings, worker safety, radioactivity and consent gates."
+  },
+  Ce: {
+    evidence: "Cerium is named in the source as a monazite constituent.",
+    history: "It sits beside lanthanum and neodymium in the local rare-earth boundary.",
+    relevance: "Ceria suggests glass polishing, catalysts, oxygen-storage ceramics and practical workshop chemistry.",
+    stewardship: "The positive path is recycling and clean separation research before any extraction claim."
+  },
+  Nd: {
+    evidence: "Neodymium is named in the source as a monazite constituent.",
+    history: "It is the source-backed magnet element in this local rare-earth set.",
+    relevance: "Motors, generators, speakers, robotics and repairable energy hardware are the current relevance.",
+    stewardship: "Magnet dreams must carry separation difficulty, thorium proximity, recycling and public consent."
+  },
+  Th: {
+    evidence: "Thorium is named in the source as a monazite constituent.",
+    history: "It is the reason the monazite story must be a stewardship story first.",
+    relevance: "Its current relevance is monitoring, records, radiological literacy and strict governance, not casual use.",
+    stewardship: "Licensed professionals, regulators and community consent come before handling, storage or research."
+  }
+};
 
 const AI_DISCOVERY_OPPORTUNITIES = [
   {
@@ -146,22 +272,15 @@ const ELEMENT_PROPERTIES = {
 
 const ELEMENT_SLUGS = {
   O: "oxygen",
-  Na: "sodium",
-  Mg: "magnesium",
-  Al: "aluminium",
   Si: "silicon",
   P: "phosphorus",
-  K: "potassium",
-  Ca: "calcium",
   Ti: "titanium",
   Fe: "iron",
   Zr: "zirconium",
   La: "lanthanum",
   Ce: "cerium",
   Nd: "neodymium",
-  Hf: "hafnium",
-  Th: "thorium",
-  U: "uranium"
+  Th: "thorium"
 };
 
 const MAJOR_SAND_ELEMENTS = [
@@ -226,7 +345,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "Na",
     lane: "coastal-companion",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Coastal context, not a sand claim",
     stream: "Seawater salts, feldspar traces and glass fluxes",
     material: "Sodium salts and soda chemistry",
     summary: "Sodium is a coastal companion: less glamorous than rare earths, but useful in glass, salt chemistry, electrolytes, thermal storage and water systems.",
@@ -242,7 +362,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "Mg",
     lane: "coastal-companion",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Coastal context, not a sand claim",
     stream: "Seawater, silicates, recycled alloys and titanium processing logic",
     material: "Magnesium salts, magnesia and magnesium alloys",
     summary: "Magnesium links seawater, light alloys, cements, thermal storage and titanium-making stories.",
@@ -258,7 +379,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "Al",
     lane: "coastal-companion",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Recycling and aluminosilicate context, not a sand claim",
     stream: "Aluminosilicate traces, clays, waste recovery and aluminium scrap",
     material: "Aluminosilicates and recycled aluminium",
     summary: "Aluminium is not the star mineral sand, but it matters through clays, geopolymers, waste recovery, light structures and repairable island hardware.",
@@ -306,7 +428,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "K",
     lane: "coastal-companion",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Future food-system context, not a sand claim",
     stream: "Feldspar traces, salts and future biology",
     material: "Potassium salts and silicates",
     summary: "Potassium is a quiet companion for glass, ceramics, fertiliser discipline, electrolytes and future food-system pages.",
@@ -322,7 +445,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "Ca",
     lane: "coastal-companion",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Shell and reef context, not a sand claim",
     stream: "Shell, carbonate, oyster-crete and coastal biominerals",
     material: "Calcium carbonate and calcium silicate ideas",
     summary: "Calcium enters through shells, reefs, oyster-crete, cement chemistry, bones, water hardness and biomineralisation.",
@@ -386,7 +510,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "Hf",
     lane: "heavy-mineral",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Zircon trace context, evidence needed for Straddie claim",
     stream: "Trace companion in zircon",
     material: "Hafnium compounds and metal",
     summary: "Hafnium is the quiet trace companion of zircon. It is not a bulk island story, but it matters for high-temperature alloys, microelectronics and nuclear-control materials.",
@@ -418,7 +543,8 @@ const MAJOR_SAND_ELEMENTS = [
   {
     symbol: "U",
     lane: "stewardship",
-    hasPage: true,
+    hasPage: false,
+    tableLabel: "Radiological context, evidence needed for Straddie claim",
     stream: "Trace radiological stewardship",
     material: "Uranium traces in mineral systems",
     summary: "Uranium is included so the atlas does not hide uncomfortable chemistry. It is a monitoring and governance element, not an export fantasy.",
@@ -436,12 +562,14 @@ const MAJOR_SAND_ELEMENTS = [
 const ELEMENT_ATLAS = [
   ...MAJOR_SAND_ELEMENTS.map((item) => ({
     ...ELEMENT_PROPERTIES[item.symbol],
+    evidence: ELEMENT_EVIDENCE[item.symbol],
     slug: ELEMENT_SLUGS[item.symbol],
     ...item
   })),
   ...REE_CONSTITUENTS.map((item) => ({
     ...ELEMENT_PROPERTIES[item.symbol],
     symbol: item.symbol,
+    evidence: ELEMENT_EVIDENCE[item.symbol],
     slug: ELEMENT_SLUGS[item.symbol],
     lane: "rare-earth",
     hasPage: true,
@@ -580,7 +708,7 @@ const PERIODIC_TABLE_CONTEXT = [
   { atomicNumber: 118, symbol: "Og", name: "Oganesson", atomicMass: "(294)", category: "Unknown properties", phase: "Gas", group: 18, period: 7, tableColumn: 18, tableRow: 7 }
 ];
 
-const LOCAL_SAND_SYMBOLS = new Set(ELEMENT_ATLAS.filter((item) => item.hasPage && item.lane !== "coastal-companion").map((item) => item.symbol));
+const LOCAL_SAND_SYMBOLS = new Set(Object.keys(ELEMENT_EVIDENCE));
 
 const FULL_PERIODIC_TABLE = PERIODIC_TABLE_CONTEXT.map((base) => {
   const atlasItem = ELEMENT_ATLAS.find((item) => item.symbol === base.symbol);
@@ -614,10 +742,11 @@ const FULL_PERIODIC_TABLE = PERIODIC_TABLE_CONTEXT.map((base) => {
       ...atlasItem,
       tableColumn: base.tableColumn,
       tableRow: base.tableRow,
-      lane: "future-biology-context",
+      lane: atlasItem.lane || "future-biology-context",
       hasPage: false,
       isLocalSand: false,
-      tableLabel: "Future biology context",
+      isCompanionContext: atlasItem.lane === "coastal-companion",
+      tableLabel: atlasItem.tableLabel || "Future biology context",
       localRole: "This element is included for the later biology layer, not as a Straddie mineral-sands claim."
     };
   }
@@ -2249,7 +2378,7 @@ const INTERACTIVE_LABS = {
   "island-abundance": {
     type: "archipelago-map",
     title: "Island Abundance Paths",
-    deck: "Click a path to see how ordinary island life can become a practical prototype and a bigger abundance window.",
+    deck: "Click a path to see how ordinary island life can become a practical prototype and a bigger abundance seed.",
     islands: [
       {
         name: "Local business",

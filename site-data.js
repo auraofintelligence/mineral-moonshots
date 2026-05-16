@@ -27,7 +27,7 @@ const MINERAL_PALETTE = [
     symbol: "REE",
     name: "Rare-earth stream",
     colour: "Rare-earth violet",
-    role: "Not one material: lanthanides plus yttrium and sometimes scandium, with magnet, sensor, phosphor, ceramic and separation questions."
+    role: "At this stage, the Straddie-supported rare-earth story is monazite: lanthanum, cerium and neodymium, with thorium stewardship beside them."
   },
   {
     symbol: "Fe",
@@ -39,29 +39,19 @@ const MINERAL_PALETTE = [
 
 const REE_BREAKDOWN = [
   {
-    title: "Light rare earths",
-    symbols: "La, Ce, Pr, Nd, Sm, Eu",
-    story: "Lanthanum and cerium carry glass, catalyst and polishing stories; praseodymium and neodymium move toward strong magnets; samarium and europium point toward specialised magnets, phosphors and sensing. Promethium is named here as a boundary because it is radioactive and not a practical natural mineral-sands stream."
+    title: "Source-backed monazite REEs",
+    symbols: "La, Ce, Nd",
+    story: "For Straddie itself, the public source boundary is narrow: monazite in the mineral sands is described as containing cerium, lanthanum and neodymium, with thorium beside them. These are the rare-earth elements this site treats as local at this stage."
   },
   {
-    title: "Heavy rare earths and yttrium",
-    symbols: "Y, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu",
-    story: "Yttrium and the heavier lanthanides carry the high-value edge: heat-tolerant magnets, lasers, phosphors, medical and research imaging, ceramics, microwave devices and precision sensing. These are tiny fractions with big separation and stewardship questions."
-  },
-  {
-    title: "Scandium branch",
-    symbols: "Sc",
-    story: "Scandium is often grouped with rare earths because of similar chemistry, but it is not a lanthanide. The opportunity is lightweight aluminium-scandium alloys, solid-oxide fuel-cell materials, ceramics and aerospace thinking, not a casual add-on."
-  },
-  {
-    title: "Magnet quartet",
-    symbols: "Nd, Pr, Dy, Tb",
-    story: "Neodymium and praseodymium are the permanent-magnet workhorses. Dysprosium and terbium can help magnets hold performance at higher temperatures. This is the motors, generators, actuators, robotics and energy-hardware lane."
+    title: "Practical opportunity lane",
+    symbols: "Ce, La, Nd",
+    story: "Cerium and lanthanum keep the glass, polishing, catalyst and battery-literacy doors open. Neodymium carries the magnet story, but only with clean separation, recycling, worker safety, water discipline and public consent."
   },
   {
     title: "Clean separation and recycling",
-    symbols: "Monazite, xenotime, bastnaesite style questions",
-    story: "A rare-earth stream is only useful if separation, radioactivity, tailings, water, worker safety, public consent and recycling are part of the design from the beginning. The moonshot is clean materials intelligence, not faster extraction theatre."
+    symbols: "Monazite + recycling first",
+    story: "The rare-earth stream is only useful if separation, radioactivity, tailings, water, worker safety, public consent and recycling are part of the design from the beginning. The moonshot is clean materials intelligence, not faster extraction theatre."
   }
 ];
 
@@ -79,94 +69,10 @@ const REE_CONSTITUENTS = [
     opportunity: "Glass polishing, catalysts, oxygen-storage ceramics and cleaner workshop chemistry."
   },
   {
-    symbol: "Pr",
-    name: "Praseodymium",
-    material: "Pr oxide / NdPr blends",
-    opportunity: "Magnet alloys, green glass, ceramics and small-motor supply-chain questions."
-  },
-  {
     symbol: "Nd",
     name: "Neodymium",
     material: "Neodymium oxide / metal",
     opportunity: "Permanent magnets for motors, generators, speakers, actuators and robotics."
-  },
-  {
-    symbol: "Pm",
-    name: "Promethium",
-    material: "Radioactive isotope stream",
-    opportunity: "Research boundary only: not an ordinary natural recovery target."
-  },
-  {
-    symbol: "Sm",
-    name: "Samarium",
-    material: "Samarium oxide / SmCo alloys",
-    opportunity: "High-temperature magnets, sensors and specialised aerospace-style components."
-  },
-  {
-    symbol: "Eu",
-    name: "Europium",
-    material: "Europium oxide",
-    opportunity: "Red and blue phosphors, anti-counterfeiting marks and precision display history."
-  },
-  {
-    symbol: "Gd",
-    name: "Gadolinium",
-    material: "Gadolinium oxide",
-    opportunity: "Magnetic refrigeration research, neutron capture, imaging contrast and sensor work."
-  },
-  {
-    symbol: "Tb",
-    name: "Terbium",
-    material: "Terbium oxide",
-    opportunity: "Green phosphors, high-temperature magnet additives and magnetostrictive devices."
-  },
-  {
-    symbol: "Dy",
-    name: "Dysprosium",
-    material: "Dysprosium oxide",
-    opportunity: "Heat-tolerant magnets for hard-working motors, generators and underground machines."
-  },
-  {
-    symbol: "Ho",
-    name: "Holmium",
-    material: "Holmium oxide",
-    opportunity: "Lasers, magnetic research and niche shielding or control-material questions."
-  },
-  {
-    symbol: "Er",
-    name: "Erbium",
-    material: "Erbium oxide",
-    opportunity: "Fibre amplifiers, lasers, glass colour and long-distance communications."
-  },
-  {
-    symbol: "Tm",
-    name: "Thulium",
-    material: "Thulium oxide",
-    opportunity: "Specialised lasers, portable sensing research and careful isotope boundaries."
-  },
-  {
-    symbol: "Yb",
-    name: "Ytterbium",
-    material: "Ytterbium oxide",
-    opportunity: "Fibre lasers, atomic-clock research, quantum devices and precision measurement."
-  },
-  {
-    symbol: "Lu",
-    name: "Lutetium",
-    material: "Lutetium oxide / scintillators",
-    opportunity: "Detector crystals, catalysts, medical-research isotopes and high-value lab materials."
-  },
-  {
-    symbol: "Y",
-    name: "Yttrium",
-    material: "Yttria / yttria-stabilised zirconia",
-    opportunity: "Ceramics, phosphors, lasers, solid-oxide fuel cells and high-temperature components."
-  },
-  {
-    symbol: "Sc",
-    name: "Scandium",
-    material: "Scandium oxide / Al-Sc alloys",
-    opportunity: "Light alloys, solid-oxide fuel-cell materials, ceramics and aerospace build logic."
   }
 ];
 
@@ -247,26 +153,12 @@ const ELEMENT_SLUGS = {
   P: "phosphorus",
   K: "potassium",
   Ca: "calcium",
-  Sc: "scandium",
   Ti: "titanium",
   Fe: "iron",
-  Y: "yttrium",
   Zr: "zirconium",
   La: "lanthanum",
   Ce: "cerium",
-  Pr: "praseodymium",
   Nd: "neodymium",
-  Pm: "promethium",
-  Sm: "samarium",
-  Eu: "europium",
-  Gd: "gadolinium",
-  Tb: "terbium",
-  Dy: "dysprosium",
-  Ho: "holmium",
-  Er: "erbium",
-  Tm: "thulium",
-  Yb: "ytterbium",
-  Lu: "lutetium",
   Hf: "hafnium",
   Th: "thorium",
   U: "uranium"
@@ -399,12 +291,12 @@ const MAJOR_SAND_ELEMENTS = [
     symbol: "P",
     lane: "heavy-mineral",
     hasPage: true,
-    stream: "Monazite and xenotime phosphate minerals",
+    stream: "Monazite phosphate minerals",
     material: "Phosphates",
-    summary: "Phosphorus is the phosphate spine of monazite and xenotime. It links rare-earth minerals to fertiliser discipline, batteries, phosphors and biological life.",
+    summary: "Phosphorus is the phosphate spine of monazite. It links rare-earth host minerals to fertiliser discipline, batteries, phosphors and biological life.",
     localRole: "The opportunity is to understand phosphate streams as both material and ecological responsibility, not to leak nutrients or chase unlicensed chemistry.",
     opportunities: [
-      { title: "Rare-earth host chemistry", body: "Monazite and xenotime are phosphates, so phosphorus helps explain why rare-earth separation is hard and mineral-specific." },
+      { title: "Rare-earth host chemistry", body: "Monazite is a phosphate, so phosphorus helps explain why rare-earth separation is hard and mineral-specific." },
       { title: "Battery and phosphor research", body: "Phosphate chemistries connect to safer battery materials, phosphors and durable ceramics." },
       { title: "Food-system bridge", body: "Later biology can link phosphorus to DNA, ATP, bones, soils and nutrient recycling." }
     ],
@@ -486,7 +378,7 @@ const MAJOR_SAND_ELEMENTS = [
     opportunities: [
       { title: "Ceramic steel", body: "Zirconia can be framed as ceramic toughness for cutter heads, bearings, sensors and high-temperature parts." },
       { title: "Thermal barriers", body: "Zirconium compounds help explain why turbines, heat stores and extreme environments need specialist materials." },
-      { title: "Fuel-cell bridge", body: "Yttria-stabilised zirconia connects zirconium and yttrium to solid-oxide fuel cells and oxygen sensors." }
+      { title: "Fuel-cell bridge", body: "Stabilised zirconia connects zirconium to solid-oxide fuel cells and oxygen sensors, while any added stabilisers would need their own sourcing evidence." }
     ],
     stewardship: "Zircon processing can involve hafnium and trace radiological questions. Treat it as a qualified materials lane.",
     biologyBridge: "Dental ceramics and biocompatible surfaces."
@@ -551,9 +443,9 @@ const ELEMENT_ATLAS = [
     ...ELEMENT_PROPERTIES[item.symbol],
     symbol: item.symbol,
     slug: ELEMENT_SLUGS[item.symbol],
-    lane: item.symbol === "Sc" || item.symbol === "Y" ? "rare-earth-side" : "rare-earth",
+    lane: "rare-earth",
     hasPage: true,
-    stream: item.symbol === "Sc" ? "Scandium branch" : item.symbol === "Y" ? "Yttrium and xenotime-style questions" : "Rare-earth stream",
+    stream: "Monazite rare-earth stream",
     material: item.material,
     summary: item.opportunity,
     localRole: "This element belongs in a long-term capability atlas: recycling first, careful separation research second, and local public benefit before any export-for-profit logic.",
@@ -562,9 +454,7 @@ const ELEMENT_ATLAS = [
       { title: "Research pathway", body: "Map uses, hazards, separation difficulty, recycling routes, lab partners and what the community would actually gain before anyone treats it as a commodity." },
       { title: "Joyful responsible abundance", body: "The positive action is a clean materials library for repairable motors, sensors, displays, ceramics, energy systems and learning labs." }
     ],
-    stewardship: item.symbol === "Pm"
-      ? "Promethium is radioactive and not a practical natural mineral-sands recovery target. It stays here as a boundary marker."
-      : "Rare-earth separation can involve acids, solvents, radioactivity, water risk and tailings. Recycling, consent and professional review come first.",
+    stewardship: "Rare-earth separation can involve acids, solvents, radioactivity, water risk and tailings. Recycling, consent and professional review come first.",
     biologyBridge: "Trace-element biology, imaging, sensors or toxicity can be added later where evidence supports it."
   }))
 ].sort((a, b) => a.atomicNumber - b.atomicNumber);

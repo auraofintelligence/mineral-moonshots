@@ -888,8 +888,8 @@ const NARRATIVE_SEEDS = {
     "What if emergency infrastructure also made normal days kinder? The useful path is solar power, battery backup, mesh comms, trusted local content and practice runs that make confidence ordinary."
   ],
   "capsule-hotels": [
-    "The capsule hotel becomes more than beds in a wall. Each room is a small comfort cell, compute node, visitor interface and simulator prototype for a city that learns from use.",
-    "What if travel accommodation helped pay for shared compute, local planning and better public spaces? Abundance appears when tourism funds tools locals can use, not just rooms visitors pass through."
+    "The capsule hotel becomes more than beds in a wall. On Straddie it can be a site-neutral civic machine: sleep, compute, training, protected access and confidence-building held in one small public-capacity engine.",
+    "What if paid stays helped fund shared compute, local planning, health-surge rehearsal and disaster readiness without becoming another resort story? Joyful responsible abundance appears when visitors help leave tools behind."
   ],
   "multicultural-hub": [
     "The hub story begins with a place to gather: youth, Elders, sport, culture, media, training, meals and safe ordinary welcome.",
@@ -1465,27 +1465,31 @@ const SITE_BRIEFS = [
   {
     slug: "capsule-hotels",
     url: "briefs/capsule-hotels.html",
-    title: "Capsule Hotels As Simulators",
-    eyebrow: "Cashflow To Cosmos",
-    material: "GPUs, modular rooms, city twins",
-    source: "Copy of (Draft) Capsule Hotel Opportunities.pptx.pdf",
-    deck: "A modular capsule hotel model where accommodation cashflow powers GPUs, city simulations, VR planning and off-world thinking.",
+    projectUrl: "https://auraofintelligence.github.io/straddie-capsule-surge-lab/",
+    projectLabel: "Open Capsule Surge Lab",
+    title: "Straddie Capsule Surge Lab",
+    eyebrow: "Beds To Civic Compute",
+    material: "Capsules, GPUs, civic twins, health surge",
+    source: "Copy of (Draft) Capsule Hotel Opportunities.pptx.pdf + Straddie Capsule Surge Lab",
+    sourceLabel: "Capsule hotel deck, Straddie civic-simulation build and island compute notes.",
+    deck: "An inland not-for-profit capsule stay that turns paid nights into civic simulation, health-surge readiness and local compute capacity.",
     brief: [
-      "The deck links capsule hotels, graphics processors, city simulation services and off-world space development.",
-      "Each capsule can become more than a bed: a compute, VR, planning and local-cloud access point.",
-      "Common spaces become living simulators for maintenance, public works, events, waste, traffic and community planning."
+      "This is not a beachfront resort or a nominated address. The moonshot asks what a suitable inland space could carry before anyone fights over a block.",
+      "Paid capsule stays create ordinary cashflow, but the public value comes from protected access nights, simulation rooms, training seats and idle GPU-hours.",
+      "The island compute layer ties capsules to disaster kiosks, noticeboards, Virtual Minjerribah, Web3 Sensorium debate and a future NVIDIA-class supercompute rack pathway."
     ],
-    moonshot: "Use humble, modular accommodation to fund a network of city-simulating computers that eventually teaches communities how to build in space.",
+    moonshot: "A public-capacity hotel that can sleep people, run local AI, pressure-test health and disaster surges, and help Straddie build confidence before scale.",
     modules: [
-      "One or two GPUs attached to each capsule",
-      "VR and AR planning interfaces for guests and locals",
-      "Local cloud, satellite data and digital twin services",
-      "Orbital moon-ring and spin-gravity thought experiments"
+      "Inland capsule rooms with workforce, visitor and surge modes",
+      "Per-capsule GPUs for occupant tools first, then local compute",
+      "Civic simulation rooms linked to kiosks, noticeboards and digital twins",
+      "NFP reserve model for protected access, maintenance and future rack purchase"
     ],
     experiments: [
-      "Mock up one capsule dashboard showing room comfort plus city simulator access.",
-      "Model the economics: bed revenue, GPU cost, power cost and useful compute hours.",
-      "Design the common room as a planning cockpit, not just a lounge."
+      "Run site-neutral metrics: nights, simulation hours, access blocks and idle GPU-hours.",
+      "Prototype one public dashboard connecting capsule use, noticeboard load and disaster-kiosk readiness.",
+      "Write the $3M AUD NVIDIA rack as an ambition pathway, not a current promise.",
+      "Use the common room as a gentle compatibility lab for joyful responsible abundance."
     ],
     elements: ["SiO2", "TiO2", "REE", "Fe"]
   },

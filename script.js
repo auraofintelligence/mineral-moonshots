@@ -146,6 +146,15 @@
         actions.appendChild(context);
       }
 
+      if (!preferProjectUrl && brief.projectUrl) {
+        const project = make("a", "card-link secondary-link", brief.projectLabel || grid.dataset.projectLinkLabel || "Open project site");
+        project.href = brief.projectUrl;
+        project.target = "_blank";
+        project.rel = "noopener noreferrer";
+        project.setAttribute("aria-label", "Open project site for " + brief.title);
+        actions.appendChild(project);
+      }
+
       if (grid.dataset.showRepoLinks === "true" && brief.repoUrl) {
         const repo = make("a", "card-link secondary-link", "GitHub repo");
         repo.href = brief.repoUrl;

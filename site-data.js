@@ -1467,6 +1467,7 @@ const SITE_BRIEFS = [
     url: "briefs/capsule-hotels.html",
     projectUrl: "https://auraofintelligence.github.io/straddie-capsule-surge-lab/",
     projectLabel: "Open Capsule Surge Lab",
+    repoUrl: "https://github.com/auraofintelligence/straddie-capsule-surge-lab",
     title: "Straddie Capsule Surge Lab",
     eyebrow: "Beds To Civic Compute",
     material: "Capsules, GPUs, civic twins, health surge",

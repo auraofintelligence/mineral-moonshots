@@ -1014,6 +1014,25 @@
       hero.querySelector("[data-title]").textContent = brief.title;
       hero.querySelector("[data-deck]").textContent = brief.deck;
       hero.querySelector("[data-source]").textContent = brief.sourceLabel || brief.material;
+
+      if ((brief.projectUrl || brief.repoUrl) && !hero.querySelector(".project-page-links")) {
+        const links = make("div", "card-actions project-page-links");
+        if (brief.projectUrl) {
+          const project = make("a", "card-link", brief.projectLabel || "Open project site");
+          project.href = brief.projectUrl;
+          project.target = "_blank";
+          project.rel = "noopener noreferrer";
+          links.appendChild(project);
+        }
+        if (brief.repoUrl) {
+          const repo = make("a", "card-link secondary-link", "GitHub repo");
+          repo.href = brief.repoUrl;
+          repo.target = "_blank";
+          repo.rel = "noopener noreferrer";
+          links.appendChild(repo);
+        }
+        hero.appendChild(links);
+      }
     }
 
     const briefList = document.querySelector("[data-brief-points]");

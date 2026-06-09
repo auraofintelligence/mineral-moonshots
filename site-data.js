@@ -782,11 +782,12 @@ const PROJECT_CURRENTS = [
   },
   {
     lane: "build-path",
-    title: "Sovereign wealth, not royalties",
-    eyebrow: "7th generation capital",
-    narrative: "The new project stack pushes away from passive royalties and toward community-held equity, patient trusts, local reinvestment and decision power that lasts beyond one construction cycle.",
-    build: "A Minjerribah-style future fund should separate commercial agility, cultural authority, public benefit, legal compliance and intergenerational accumulation.",
-    href: "boundaries.html"
+    title: "7th generation wealth and mutual protection",
+    eyebrow: "Wealth + insurance",
+    narrative: "The new wealth and mutuals doorway pushes away from passive royalties and toward community-held equity, patient trusts, local reinvestment, mutual care and decision power that lasts beyond one construction cycle.",
+    build: "The practical path separates future funds, mutual protection, Indigenous data sovereignty, Country deals, legal compliance and intergenerational accumulation.",
+    href: "https://auraofintelligence.github.io/moreton-bay-community-wealth-and-mutuals/",
+    linkLabel: "Open wealth and mutuals"
   },
   {
     lane: "build-path",
@@ -1951,15 +1952,6 @@ const LOCAL_PROJECTS = [
     buildStep: "Gives the civilisation work an emotional entry through music, hope, repair and future courage."
   },
   {
-    name: "Agent Markdown Form Navigator",
-    repo: "auraofintelligence/agent-md-form-navigator",
-    visibility: "Public tool",
-    pageUrl: "https://auraofintelligence.github.io/agent-md-form-navigator/",
-    url: "https://github.com/auraofintelligence/agent-md-form-navigator",
-    bridge: "Shows how public forms can become agent-ready markdown without burying people in technical setup.",
-    buildStep: "Lets people turn plain-language input into useful AI briefs one structured page at a time."
-  },
-  {
     name: "Legal Memory Workbench",
     repo: "auraofintelligence/legal-memory-workbench",
     visibility: "Public workbench",
@@ -2040,30 +2032,6 @@ const LOCAL_PROJECTS = [
     bridge: "Documentary planning turns source trails, interviews, scenes and screening notes into agent-ready public/private files.",
     buildStep: "Keeps the culture layer useful: stories can gather evidence, care and consent before becoming spectacle."
   },
-  {
-    name: "Strange But True Field Library",
-    repo: "auraofintelligence/strange-but-true-field-library",
-    visibility: "Private workbench",
-    url: "",
-    bridge: "The deeper archive catalogue stays private while public-safe summaries can feed future moonshots.",
-    buildStep: "Keeps the source archive useful without leaking private material into public layers."
-  },
-  {
-    name: "Strange But True Travel Oracle",
-    repo: "auraofintelligence/strange-but-true-travel-oracle",
-    visibility: "Private workbench",
-    url: "",
-    bridge: "Keeps travel, hospitality, reciprocity and Shared Table logic in a private planning lane for now.",
-    buildStep: "Treats travel as a care and reciprocity problem before it becomes a bigger world system."
-  },
-  {
-    name: "Aura Health Twin",
-    repo: "auraofintelligence/aura-health-twin",
-    visibility: "Private-first health",
-    url: "",
-    bridge: "Keeps longevity, health context and personal reflection private unless the person deliberately chooses otherwise.",
-    buildStep: "Keeps health and longevity context private-first while public pages stay careful and non-medical."
-  }
 ];
 
 const INTERACTIVE_LABS = {

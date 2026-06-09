@@ -54,6 +54,10 @@
     return node;
   }
 
+  function isExternalUrl(url) {
+    return /^https?:\/\//.test(url || "");
+  }
+
   function renderHeader() {
     const mount = document.querySelector("[data-site-header]");
     if (!mount) return;
@@ -133,7 +137,7 @@
       const link = make("a", "card-link", primaryLabel);
       link.href = primaryUrl;
       link.setAttribute("aria-label", primaryLabel + ": " + brief.title);
-      if (/^https?:\/\//.test(primaryUrl)) {
+      if (isExternalUrl(primaryUrl)) {
         link.target = "_blank";
         link.rel = "noopener noreferrer";
       }
@@ -411,8 +415,12 @@
         card.appendChild(make("p", "", item.narrative));
         card.appendChild(make("p", "project-current-build", item.build));
         if (item.href) {
-          const link = make("a", "card-link", "Follow thread");
-          link.href = prefix + item.href;
+          const link = make("a", "card-link", item.linkLabel || "Follow thread");
+          link.href = isExternalUrl(item.href) ? item.href : prefix + item.href;
+          if (isExternalUrl(item.href)) {
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+          }
           card.appendChild(link);
         }
         grid.appendChild(card);
@@ -985,6 +993,42 @@
     main.appendChild(section);
   }
 
+  function renderSitePager() {
+    if (pathName.includes("/briefs/") || pathName.includes("/elements/")) return;
+    const main = document.querySelector("main");
+    if (!main || main.querySelector(".site-pager")) return;
+
+    const currentFile = pathName.endsWith("/") ? "index.html" : pathName.split("/").pop();
+    const currentIndex = routes.findIndex((route) => route.href === currentFile);
+    if (currentIndex < 0) return;
+
+    const previous = routes[(currentIndex - 1 + routes.length) % routes.length];
+    const next = routes[(currentIndex + 1) % routes.length];
+    const section = make("nav", "section brief-pager site-pager");
+    section.setAttribute("aria-label", "Site page navigation");
+
+    const heading = make("div", "section-heading compact-heading");
+    heading.appendChild(make("p", "eyebrow", "Keep exploring"));
+    heading.appendChild(make("h2", "", "Move through the atlas."));
+
+    const links = make("div", "pager-links");
+    [
+      ["Previous", previous],
+      ["Next", next]
+    ].forEach(([label, route]) => {
+      const link = make("a", "pager-link");
+      link.href = prefix + route.href;
+      link.setAttribute("aria-label", label + " page: " + route.label);
+      link.appendChild(make("span", "", label));
+      link.appendChild(make("strong", "", route.label));
+      link.appendChild(make("p", "", label === "Previous" ? "Step back in the atlas." : "Keep moving through the atlas."));
+      links.appendChild(link);
+    });
+
+    section.append(heading, links);
+    main.appendChild(section);
+  }
+
   function renderBackToTop() {
     const button = make("button", "to-top-button", "Top");
     button.type = "button";
@@ -1122,6 +1166,7 @@
   renderHomeLabPreview();
   renderBriefPage();
   renderElementPage();
+  renderSitePager();
   renderBackToTop();
   scrollToHashTarget();
 })();

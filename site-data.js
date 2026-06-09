@@ -1141,6 +1141,12 @@ const SITE_BRIEFS = [
   {
     slug: "peaceful-space",
     url: "briefs/peaceful-space.html",
+    projectUrl: "https://auraofintelligence.github.io/aukus-space-gambit/",
+    projectLabel: "Open AUKUS Space Gambit",
+    repoUrl: "https://github.com/auraofintelligence/aukus-space-gambit",
+    relatedLinks: [
+      { label: "Brisbane summit", url: "https://auraofintelligence.github.io/GAJRA_Earth-Space-AI_Summit/" }
+    ],
     title: "Peaceful Space Gambit",
     eyebrow: "Ocean To Orbit",
     material: "Titanium, solar, treaty commons",
@@ -1180,6 +1186,9 @@ const SITE_BRIEFS = [
   {
     slug: "web3-sensorium",
     url: "briefs/web3-sensorium.html",
+    projectUrl: "https://auraofintelligence.github.io/gajra-earth-public-hub/",
+    projectLabel: "Open GAJRA Earth hub",
+    repoUrl: "https://github.com/auraofintelligence/gajra-earth-public-hub",
     title: "Web3 Global Sensorium",
     eyebrow: "Planetary Twin",
     material: "DIDs, CRDTs, digital twin, DeSci",
@@ -1248,6 +1257,9 @@ const SITE_BRIEFS = [
   {
     slug: "aura-geode",
     url: "briefs/aura-geode.html",
+    projectUrl: "https://auraofintelligence.github.io/aura-geode/",
+    projectLabel: "Open Aura Geode protocol",
+    repoUrl: "https://github.com/auraofintelligence/aura-geode",
     title: "Aura Geode And Genesis Protocol",
     eyebrow: "Qualified Self",
     material: "Straddie quartz, AuraOS, clinical wrapper, digital twin",
@@ -1497,9 +1509,12 @@ const SITE_BRIEFS = [
   {
     slug: "multicultural-hub",
     url: "briefs/multicultural-hub.html",
-    projectUrl: "https://auraofintelligence.github.io/stradbroke-grants-lab/projects.html",
-    projectLabel: "Open Grants Lab projects",
-    repoUrl: "https://github.com/auraofintelligence/stradbroke-grants-lab",
+    projectUrl: "https://auraofintelligence.github.io/ballow-road-sand-screen-hub/",
+    projectLabel: "Open Ballow Road hub",
+    repoUrl: "https://github.com/auraofintelligence/ballow-road-sand-screen-hub",
+    relatedLinks: [
+      { label: "Grant pathway", url: "https://auraofintelligence.github.io/stradbroke-grants-lab/projects.html" }
+    ],
     title: "Cultural And Sandy Sports Hub",
     eyebrow: "Heart-First Hub",
     material: "Ballow Road, youth, culture, sandy sports",
@@ -1527,9 +1542,12 @@ const SITE_BRIEFS = [
   {
     slug: "community-coop",
     url: "briefs/community-coop.html",
-    projectUrl: "https://auraofintelligence.github.io/shared-table-initiative/sovereign-space-builder.html",
-    projectLabel: "Open Shared Table builder",
-    repoUrl: "https://github.com/auraofintelligence/shared-table-initiative",
+    projectUrl: "https://auraofintelligence.github.io/ready-set-co-op-trust-hub/",
+    projectLabel: "Open Ready S.E.T. hub",
+    repoUrl: "https://github.com/auraofintelligence/ready-set-co-op-trust-hub",
+    relatedLinks: [
+      { label: "Shared Table builder", url: "https://auraofintelligence.github.io/shared-table-initiative/sovereign-space-builder.html" }
+    ],
     title: "Ready S.E.T. Community Co-op",
     eyebrow: "Trust To Infrastructure",
     material: "Care, training, C-Hours, local ownership",
@@ -1557,9 +1575,12 @@ const SITE_BRIEFS = [
   {
     slug: "sandy-sports-network",
     url: "briefs/sandy-sports-network.html",
-    projectUrl: "https://auraofintelligence.github.io/amity-outdoor-fitness-grant/",
-    projectLabel: "Open Amity fitness site",
-    repoUrl: "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
+    projectUrl: "https://auraofintelligence.github.io/ballow-road-sand-screen-hub/sports.html",
+    projectLabel: "Open sand sports page",
+    repoUrl: "https://github.com/auraofintelligence/ballow-road-sand-screen-hub",
+    relatedLinks: [
+      { label: "Amity fitness support", url: "https://auraofintelligence.github.io/amity-outdoor-fitness-grant/" }
+    ],
     title: "Sandy Sports Network",
     eyebrow: "2032 Game-World Legacy",
     material: "Dunwich, Amity, Point Lookout, reefs",
@@ -1815,6 +1836,9 @@ const SITE_BRIEFS = [
   {
     slug: "cosmic-nexus",
     url: "briefs/cosmic-nexus.html",
+    projectUrl: "https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/",
+    projectLabel: "Open Cosmic Nexus atlas",
+    repoUrl: "https://github.com/auraofintelligence/strange-but-true-cosmic-nexus",
     title: "Cosmic Nexus And Abyss Protocol",
     eyebrow: "Wild Ideas, Data First",
     material: "UAP, underwater civilisations, diplomacy, sensorium",
@@ -1842,6 +1866,9 @@ const SITE_BRIEFS = [
   {
     slug: "loving-longevity",
     url: "briefs/loving-longevity.html",
+    projectUrl: "https://auraofintelligence.github.io/straddie-vitality-network-builders/",
+    projectLabel: "Open Vitality builders",
+    repoUrl: "https://github.com/auraofintelligence/straddie-vitality-network-builders",
     title: "Loving Longevity Commons",
     eyebrow: "Warm Boundaries",
     material: "microbiome, HBOT, relationships, consent, privacy",
@@ -1949,6 +1976,69 @@ const LOCAL_PROJECTS = [
     url: "https://github.com/auraofintelligence/amity-outdoor-fitness-grant",
     bridge: "Grounds longevity and abundance in ordinary public movement, access, safety and outdoor activity.",
     buildStep: "Starts longevity in daylight: movement, safer access, bodies, ageing and community care."
+  },
+  {
+    name: "Dunwich Gumpi Ferry Data Lab",
+    repo: "auraofintelligence/dunwich-gumpi-ferry-terminal-open-data-lab",
+    visibility: "Open-data lab",
+    pageUrl: "https://auraofintelligence.github.io/dunwich-gumpi-ferry-terminal-open-data-lab/",
+    url: "https://github.com/auraofintelligence/dunwich-gumpi-ferry-terminal-open-data-lab",
+    bridge: "Connects official project sources, community 360 photos, data ladders and simulation workflows around the ferry gateway.",
+    buildStep: "Turns a local infrastructure upgrade into evidence, open data and digital-twin practice."
+  },
+  {
+    name: "Straddie Digital Twin Builders",
+    repo: "auraofintelligence/straddie-digital-twin-builders",
+    visibility: "Public builder",
+    pageUrl: "https://auraofintelligence.github.io/straddie-digital-twin-builders/",
+    url: "https://github.com/auraofintelligence/straddie-digital-twin-builders",
+    bridge: "Plain-English prompt builders move from private rooms to places and then bioregion-scale world prompts.",
+    buildStep: "Lets local scenes become structured prompts for visual, 3D and simulation tools without pretending the model is the place."
+  },
+  {
+    name: "Straddie Maker-Space Lab",
+    repo: "auraofintelligence/straddie-makerspace-lab",
+    visibility: "Materials lab",
+    pageUrl: "https://auraofintelligence.github.io/straddie-makerspace-lab/",
+    url: "https://github.com/auraofintelligence/straddie-makerspace-lab",
+    bridge: "Makes the mineral-sands imagination practical through repair, recycling, tools, sand experiments and community learning.",
+    buildStep: "Turns far-out materials talk into benches, tests, safety notes and low-footprint local capability."
+  },
+  {
+    name: "Quandamooka Country Events Engine",
+    repo: "auraofintelligence/quandamooka-country-events-engine",
+    visibility: "Events engine",
+    pageUrl: "https://auraofintelligence.github.io/quandamooka-country-events-engine/",
+    url: "https://github.com/auraofintelligence/quandamooka-country-events-engine",
+    bridge: "Events, places, suppliers, approvals and aftercare become public-safe planning records instead of scattered notes.",
+    buildStep: "Lets gatherings rehearse coordination, consent, transport, accessibility and learning before bigger systems scale."
+  },
+  {
+    name: "How To Use Markdown With AI",
+    repo: "auraofintelligence/how-to-use-md-with-ai",
+    visibility: "Public method",
+    pageUrl: "https://auraofintelligence.github.io/how-to-use-md-with-ai/",
+    url: "https://github.com/auraofintelligence/how-to-use-md-with-ai",
+    bridge: "Explains why plain Markdown context files help humans steer AI without surrendering privacy or public records.",
+    buildStep: "Gives visitors a practical method for turning intent, boundaries and evidence into files agents can use."
+  },
+  {
+    name: "Straddie Content Assets Kit",
+    repo: "auraofintelligence/straddie-content-assets-kit",
+    visibility: "Media tools",
+    pageUrl: "https://auraofintelligence.github.io/straddie-content-assets-kit/",
+    url: "https://github.com/auraofintelligence/straddie-content-assets-kit",
+    bridge: "Local media asset lists, equipment wishes, business profiles and upgrade roadmaps become portable Markdown.",
+    buildStep: "Helps project teams make better public media requests and shared-gear plans without losing the source trail."
+  },
+  {
+    name: "Film Club Documentary Builders",
+    repo: "auraofintelligence/film-club-documentary-builders",
+    visibility: "Story tools",
+    pageUrl: "https://auraofintelligence.github.io/film-club-documentary-builders/",
+    url: "https://github.com/auraofintelligence/film-club-documentary-builders",
+    bridge: "Documentary planning turns source trails, interviews, scenes and screening notes into agent-ready public/private files.",
+    buildStep: "Keeps the culture layer useful: stories can gather evidence, care and consent before becoming spectacle."
   },
   {
     name: "Strange But True Field Library",

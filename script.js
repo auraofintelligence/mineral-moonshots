@@ -1015,7 +1015,7 @@
       hero.querySelector("[data-deck]").textContent = brief.deck;
       hero.querySelector("[data-source]").textContent = brief.sourceLabel || brief.material;
 
-      if ((brief.projectUrl || brief.repoUrl) && !hero.querySelector(".project-page-links")) {
+      if ((brief.projectUrl || brief.repoUrl || (brief.relatedLinks && brief.relatedLinks.length)) && !hero.querySelector(".project-page-links")) {
         const links = make("div", "card-actions project-page-links");
         if (brief.projectUrl) {
           const project = make("a", "card-link", brief.projectLabel || "Open project site");
@@ -1031,6 +1031,13 @@
           repo.rel = "noopener noreferrer";
           links.appendChild(repo);
         }
+        (brief.relatedLinks || []).forEach((item) => {
+          const related = make("a", "card-link secondary-link", item.label);
+          related.href = item.url;
+          related.target = "_blank";
+          related.rel = "noopener noreferrer";
+          links.appendChild(related);
+        });
         hero.appendChild(links);
       }
     }

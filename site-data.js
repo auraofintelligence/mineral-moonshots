@@ -921,8 +921,9 @@ const NARRATIVE_SEEDS = {
     "What if every speculative ritual had a return gate? Positive action means wild ideas come back through consent, evidence, engineering, ecology, law and local governance before they touch reality."
   ],
   archipelago: [
-    "The archipelago turns many projects into islands that can be visited without needing to understand the whole ocean at once. Aura, resilience, music, media, P4A and Strange But True become connected but not collapsed.",
-    "What if a visitor could choose their own depth: practical help, cultural story, civic simulation or moonshot research? Abundance is navigation that lets people join from where they are."
+    "The Archipelago began as a public index for many project islands: Aura, resilience, P4A, music, media, Strange But True and local civic experiments. Its job was not to finish the ecosystem. Its job was to keep the islands findable.",
+    "That older public repo was created on 20 March 2026 and is now due for refresh. In this atlas it becomes a source marker: useful as a first constellation, but ready to be rebuilt with cleaner links, stronger boundaries and better paths into each living project.",
+    "What if a visitor could choose their own depth: practical help, cultural story, civic simulation, moonshot research or private workbench? Joyful responsible abundance needs navigation that lets people join from where they are without collapsing every idea into one overwhelming system."
   ],
   "island-abundance": [
     "Island abundance begins with ordinary signals: events, artists, businesses, care, visitor welcome, food, transport and public art. The future becomes believable when it improves daily life first.",
@@ -1729,27 +1730,52 @@ const SITE_BRIEFS = [
   {
     slug: "archipelago",
     url: "briefs/archipelago.html",
+    projectUrl: "https://auraofintelligence.github.io/Archipelago/",
+    projectLabel: "Open old Archipelago index",
+    repoUrl: "https://github.com/auraofintelligence/Archipelago",
     title: "Archipelago Intelligence Ecosystem",
-    eyebrow: "Map Of Maps",
-    material: "Aura, P4A, resilience, media",
+    eyebrow: "Old Index, Next Map",
+    material: "Aura, P4A, resilience, media, public indexes",
+    sourceLabel: "Linked public index: Archipelago repo, created 20 March 2026; useful but due for refresh.",
     source: "archipelago-intelligence-ecosystem-2026-05-03T05-40.opml",
-    deck: "A navigation map connecting Aura, Minjerribah resilience, P4A, I See Infinity and Strange but True into one island-scale ecosystem.",
+    deck: "A navigation moonshot for turning scattered project islands into a clearer public map. The linked Archipelago repo is an older public index, created on 20 March 2026, and should be treated as due for refresh rather than final architecture.",
     brief: [
-      "The OPML map is the constellation of the bigger universe: Aura of Intelligence, local resilience, Sandy Sports, P4A, I See Infinity and Strange but True.",
-      "In this atlas, it becomes the bridge between practical local services and the moonshot civilisation layer.",
-      "It keeps the wild ideas findable without forcing every visitor to understand the whole cosmology at once."
+      "The public Archipelago index shows the old shape of the project universe: Aura of Intelligence, local resilience, Sandy Sports, P4A, I See Infinity, Strange But True and civic imagination tools.",
+      "Its value is orientation. It proves the ecosystem wanted to be navigable early, before the individual repos, public pages and quality-control boundaries matured.",
+      "Its limitation is also visible: the map needs a refresh so old links, live repos, private workbenches, public-safe pages and moonshot narratives are separated cleanly."
     ],
-    moonshot: "A public map where each project becomes an island in an archipelago, with bridges for people who want to travel deeper.",
+    moonshot: "A refreshed public archipelago where each repo, page, prototype and private boundary becomes an island with a plain entry, a live link, a quality-control status and a path for deeper explorers.",
     modules: [
-      "Aura Builder, Avatar Builder and Mind Palace Builder",
-      "Ready S.E.T. co-op, disaster kiosks and sovereign mesh",
-      "Truth Engine, braided economy and cyber-republic simulator",
-      "Songs, films, hyperlocal media and practical tech support"
+      "Public old-index marker with created date and refresh status",
+      "Live repo islands for pages that have passed quality control",
+      "Private/workbench islands kept out of the public path until ready",
+      "Bridge pages from local projects into moonshot civilisation threads"
     ],
     experiments: [
-      "Turn the OPML into an interactive constellation map.",
-      "Give each island a practical path and a moonshot path.",
-      "Let the first entry stay simple while the deep pages hold the wildness."
+      "Audit the old Archipelago public index against the current GitHub Pages ecosystem.",
+      "Give each island one public page link, one repo link and one honest status: live, old, draft, private or needs refresh.",
+      "Let the first entry stay simple while deep pages carry the wildness, the source trail and the quality-control boundary."
+    ],
+    depthEyebrow: "Refresh path",
+    depthTitle: "From old public index to living atlas",
+    depthIntro: "The linked Archipelago page should be treated as a public artefact from an earlier mapping pass. The upgrade path is not to hide that age, but to make it useful.",
+    depth: [
+      {
+        title: "Old index as evidence",
+        body: "The repo was created on 20 March 2026. That date matters because it shows the ecosystem was already trying to become navigable before the current Mineral Moonshots structure existed."
+      },
+      {
+        title: "Due for refresh",
+        body: "The old page should not be treated as the final public architecture. It needs a fresh pass against current repos, live project pages, retired ideas, private boundaries and quality-control status."
+      },
+      {
+        title: "Useful next form",
+        body: "A refreshed Archipelago can become a public route map: each island gets a short narrative, a project link, a repo link, a status and a next-step bridge into Mineral Moonshots or the relevant standalone site."
+      },
+      {
+        title: "Careful public promise",
+        body: "The map should invite explorers without pretending every repo is ready, funded, endorsed or live. Good navigation is part of responsible abundance."
+      }
     ],
     elements: ["SiO2", "REE", "FeTiO3"]
   },
@@ -2452,33 +2478,33 @@ const INTERACTIVE_LABS = {
   },
   archipelago: {
     type: "archipelago-map",
-    title: "Project Archipelago Map",
-    deck: "Click an island to see the practical path and the moonshot path. This keeps the ecosystem navigable.",
+    title: "Refresh The Project Archipelago",
+    deck: "Click an island to see what the old public index was trying to hold. The next version should make every island clearer: live page, repo, status, boundary and moonshot path.",
     islands: [
       {
-        name: "Aura",
-        practical: "Builders for profiles, avatars, mind palaces and creative engines.",
-        moonshot: "A living interface for digital consciousness and self-reflective cognitive architecture."
+        name: "Old public index",
+        practical: "Archipelago was created on 20 March 2026 as a public narrative index.",
+        moonshot: "Refresh it into a cleaner atlas that admits what is old, live, private, draft or ready."
       },
       {
-        name: "Minjerribah",
-        practical: "Ready S.E.T., disaster kiosks, media, transport and local resilience.",
-        moonshot: "An island-scale prototype for sovereign infrastructure and regenerative abundance."
+        name: "Local islands",
+        practical: "Noticeboards, ferry data, events, grants, makerspaces and care projects need simple entries.",
+        moonshot: "Local work becomes the launchpad for responsible abundance without becoming the hero of every site."
       },
       {
-        name: "P4A",
-        practical: "Food, tolls, self-insurance, public trust trails and civic tools.",
-        moonshot: "A cyber-republic simulator for joyful responsible abundance."
+        name: "Moonshot islands",
+        practical: "Crystal city, peaceful space, compute, sensorium and longevity pages stay linked but distinct.",
+        moonshot: "Explorers can move from grounded evidence into far-out worlds without losing the return gate."
       },
       {
-        name: "I See Infinity",
-        practical: "Music, stories, films and public-facing mythic language.",
-        moonshot: "A narrative engine that lets people feel the future before they can code it."
+        name: "Culture islands",
+        practical: "Music, film, story and public language give the system emotional entry points.",
+        moonshot: "Culture lets people feel the future before the technical map becomes legible."
       },
       {
-        name: "Strange but True",
-        practical: "Tech help, AI help, scam awareness, grant writing and local support.",
-        moonshot: "The friendly first entry into the whole intelligence ecosystem."
+        name: "Boundary islands",
+        practical: "Private workbenches, old repos and draft systems need status labels before public routing.",
+        moonshot: "A mature archipelago can invite curiosity without pretending every island is ready for visitors."
       }
     ]
   },

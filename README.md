@@ -28,7 +28,7 @@ http://localhost:4173
 - `briefs/` contains the separate concept pages.
 - `site-data.js` holds the page content in one simple place.
 - `styles.css` holds the Strange but True inspired layout with a new mineral-metal colour scheme.
-- `assets/mineral-city-map.svg` is the main visual asset.
+- `assets/heroes/` contains the WebP title-page hero images.
 - `assets/noticeboard-network.webp` is the public media-spine concept showing wall, tablet, phone, kiosk and fallback surfaces.
 - The brief pages include interactive labs: a Kardashev dial, layer map, biosphere calculator, kiosk simulator, compute sketch, grant quest, co-op sorter, sports node map, space path, reality sorter and archipelago map.
 - The newer pages add island abundance, alien necklace alignment film, protopian music/story culture, cosmic nexus / abyss protocol, and loving longevity commons.

@@ -19,6 +19,7 @@
   --body: "Atkinson Hyperlegible", "Source Sans 3", Arial, sans-serif;
   --sticky-offset: 6rem;
   --max-width: 1160px;
+  --hero-image: url("assets/heroes/hero-home.webp");
 }
 
 * {
@@ -166,15 +167,58 @@ main [id] {
   width: 1.15rem;
 }
 
-.hero {
+.hero,
+.page-hero {
+  --hero-copy-width: min(32rem, calc(50vw - 2.5rem));
   background:
-    linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.78) 48%, rgba(7, 16, 19, 0.24)),
-    linear-gradient(0deg, rgba(7, 16, 19, 0.9), transparent 34%),
-    url("assets/mineral-city-map.svg");
+    linear-gradient(90deg, rgba(7, 16, 19, 0.92) 0%, rgba(7, 16, 19, 0.82) 24%, rgba(7, 16, 19, 0.38) 42%, rgba(7, 16, 19, 0.08) 57%, rgba(7, 16, 19, 0) 72%),
+    linear-gradient(0deg, rgba(7, 16, 19, 0.26) 0%, rgba(7, 16, 19, 0) 38%),
+    var(--hero-image);
   background-position: center;
   background-size: cover;
-  min-height: 86vh;
+  background-color: var(--obsidian);
+  overflow: hidden;
   position: relative;
+}
+
+.hero {
+  min-height: 86vh;
+}
+
+.page-hero {
+  --hero-image: url("assets/heroes/hero-moonshots.webp");
+}
+
+.hero-home {
+  --hero-image: url("assets/heroes/hero-home.webp");
+}
+
+.hero-moonshots {
+  --hero-image: url("assets/heroes/hero-moonshots.webp");
+}
+
+.hero-materials {
+  --hero-image: url("assets/heroes/hero-materials.webp");
+}
+
+.hero-elements {
+  --hero-image: url("assets/heroes/hero-elements.webp");
+}
+
+.hero-build-path {
+  --hero-image: url("assets/heroes/hero-build-path.webp");
+}
+
+.hero-worlds {
+  --hero-image: url("assets/heroes/hero-worlds.webp");
+}
+
+.hero-labs {
+  --hero-image: url("assets/heroes/hero-labs.webp");
+}
+
+.hero-boundaries {
+  --hero-image: url("assets/heroes/hero-boundaries.webp");
 }
 
 .hero-inner,
@@ -194,6 +238,23 @@ main [id] {
   min-height: 86vh;
   padding-bottom: 4.5rem;
   padding-top: 4.5rem;
+}
+
+.hero .hero-lede,
+.hero .hero-actions {
+  max-width: var(--hero-copy-width);
+}
+
+.hero .eyebrow,
+.hero h1,
+.hero-lede,
+.hero-actions,
+.page-hero .eyebrow,
+.page-hero h1,
+.page-lede,
+.source-line {
+  position: relative;
+  text-shadow: 0 0.12rem 1.2rem rgba(0, 0, 0, 0.78);
 }
 
 .eyebrow {
@@ -1030,16 +1091,28 @@ p {
 }
 
 .page-hero {
-  background:
-    linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.76)),
-    url("assets/mineral-city-map.svg");
   background-position: center;
   background-size: cover;
   max-width: none;
   min-height: 52vh;
-  overflow: hidden;
   padding-bottom: 5rem;
   padding-top: 5.5rem;
+}
+
+.title-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 82svh;
+  padding-bottom: clamp(5rem, 8vw, 8rem);
+  padding-top: clamp(5.5rem, 8vw, 8.5rem);
+}
+
+.page-hero.title-hero > * {
+  margin-left: max(1.25rem, calc((100vw - var(--max-width)) / 2 + 1.25rem));
+  margin-right: auto;
+  max-width: var(--hero-copy-width);
+  width: var(--hero-copy-width);
 }
 
 .page-hero > * {
@@ -1051,6 +1124,15 @@ p {
 
 .page-hero h1 {
   max-width: 12ch;
+}
+
+.title-hero h1 {
+  margin-left: max(1.25rem, calc((100vw - var(--max-width)) / 2 + 1.25rem));
+  max-width: 9.8ch;
+}
+
+.title-hero .page-lede {
+  max-width: var(--hero-copy-width);
 }
 
 .source-line {
@@ -1659,12 +1741,10 @@ p {
     padding: 0.4rem 0;
   }
 
-  .hero {
-    background:
-      linear-gradient(90deg, rgba(7, 16, 19, 0.98), rgba(7, 16, 19, 0.72)),
-      url("assets/mineral-city-map.svg");
-    background-position: 58% center;
-    background-size: cover;
+  .hero,
+  .page-hero {
+    --hero-copy-width: min(32rem, calc(100vw - 2.5rem));
+    background-position: 60% center;
   }
 
   .hero-inner,
@@ -1672,6 +1752,18 @@ p {
     min-height: auto;
     padding-bottom: 4rem;
     padding-top: 4rem;
+  }
+
+  .title-hero {
+    min-height: 74svh;
+  }
+
+  .page-hero.title-hero > *,
+  .title-hero h1,
+  .title-hero .page-lede {
+    margin-left: 1.25rem;
+    max-width: var(--hero-copy-width) !important;
+    width: var(--hero-copy-width);
   }
 
   .page-lede,
